@@ -2,7 +2,7 @@
 
 > **Proyecto en desarrollo activo.** Actualmente en fase de construcción — no apto para producción.
 
-Sitio web corporativo para el **Hospital Jesús Nazareno**, centro residencial para mayores. Desarrollado desde cero con foco en rendimiento, accesibilidad y posicionamiento SEO.
+Sitio web corporativo para la **Fundación Hospital Jesús Nazareno**, centro residencial para mayores. La finalidad de este nuevo espacio web es transmitir los valores del centro, el amor y la dedicación por el cuidado de las personas. Desarrollado desde cero con foco en rendimiento, accesibilidad y posicionamiento SEO.
 
 ![Estado](https://img.shields.io/badge/Estado-En_desarrollo-orange)
 ![Astro](https://img.shields.io/badge/Astro-5.x-BC52EE?logo=astro&logoColor=white)
@@ -15,9 +15,9 @@ Sitio web corporativo para el **Hospital Jesús Nazareno**, centro residencial p
 
 ## Sobre el proyecto
 
-El centro carecía de presencia digital. Este proyecto cubre el diseño y desarrollo completo del sitio web, incluyendo identidad de marca, sesión fotográfica, estrategia SEO y mantenimiento mensual de contenidos.
+El centro carecía de presencia digital. Este proyecto cubre el diseño y desarrollo completo del sitio web, incluyendo identidad de marca, estrategia SEO y mantenimiento mensual de contenidos.
 
-El objetivo principal es ofrecer a las familias toda la información que necesitan (servicios, instalaciones, proceso de admisión) de forma clara, accesible y con una imagen que transmita confianza.
+El objetivo principal es ofrecer a las familias toda la información que necesitan (servicios, instalaciones, proceso de admisión, personal) de forma clara, accesible y con una imagen que transmita los valores que durante años ha representado la entidad.
 
 ---
 
