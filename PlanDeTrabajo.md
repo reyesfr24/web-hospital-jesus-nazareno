@@ -224,6 +224,3 @@
 - [ ] Comprobar que no hay errores en Google Search Console (cobertura, Core Web Vitals)
 - [ ] Backup del repositorio
 
----
-
-> **Nota:** Las fases no son estrictamente secuenciales. La Fase 1 (branding) y la Fase 3 (SEO) pueden trabajarse en paralelo con la Fase 2 (fotografía). El desarrollo (Fase 5) puede avanzar con placeholders mientras las fotos y los textos definitivos no están listos.
