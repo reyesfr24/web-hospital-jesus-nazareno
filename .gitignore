@@ -1,0 +1,79 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+*.lcov
+.nyc_output
+
+# Production builds
+dist/
+build/
+.next/
+out/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.local-logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDEs
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.settings/
+*.iml
+
+# Local development
+.local-pids
+.local-ports
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Prisma
+backend/prisma/migrations/**/*.md
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.parcel-cache/
+.vite/
+
+# Docker
+docker-compose.override.yml
+
+# Git attributes
+.gitattributes
+
+# Other
+.turbo
+.vercel

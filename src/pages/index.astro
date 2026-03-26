@@ -1,0 +1,99 @@
+---
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="Inicio" description="Centro Residencial Hospital Jesús Nazareno. Cuidado y atención especializada para mayores con asistencia médica, enfermería 24h, fisioterapia y mucho más.">
+
+  <!-- Hero -->
+  <section class="relative bg-primary-950 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-900/80 to-primary-950/90 z-10"></div>
+    <!-- TODO: Reemplazar con imagen real del centro -->
+    <div class="absolute inset-0 bg-gray-700 z-0"></div>
+
+    <div class="relative z-20 section-container section-padding text-center">
+      <p class="text-warm-300 font-medium text-sm uppercase tracking-widest mb-4">Centro Residencial</p>
+      <h1 class="text-white mb-6">
+        Cuidado y dignidad<br />para quienes más quieres
+      </h1>
+      <p class="text-primary-200 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+        En el Hospital Jesús Nazareno ofrecemos atención médica, enfermería 24 horas y acompañamiento personalizado en un entorno familiar y de confianza.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contacto" class="btn-primary text-base px-8 py-4">Solicitar información</a>
+        <a href="/servicios" class="btn-outline text-base px-8 py-4 !text-white !border-white hover:!bg-white/10">Ver servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores / puntos fuertes -->
+  <section class="section-padding bg-gray-50" aria-labelledby="valores-heading">
+    <div class="section-container">
+      <div class="text-center mb-12">
+        <h2 id="valores-heading" class="text-gray-900 mb-3">Por qué confiar en nosotros</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Más de X años cuidando a mayores con dedicación, profesionalidad y calidez humana.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { icon: '🏥', titulo: 'Asistencia médica', texto: 'Médico y enfermería disponibles las 24 horas del día.' },
+          { icon: '🤝', titulo: 'Atención personalizada', texto: 'Cada residente tiene un plan de cuidados adaptado a sus necesidades.' },
+          { icon: '🌿', titulo: 'Entorno tranquilo', texto: 'Instalaciones cómodas, jardines y zonas de descanso.' },
+          { icon: '👨‍👩‍👧', titulo: 'Cercanía con las familias', texto: 'Comunicación continua y horario de visitas amplio.' },
+        ].map(({ icon, titulo, texto }) => (
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
+            <span class="text-4xl mb-4 block" aria-hidden="true">{icon}</span>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">{titulo}</h3>
+            <p class="text-gray-600 text-sm">{texto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios destacados -->
+  <section class="section-padding" aria-labelledby="servicios-heading">
+    <div class="section-container">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div>
+          <h2 id="servicios-heading" class="text-gray-900 mb-2">Nuestros servicios</h2>
+          <p class="text-gray-600">Atención integral para el bienestar físico, mental y social del residente.</p>
+        </div>
+        <a href="/servicios" class="btn-outline shrink-0">Ver todos los servicios</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { titulo: 'Asistencia médica', texto: 'Seguimiento médico continuo y gestión de tratamientos.' },
+          { titulo: 'Enfermería 24h', texto: 'Personal de enfermería presente todos los días del año.' },
+          { titulo: 'Fisioterapia', texto: 'Rehabilitación y ejercicio adaptado para mantener la movilidad.' },
+          { titulo: 'Psicología', texto: 'Apoyo emocional y estimulación cognitiva.' },
+          { titulo: 'Peluquería y podología', texto: 'Servicios de bienestar e imagen personal.' },
+          { titulo: 'Actividades y talleres', texto: 'Programa de ocio y animación sociocultural.' },
+        ].map(({ titulo, texto }) => (
+          <div class="flex gap-4 p-5 border border-gray-100 rounded-xl hover:border-primary-200 hover:bg-primary-50/50 transition-colors">
+            <div class="w-2 shrink-0 bg-primary-600 rounded-full mt-1"></div>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1 text-base">{titulo}</h3>
+              <p class="text-gray-600 text-sm">{texto}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA admisión -->
+  <section class="section-padding bg-primary-700 text-white" aria-labelledby="admision-heading">
+    <div class="section-container text-center">
+      <h2 id="admision-heading" class="text-white mb-4">¿Estás buscando plaza?</h2>
+      <p class="text-primary-100 text-lg max-w-xl mx-auto mb-8">
+        Te explicamos todo el proceso de admisión paso a paso. Sin complicaciones, con toda la información que necesitas.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/admision" class="btn-outline !text-white !border-white hover:!bg-white/10">Ver proceso de admisión</a>
+        <a href="/contacto" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-primary-700 font-medium rounded-lg hover:bg-primary-50 transition-colors">
+          Contactar ahora
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

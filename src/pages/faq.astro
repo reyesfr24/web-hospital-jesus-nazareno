@@ -1,0 +1,101 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+const preguntas = [
+  {
+    pregunta: '¿Cuál es el horario de visitas?',
+    respuesta: 'Las visitas están permitidas de lunes a viernes de 10:00 a 13:00 y de 16:00 a 20:00. Los fines de semana y festivos el horario es de 10:00 a 20:00. Recomendamos avisar al equipo en caso de visitas fuera del horario habitual.',
+  },
+  {
+    pregunta: '¿Qué objetos personales puede traer el residente?',
+    respuesta: 'El residente puede traer ropa, fotos, objetos decorativos pequeños y otros artículos personales que le hagan sentir como en casa. Recomendamos identificar todas las prendas de ropa con el nombre. Consulta con nosotros si tienes dudas sobre algún objeto específico.',
+  },
+  {
+    pregunta: '¿Puede el residente salir del centro?',
+    respuesta: 'Sí. Los residentes pueden salir con familiares o de forma autónoma (siempre que su estado de salud lo permita) con aviso previo al centro. Las salidas se gestionan con el equipo de enfermería para garantizar la continuidad de los cuidados.',
+  },
+  {
+    pregunta: '¿Cómo es el proceso de adaptación al ingreso?',
+    respuesta: 'El primer mes es clave. Asignamos un profesional de referencia a cada nuevo residente que hace seguimiento de su adaptación. Además, las familias pueden realizar visitas más frecuentes durante este periodo y reciben información periódica del estado de su familiar.',
+  },
+  {
+    pregunta: '¿El centro admite residentes con deterioro cognitivo o demencia?',
+    respuesta: 'Sí, disponemos de personal especializado en atención a personas con deterioro cognitivo y demencia. Cada caso es valorado individualmente para garantizar que podemos ofrecer el nivel de atención adecuado.',
+  },
+  {
+    pregunta: '¿Cómo se gestiona la medicación del residente?',
+    respuesta: 'El equipo de enfermería se encarga íntegramente de la gestión y administración de la medicación. Al ingreso se realiza una revisión del tratamiento con el médico del centro.',
+  },
+  {
+    pregunta: '¿Qué incluye el precio de la residencia?',
+    respuesta: 'La tarifa general incluye alojamiento, manutención (desayuno, almuerzo, merienda y cena), cuidados de enfermería, atención médica, actividades de animación y servicios de lavandería. Algunos servicios específicos pueden tener coste adicional; te lo detallaremos en la propuesta personalizada.',
+  },
+  {
+    pregunta: '¿Se admite la prestación de dependencia?',
+    respuesta: 'Sí. El centro está concertado con el sistema público de dependencia. Si el residente tiene reconocida su situación de dependencia, la prestación puede aplicarse para cubrir parte del coste. Consúltanos para más información.',
+  },
+];
+---
+
+<Layout title="Preguntas frecuentes" description="Resolvemos las dudas más habituales sobre el Hospital Jesús Nazareno: horarios de visitas, objetos permitidos, política de salidas, gestión de medicación y más.">
+
+  <section class="bg-primary-950 text-white section-padding">
+    <div class="section-container">
+      <p class="text-warm-300 text-sm font-medium uppercase tracking-widest mb-3">FAQ</p>
+      <h1 class="text-white mb-4">Preguntas frecuentes</h1>
+      <p class="text-primary-200 text-lg max-w-2xl">
+        Las dudas más habituales de las familias, respondidas de forma clara y directa.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="section-container max-w-3xl">
+      <dl class="space-y-4">
+        {preguntas.map(({ pregunta, respuesta }, i) => (
+          <div class="border border-gray-200 rounded-xl overflow-hidden">
+            <dt>
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls={`faq-answer-${i}`}
+                class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 focus-visible:outline transition-colors"
+                data-faq-toggle
+              >
+                <span>{pregunta}</span>
+                <svg class="shrink-0 h-5 w-5 text-gray-500 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </dt>
+            <dd id={`faq-answer-${i}`} class="hidden px-6 pb-5 text-gray-600">
+              {respuesta}
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      <div class="mt-12 p-6 bg-primary-50 rounded-xl border border-primary-100 text-center">
+        <p class="text-gray-700 font-medium mb-2">¿No encuentras lo que buscas?</p>
+        <p class="text-gray-600 text-sm mb-4">Escríbenos o llámanos. Te atendemos personalmente.</p>
+        <a href="/contacto" class="btn-primary">Contactar con el centro</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  document.querySelectorAll('[data-faq-toggle]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const answerId = btn.getAttribute('aria-controls')!;
+      const answer = document.getElementById(answerId)!;
+      const icon = btn.querySelector('svg')!;
+
+      btn.setAttribute('aria-expanded', String(!expanded));
+      answer.classList.toggle('hidden', expanded);
+      icon.style.transform = expanded ? '' : 'rotate(180deg)';
+    });
+  });
+</script>

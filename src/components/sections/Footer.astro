@@ -1,0 +1,60 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-gray-300">
+  <div class="section-container py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- Identidad -->
+      <div>
+        <p class="text-white font-semibold text-lg mb-1">Hospital Jesús Nazareno</p>
+        <p class="text-sm text-gray-400 mb-4">Centro residencial para mayores comprometido con el cuidado y la dignidad.</p>
+        <address class="not-italic text-sm space-y-1 text-gray-400">
+          <p>Dirección del centro</p>
+          <p>Ciudad, Provincia CP</p>
+          <p><a href="tel:+34000000000" class="hover:text-white transition-colors">+34 000 000 000</a></p>
+          <p><a href="mailto:info@hospitaljesusnazareno.es" class="hover:text-white transition-colors">info@hospitaljesusnazareno.es</a></p>
+        </address>
+      </div>
+
+      <!-- Navegación -->
+      <nav aria-label="Navegación del pie de página">
+        <p class="text-white font-medium mb-3">Secciones</p>
+        <ul class="space-y-2 text-sm">
+          {[
+            ['Servicios', '/servicios'],
+            ['Instalaciones', '/instalaciones'],
+            ['Equipo humano', '/equipo'],
+            ['Proceso de admisión', '/admision'],
+            ['Noticias', '/noticias'],
+            ['Preguntas frecuentes', '/faq'],
+            ['Contacto', '/contacto'],
+          ].map(([label, href]) => (
+            <li>
+              <a href={href} class="hover:text-white transition-colors">{label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <!-- Horarios y acceso rápido -->
+      <div>
+        <p class="text-white font-medium mb-3">Horario de visitas</p>
+        <p class="text-sm text-gray-400 mb-4">Lunes a viernes: 10:00 – 13:00 / 16:00 – 20:00<br/>Fines de semana: 10:00 – 20:00</p>
+        <a href="/contacto" class="btn-outline text-sm !text-gray-200 !border-gray-500 hover:!bg-gray-800">
+          Solicitar información
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-10 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
+      <p>&copy; {year} Hospital Jesús Nazareno. Todos los derechos reservados.</p>
+      <div class="flex gap-4">
+        <a href="/politica-privacidad" class="hover:text-gray-300 transition-colors">Política de privacidad</a>
+        <a href="/aviso-legal" class="hover:text-gray-300 transition-colors">Aviso legal</a>
+        <a href="/cookies" class="hover:text-gray-300 transition-colors">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>

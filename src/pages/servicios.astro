@@ -1,0 +1,72 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+const servicios = [
+  {
+    categoria: 'Atención médica y sanitaria',
+    items: [
+      { titulo: 'Asistencia médica', descripcion: 'Seguimiento médico continuado con revisiones periódicas, gestión y control de tratamientos farmacológicos y coordinación con especialistas.' },
+      { titulo: 'Enfermería 24 horas', descripcion: 'Personal de enfermería disponible las 24 horas del día, los 365 días del año para atender cualquier necesidad sanitaria del residente.' },
+      { titulo: 'Fisioterapia y rehabilitación', descripcion: 'Programa de ejercicio terapéutico adaptado, rehabilitación tras caídas o intervenciones quirúrgicas y mantenimiento de la movilidad.' },
+      { titulo: 'Psicología', descripcion: 'Apoyo emocional individual, estimulación cognitiva y talleres de memoria para el bienestar mental del residente.' },
+    ],
+  },
+  {
+    categoria: 'Bienestar e imagen personal',
+    items: [
+      { titulo: 'Peluquería', descripcion: 'Servicio de peluquería y cuidado del cabello para mantener la imagen personal y la autoestima.' },
+      { titulo: 'Podología', descripcion: 'Cuidado y tratamiento de los pies con visitas periódicas de podólogo especializado.' },
+    ],
+  },
+  {
+    categoria: 'Vida social y actividades',
+    items: [
+      { titulo: 'Animación sociocultural', descripcion: 'Programa mensual de actividades: talleres de manualidades, musicoterapia, gymkhanas, excursiones y celebraciones.' },
+      { titulo: 'Capilla y servicio religioso', descripcion: 'Misa periódica y acompañamiento espiritual para quienes lo deseen.' },
+    ],
+  },
+];
+---
+
+<Layout title="Servicios" description="Conoce todos los servicios del Hospital Jesús Nazareno: asistencia médica, enfermería 24h, fisioterapia, psicología, peluquería, podología y actividades.">
+
+  <!-- Cabecera -->
+  <section class="bg-primary-950 text-white section-padding">
+    <div class="section-container">
+      <p class="text-warm-300 text-sm font-medium uppercase tracking-widest mb-3">Lo que ofrecemos</p>
+      <h1 class="text-white mb-4">Nuestros servicios</h1>
+      <p class="text-primary-200 text-lg max-w-2xl">
+        Atención integral para garantizar el bienestar físico, mental y social de cada residente, con profesionales especializados y un trato cercano.
+      </p>
+    </div>
+  </section>
+
+  <!-- Listado de servicios -->
+  <section class="section-padding">
+    <div class="section-container space-y-14">
+      {servicios.map(({ categoria, items }) => (
+        <div>
+          <h2 class="text-primary-800 mb-6 pb-3 border-b border-primary-100">{categoria}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {items.map(({ titulo, descripcion }) => (
+              <div class="p-6 border border-gray-100 rounded-xl hover:shadow-md transition-shadow">
+                <h3 class="font-semibold text-gray-900 mb-2 text-lg">{titulo}</h3>
+                <p class="text-gray-600">{descripcion}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-gray-50">
+    <div class="section-container text-center">
+      <h2 class="text-gray-900 mb-4">¿Tienes alguna pregunta sobre nuestros servicios?</h2>
+      <p class="text-gray-600 max-w-lg mx-auto mb-6">Estaremos encantados de explicarte en detalle cualquier servicio o resolver tus dudas.</p>
+      <a href="/contacto" class="btn-primary">Contactar con el centro</a>
+    </div>
+  </section>
+
+</Layout>

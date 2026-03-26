@@ -1,0 +1,72 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const todasLasNoticias = await getCollection('noticias');
+const noticias = todasLasNoticias
+  .sort((a, b) => b.data.fecha.valueOf() - a.data.fecha.valueOf());
+
+const categorias: Record<string, string> = {
+  'residente-del-mes': 'Residente del mes',
+  'actividades': 'Actividades',
+  'salud': 'Consejos de salud',
+  'cumpleanos': 'Cumpleaños',
+  'menu': 'Menú del mes',
+};
+---
+
+<Layout title="Noticias" description="Últimas noticias del Hospital Jesús Nazareno: actividades, residente del mes, consejos de salud y más.">
+
+  <section class="bg-primary-950 text-white section-padding">
+    <div class="section-container">
+      <p class="text-warm-300 text-sm font-medium uppercase tracking-widest mb-3">Lo que hacemos</p>
+      <h1 class="text-white mb-4">Noticias y actividades</h1>
+      <p class="text-primary-200 text-lg max-w-2xl">
+        Mantente al día de todo lo que ocurre en el centro: actividades, celebraciones, consejos de salud y mucho más.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="section-container">
+      {noticias.length === 0 ? (
+        <p class="text-gray-500 text-center py-12">Próximamente publicaremos nuestras primeras noticias.</p>
+      ) : (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {noticias.map((noticia) => (
+            <article class="border border-gray-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow group">
+              {noticia.data.imagen && (
+                <div class="aspect-video bg-gray-100 overflow-hidden">
+                  <img
+                    src={noticia.data.imagen}
+                    alt=""
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              )}
+              <div class="p-5">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs font-medium text-primary-700 bg-primary-50 px-2.5 py-1 rounded-full">
+                    {categorias[noticia.data.categoria] ?? noticia.data.categoria}
+                  </span>
+                  <time datetime={noticia.data.fecha.toISOString()} class="text-xs text-gray-400">
+                    {noticia.data.fecha.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
+                  </time>
+                </div>
+                <h2 class="font-semibold text-gray-900 mb-2 text-lg leading-snug group-hover:text-primary-700 transition-colors">
+                  <a href={`/noticias/${noticia.slug}`} class="focus-visible:outline rounded">
+                    {noticia.data.titulo}
+                  </a>
+                </h2>
+                <p class="text-gray-600 text-sm line-clamp-2">{noticia.data.descripcion}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+</Layout>

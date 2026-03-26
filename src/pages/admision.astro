@@ -1,0 +1,106 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+const pasos = [
+  {
+    numero: '01',
+    titulo: 'Contacto inicial',
+    descripcion: 'Llámanos o envíanos un formulario. Nuestro equipo te atenderá para escuchar la situación y resolver las primeras dudas sin compromiso.',
+  },
+  {
+    numero: '02',
+    titulo: 'Visita al centro',
+    descripcion: 'Te invitamos a conocer las instalaciones, conocer al equipo y ver cómo es el día a día en el centro. Las visitas son libres y sin cita previa en horario de atención.',
+  },
+  {
+    numero: '03',
+    titulo: 'Valoración del residente',
+    descripcion: 'Nuestro equipo médico y de enfermería realiza una valoración del estado de salud y necesidades del futuro residente para asegurar que podemos ofrecer la atención adecuada.',
+  },
+  {
+    numero: '04',
+    titulo: 'Documentación',
+    descripcion: 'Una vez confirmada la plaza, se firma el contrato de ingreso y se aporta la documentación necesaria.',
+  },
+  {
+    numero: '05',
+    titulo: 'Ingreso y acogida',
+    descripcion: 'El día del ingreso, el equipo de acogida acompaña al residente y a la familia para facilitar la adaptación al nuevo hogar.',
+  },
+];
+
+const documentacion = [
+  'DNI o NIE del residente (original y copia)',
+  'Tarjeta sanitaria',
+  'Informe médico actualizado (últimos 6 meses)',
+  'Listado actualizado de medicación',
+  'Resolución de dependencia (si la hubiera)',
+  'Autorización bancaria para domiciliación de pagos',
+  'Documentación del representante legal (si aplica)',
+];
+---
+
+<Layout title="Proceso de admisión" description="Conoce el proceso de admisión del Hospital Jesús Nazareno. Te explicamos cada paso y la documentación necesaria para el ingreso de tu familiar.">
+
+  <section class="bg-primary-950 text-white section-padding">
+    <div class="section-container">
+      <p class="text-warm-300 text-sm font-medium uppercase tracking-widest mb-3">Cómo ingresar</p>
+      <h1 class="text-white mb-4">Proceso de admisión</h1>
+      <p class="text-primary-200 text-lg max-w-2xl">
+        Sabemos que esta decisión es importante. Aquí tienes toda la información para que el proceso sea lo más sencillo y tranquilo posible.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pasos -->
+  <section class="section-padding" aria-labelledby="pasos-heading">
+    <div class="section-container">
+      <h2 id="pasos-heading" class="text-gray-900 mb-10">Pasos del proceso</h2>
+      <ol class="space-y-8" aria-label="Pasos del proceso de admisión">
+        {pasos.map(({ numero, titulo, descripcion }) => (
+          <li class="flex gap-6 items-start">
+            <span class="shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-primary-100 text-primary-700 font-bold text-lg" aria-hidden="true">
+              {numero}
+            </span>
+            <div>
+              <h3 class="font-semibold text-gray-900 text-xl mb-1">{titulo}</h3>
+              <p class="text-gray-600">{descripcion}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- Documentación -->
+  <section class="section-padding bg-gray-50" aria-labelledby="documentacion-heading">
+    <div class="section-container">
+      <div class="max-w-2xl">
+        <h2 id="documentacion-heading" class="text-gray-900 mb-4">Documentación necesaria</h2>
+        <p class="text-gray-600 mb-6">Para formalizar el ingreso necesitaremos la siguiente documentación. Si tienes dudas sobre algún documento, consúltanos.</p>
+        <ul class="space-y-3" role="list">
+          {documentacion.map((doc) => (
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-primary-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-700">{doc}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-primary-700 text-white">
+    <div class="section-container text-center">
+      <h2 class="text-white mb-4">¿Listo para dar el siguiente paso?</h2>
+      <p class="text-primary-100 max-w-lg mx-auto mb-8">Contáctanos y te ayudamos a gestionar el proceso de inicio a fin.</p>
+      <a href="/contacto" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-700 font-medium rounded-lg hover:bg-primary-50 transition-colors text-base">
+        Solicitar información
+      </a>
+    </div>
+  </section>
+
+</Layout>
