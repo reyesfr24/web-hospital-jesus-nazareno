@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npm create:*)",
-      "Bash(printf '\\\\n')"
+      "Bash(printf '\\\\n')",
+      "Bash(grep -E \"\\\\.\\(css|ts|tsx\\)$\")"
     ]
   }
 }

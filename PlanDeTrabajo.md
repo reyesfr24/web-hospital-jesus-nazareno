@@ -23,7 +23,7 @@
   - [ ] Fondo claro / fondo oscuro / fondo transparente
 - [ ] Exportar en todos los formatos: SVG, PNG (1x, 2x), WebP, ICO, PDF
 - [ ] Seleccionar tipografía principal y secundaria (Google Fonts o fuente descargada)
-- [ ] Actualizar `tailwind.config.mjs` con los valores definitivos
+- [x] Actualizar `tailwind.config.mjs` con los valores definitivos
 
 ### Usos corporativos adicionales
 
@@ -69,7 +69,7 @@
 - [ ] Definir la keyword principal para cada página
 - [ ] Decidir estrategia de SEO local (Google Business Profile, schema de organización, NAP consistente)
 - [ ] Investigar snippets destacados y preguntas frecuentes reales (para la FAQ)
-- [ ] Definir estructura de metadatos: título, descripción y OG para cada página
+- [x] Definir estructura de metadatos: título, descripción y OG para cada página
 - [ ] Planificar el blog/noticias como canal de contenido long-tail a largo plazo
 
 ---
@@ -78,7 +78,7 @@
 
 ### Sitemap definitivo
 
-- [ ] Confirmar todas las páginas del sitio y sus URLs
+- [x] Confirmar todas las páginas del sitio y sus URLs
 - [ ] Decidir jerarquía de navegación (qué va en menú principal, qué en footer)
 - [ ] Crear `sitemap.xml` y configurar en Astro
 
@@ -115,16 +115,16 @@
 
 ### Páginas
 
-- [ ] Layout base con SEO y skip-nav
-- [ ] Header con menú responsive y menú móvil accesible
-- [ ] Footer
-- [ ] `/` — Home
-- [ ] `/servicios`
-- [ ] `/admision`
-- [ ] `/faq` — acordeón accesible
-- [ ] `/contacto` — formulario Formspree
-- [ ] `/noticias` — listado
-- [ ] `/noticias/[slug]` — página de artículo
+- [x] Layout base con SEO y skip-nav
+- [x] Header con menú responsive y menú móvil accesible
+- [x] Footer
+- [x] `/` — Home
+- [x] `/servicios`
+- [x] `/admision`
+- [x] `/faq` — acordeón accesible
+- [x] `/contacto` — formulario Formspree
+- [x] `/noticias` — listado
+- [x] `/noticias/[slug]` — página de artículo
 - [ ] `/instalaciones` — galería con lightbox accesible
 - [ ] `/equipo` — grid con foto y bio
 - [ ] `/politica-privacidad`
@@ -154,7 +154,7 @@
 ## Fase 6 — Calidad, accesibilidad y rendimiento
 
 ### Accesibilidad (WCAG 2.1 AA)
-
+- [x] Preparación de la estrucutra de código para que sea compatible WCAG 2.1 AA
 - [ ] Verificar que todos los elementos interactivos son accesibles por teclado
 - [ ] Comprobar ratio de contraste en toda la interfaz
 - [ ] Auditar con Axe DevTools o WAVE
