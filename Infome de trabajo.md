@@ -1,3 +1,5 @@
+**Fecha: 31-03-2026**
+
 ## 1. Planificación y definición del proyecto
 - Elaborado un **Plan de Trabajo detallado** que cubre desde el inicio hasta el lanzamiento, dividido en fases claras: diseño, desarrollo, contenido, fotografía, pruebas, publicación y mantenimiento.
 - Seleccionadas las tecnologías más adecuadas para garantizar que el sitio sea rápido, seguro, accesible para personas con discapacidad y fácil de actualizar en el futuro.
