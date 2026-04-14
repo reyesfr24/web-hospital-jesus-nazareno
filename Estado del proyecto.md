@@ -80,7 +80,7 @@
 
 - [x] Confirmar todas las páginas del sitio y sus URLs
 - [ ] Decidir jerarquía de navegación (qué va en menú principal, qué en footer)
-- [ ] Crear `sitemap.xml` y configurar en Astro
+- [x] Crear `sitemap.xml` y configurar en Astro
 
 ### Redacción de contenidos
 
@@ -99,10 +99,10 @@
 
 ### Setup y configuración
 
-- [ ] Instalar `@astrojs/sitemap` y configurar generación automática
+- [x] Instalar `@astrojs/sitemap` y configurar generación automática
 - [ ] Instalar `@astrojs/image` para optimización automática de imágenes
 - [ ] Configurar variables de entorno para el ID de Formspree
-- [ ] Añadir `robots.txt`
+- [x] Añadir `robots.txt`
 - [ ] Configurar fuentes web con `font-display: swap`
 
 ### Componentes UI reutilizables
@@ -174,7 +174,8 @@
 
 - [ ] Verificar que `<title>` y `<meta description>` son únicos en cada página
 - [ ] Comprobar que las URLs son descriptivas y sin parámetros innecesarios
-- [ ] Añadir datos estructurados (schema.org): `LocalBusiness`, `MedicalOrganization`, `FAQPage`
+- [x] Añadir datos estructurados (schema.org): `NursingHome` en Layout global (con dirección, teléfono y coordenadas reales)
+- [ ] Añadir datos estructurados `FAQPage` en `/faq`
 - [ ] Verificar canonical en todas las páginas
 - [ ] Comprobar que el sitemap es correcto y accesible en `/sitemap-index.xml`
 - [ ] Verificar que `robots.txt` no bloquea nada importante
@@ -203,14 +204,34 @@
 
 ## Fase 8 — Lanzamiento y post-lanzamiento
 
-- [ ] Crear y verificar Google Business Profile del centro
-- [ ] Dar de alta el sitio en Google Search Console
-- [ ] Enviar el sitemap a Google Search Console
-- [ ] Instalar Google Analytics 4 (o alternativa: Plausible, Fathom)
-- [ ] Configurar objetivos/eventos en Analytics (clics en teléfono, envíos de formulario)
+### Antes de lanzar
 - [ ] Hacer una revisión final completa del sitio en producción
-- [ ] Entregar accesos al cliente y documentar cómo añadir noticias
+
+### Indexación y presencia en Google (acciones externas, no requieren código)
+- [ ] **Crear y verificar Google Business Profile del centro** ← prioritario para búsquedas locales
+  - Ir a: https://business.google.com
+  - Añadir nombre, dirección, teléfono, categoría ("Residencia de ancianos"), fotos y horario
+  - Google enviará una carta postal con código de verificación al centro
+- [ ] **Dar de alta el sitio en Google Search Console**
+  - Ir a: https://search.google.com/search-console
+  - Añadir propiedad con el dominio `hospitaljesusnazareno.es` y verificar la propiedad
+- [ ] **Enviar el sitemap a Google Search Console**
+  - Una vez verificado, ir a Sitemaps e introducir: `sitemap-index.xml`
+- [ ] Registrar el centro en directorios especializados de residencias (generan backlinks y mejoran el ranking local):
+  - [ ] https://www.residencias.com
+  - [ ] https://www.inforesidencias.com
+  - [ ] https://www.mayoresudp.org (directorio de la Unión Democrática de Pensionistas)
+  - [ ] Directorio de centros sociosanitarios de la Junta de Andalucía
+  - [ ] Página web o directorio del Ayuntamiento de Villanueva de Córdoba
+- [ ] Comprobar que cualquier sitio externo donde ya aparezca el centro (páginas amarillas, directorios médicos, etc.) tiene la URL `hospitaljesusnazareno.es` actualizada — la coherencia del nombre/dirección/teléfono en toda la web (NAP) influye directamente en el SEO local
+
+### Analytics y seguimiento
+- [ ] Instalar Google Analytics 4 (o alternativa privada: Plausible, Fathom)
+- [ ] Configurar objetivos/eventos en Analytics (clics en teléfono, envíos de formulario)
 - [ ] Programar primera revisión de métricas (un mes después del lanzamiento)
+
+### Entrega al cliente
+- [ ] Entregar accesos al cliente y documentar cómo añadir noticias
 
 ---
 
