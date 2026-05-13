@@ -1,0 +1,332 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation [ref=e5]:
+      - link "Hospital de Jesús Nazareno" [ref=e6] [cursor=pointer]:
+        - /url: "#inicio"
+        - img "Hospital de Jesús Nazareno" [ref=e7]
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Inicio" [ref=e10] [cursor=pointer]:
+            - /url: "#inicio"
+            - text: Inicio
+        - listitem [ref=e11]:
+          - link "Historia" [ref=e12] [cursor=pointer]:
+            - /url: "#historia"
+            - text: Historia
+        - listitem [ref=e13]:
+          - link "Servicios" [ref=e14] [cursor=pointer]:
+            - /url: "#servicios"
+            - text: Servicios
+        - listitem [ref=e15]:
+          - link "Instalaciones" [ref=e16] [cursor=pointer]:
+            - /url: "#instalaciones"
+            - text: Instalaciones
+        - listitem [ref=e17]:
+          - link "Contacto" [ref=e18] [cursor=pointer]:
+            - /url: "#contacto"
+            - text: Contacto
+      - generic [ref=e19]:
+        - link "601 623 400" [ref=e20] [cursor=pointer]:
+          - /url: tel:601623400
+        - link "Contactar" [ref=e21] [cursor=pointer]:
+          - /url: "#contacto"
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e28]: Fundado en 1819 · Villanueva de Córdoba
+          - heading "Hospital de Jesús Nazareno." [level=1] [ref=e30]:
+            - text: Hospital de
+            - text: Jesús Nazareno.
+          - paragraph [ref=e31]:
+            - text: Más de 200 años cuidando con dignidad,
+            - text: humanidad y amor cristiano.
+          - generic [ref=e32]:
+            - link "Nuestra Historia" [ref=e33] [cursor=pointer]:
+              - /url: "#historia"
+              - text: Nuestra Historia
+              - img [ref=e34]
+            - link "Nuestros Servicios" [ref=e36] [cursor=pointer]:
+              - /url: "#servicios"
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - generic [ref=e39]: "+200"
+              - generic [ref=e40]: Años de historia
+            - generic [ref=e41]:
+              - generic [ref=e42]: "1819"
+              - generic [ref=e43]: Año de fundación
+            - generic [ref=e44]:
+              - generic [ref=e45]: ACP
+              - generic [ref=e46]: Modelo de cuidado
+        - generic [ref=e47]:
+          - generic [ref=e49]:
+            - img [ref=e51]
+            - generic [ref=e53]:
+              - paragraph [ref=e54]: "\"El cuidado de nuestros residentes es el centro de todo lo que hacemos.\""
+              - paragraph [ref=e55]: — Modelo de Atención Centrada en la Persona
+          - generic [ref=e59]:
+            - img "Logo" [ref=e60]
+            - generic [ref=e61]:
+              - paragraph [ref=e62]: "1819"
+              - paragraph [ref=e63]: Más de dos siglos de servicio
+      - generic [ref=e65]: Descubrir
+    - generic [ref=e68]:
+      - generic [ref=e70]: Desde 1819
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - heading "Más de dos siglos de vocación de servicio." [level=2] [ref=e74]:
+              - text: Más de dos siglos de
+              - emphasis [ref=e75]: vocación de servicio.
+            - paragraph [ref=e76]: Una historia de fe, caridad y entrega que comenzó con un sacerdote y su visión de un mundo más compasivo, y que hoy continúa transformando vidas.
+          - generic [ref=e77]:
+            - generic [ref=e79]:
+              - img [ref=e81]
+              - generic [ref=e83]:
+                - heading "El origen cristiano" [level=3] [ref=e84]
+                - paragraph [ref=e85]: Fundado por don Bernardo Moreno de Pedrajas (1745–1818), sacerdote que destinó su patrimonio a aliviar el sufrimiento de los pobres, enfermos y desamparados. Su testamento (1817–1818) dio nacimiento al hospital.
+            - generic [ref=e87]:
+              - img [ref=e89]
+              - generic [ref=e92]:
+                - heading "Modernización y compromiso actual" [level=3] [ref=e93]
+                - paragraph [ref=e94]: "Entre 1999 y 2007 se construyó el edificio actual: una residencia moderna, accesible y funcional. Hoy implementamos el modelo de Atención Centrada en la Persona (ACP), situando a cada residente en el centro del cuidado."
+          - link "Conocer nuestros servicios" [ref=e96] [cursor=pointer]:
+            - /url: "#servicios"
+            - text: Conocer nuestros servicios
+            - img [ref=e97]
+        - generic [ref=e99]:
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - generic [ref=e104]: Nuestra filosofía
+              - paragraph [ref=e105]:
+                - text: "\"Cuidar no es hacer por la persona,"
+                - text: es hacer con ella."
+            - paragraph [ref=e106]: Principio ACP — Atención Centrada en la Persona
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - generic [ref=e109]: ✦
+              - text: Dignidad
+            - generic [ref=e110]:
+              - generic [ref=e111]: ✦
+              - text: Humanidad
+            - generic [ref=e112]:
+              - generic [ref=e113]: ✦
+              - text: Amor cristiano
+    - generic [ref=e116]:
+      - generic [ref=e117]:
+        - generic [ref=e119]: Nuestros Servicios
+        - heading "Atención Centrada en la Persona." [level=2] [ref=e120]:
+          - text: Atención Centrada
+          - emphasis [ref=e121]: en la Persona.
+        - paragraph [ref=e122]: Cuidado profesional que respeta la historia de vida, los gustos, preferencias y decisiones de cada residente.
+        - link "Solicitar información" [ref=e124] [cursor=pointer]:
+          - /url: "#contacto"
+        - generic [ref=e125]:
+          - paragraph [ref=e126]: "06"
+          - paragraph [ref=e127]: Áreas de cuidado
+      - generic [ref=e128]:
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - heading "Psicología y Trabajo Social." [level=3] [ref=e132]
+            - generic [ref=e133]:
+              - generic [ref=e134]: Apoyo emocional
+              - generic [ref=e136]: Historia de vida
+              - generic [ref=e138]: Bienestar integral
+            - paragraph [ref=e140]: "\"ACP significa comprender antes de intervenir.\""
+          - generic [ref=e141]: ◎
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - heading "Enfermería." [level=3] [ref=e145]
+            - generic [ref=e146]:
+              - generic [ref=e147]: Seguimiento continuo
+              - generic [ref=e149]: Confort y seguridad
+              - generic [ref=e151]: Cuidado digno
+            - paragraph [ref=e153]: "\"La atención sanitaria también puede ser cercana y humana.\""
+          - generic [ref=e154]: ◉
+        - generic [ref=e156]:
+          - generic [ref=e157]:
+            - heading "Fisioterapia." [level=3] [ref=e158]
+            - generic [ref=e159]:
+              - generic [ref=e160]: Intervención individual
+              - generic [ref=e162]: Movimiento funcional
+              - generic [ref=e164]: Prevención de caídas
+            - paragraph [ref=e166]: "\"En ACP, el objetivo es la calidad de vida.\""
+          - generic [ref=e167]: ◈
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - heading "Terapia Ocupacional." [level=3] [ref=e171]
+            - generic [ref=e172]:
+              - generic [ref=e173]: Intereses personales
+              - generic [ref=e175]: Participación activa
+              - generic [ref=e177]: Autonomía
+            - paragraph [ref=e179]: "\"La persona elige, participa y decide.\""
+          - generic [ref=e180]: ◇
+        - generic [ref=e182]:
+          - generic [ref=e183]:
+            - heading "Gerocultores y Cuidadores." [level=3] [ref=e184]
+            - generic [ref=e185]:
+              - generic [ref=e186]: Atención diaria
+              - generic [ref=e188]: Vínculo humano
+              - generic [ref=e190]: Trato cercano
+            - paragraph [ref=e192]: "\"Cuidar no es hacer por la persona, es hacer con ella.\""
+          - generic [ref=e193]: ◬
+        - generic [ref=e195]:
+          - generic [ref=e196]:
+            - heading "Cocina." [level=3] [ref=e197]
+            - generic [ref=e198]:
+              - generic [ref=e199]: Nutrición adaptada
+              - generic [ref=e201]: Gustos personales
+              - generic [ref=e203]: Bienestar alimentario
+            - paragraph [ref=e205]: "\"En ACP, la comida no es solo nutrición.\""
+          - generic [ref=e206]: ◰
+    - generic [ref=e208]:
+      - generic [ref=e209]:
+        - generic [ref=e210]:
+          - generic [ref=e212]: Nuestras Instalaciones
+          - heading "Espacios pensados para el bienestar." [level=2] [ref=e213]:
+            - text: Espacios pensados
+            - emphasis [ref=e214]: para el bienestar.
+        - paragraph [ref=e215]: Instalaciones modernas, accesibles y funcionales, concebidas para garantizar la comodidad y la dignidad de cada residente.
+      - generic [ref=e216]:
+        - generic [ref=e217]:
+          - generic [ref=e220]: Foto próximamente
+          - generic [ref=e221]:
+            - heading "Habitaciones" [level=3] [ref=e222]
+            - paragraph [ref=e223]: Espacios privados y confortables
+        - generic [ref=e224]:
+          - generic [ref=e227]: Foto próximamente
+          - generic [ref=e228]:
+            - heading "Salones de Actividades" [level=3] [ref=e229]
+            - paragraph [ref=e230]: Espacios para vivir y compartir
+        - generic [ref=e231]:
+          - generic [ref=e234]: Foto próximamente
+          - generic [ref=e235]:
+            - heading "Sala de Fisioterapia" [level=3] [ref=e236]
+            - paragraph [ref=e237]: Equipamiento profesional moderno
+        - generic [ref=e238]:
+          - generic [ref=e241]: Foto próximamente
+          - generic [ref=e242]:
+            - heading "Jardines y Exteriores" [level=3] [ref=e243]
+            - paragraph [ref=e244]: Conexión con la naturaleza
+        - generic [ref=e245]:
+          - generic [ref=e248]: Foto próximamente
+          - generic [ref=e249]:
+            - heading "Comedor" [level=3] [ref=e250]
+            - paragraph [ref=e251]: Alimentación con cariño
+        - generic [ref=e252]:
+          - generic [ref=e255]: Foto próximamente
+          - generic [ref=e256]:
+            - heading "Zona de Descanso" [level=3] [ref=e257]
+            - paragraph [ref=e258]: Tranquilidad y bienestar
+      - generic [ref=e259]:
+        - generic [ref=e260]:
+          - generic [ref=e261]: "2007"
+          - generic [ref=e262]: Año del edificio actual
+        - generic [ref=e263]:
+          - generic [ref=e264]: 100%
+          - generic [ref=e265]: Accesibilidad
+        - generic [ref=e266]:
+          - generic [ref=e267]: ACP
+          - generic [ref=e268]: Modelo de atención
+        - generic [ref=e269]:
+          - generic [ref=e270]: 24/7
+          - generic [ref=e271]: Atención continua
+    - generic [ref=e273]:
+      - generic [ref=e274]:
+        - generic [ref=e275]:
+          - generic [ref=e277]: Contacto
+          - heading "Estaremos encantados de atenderte." [level=2] [ref=e278]:
+            - text: Estaremos encantados
+            - emphasis [ref=e279]: de atenderte.
+        - paragraph [ref=e280]: Nuestro equipo está disponible para responder todas tus preguntas y acompañarte en el proceso de incorporación.
+      - generic [ref=e281]:
+        - generic [ref=e282]:
+          - link "Teléfono 601 623 400" [ref=e283] [cursor=pointer]:
+            - /url: tel:601623400
+            - img [ref=e285]
+            - generic [ref=e287]:
+              - paragraph [ref=e288]: Teléfono
+              - paragraph [ref=e289]: 601 623 400
+            - img [ref=e290]
+          - link "Email jesusnazarenovillanueva@hotmail.com" [ref=e292] [cursor=pointer]:
+            - /url: mailto:jesusnazarenovillanueva@hotmail.com
+            - img [ref=e294]
+            - generic [ref=e297]:
+              - paragraph [ref=e298]: Email
+              - paragraph [ref=e299]: jesusnazarenovillanueva@hotmail.com
+            - img [ref=e300]
+          - link "Dirección C/ Moreno de Pedrajas s/n 14440 Villanueva de Córdoba (Córdoba)" [ref=e302] [cursor=pointer]:
+            - /url: https://maps.google.com/?q=Calle+Moreno+de+Pedrajas+Villanueva+de+Cordoba
+            - img [ref=e304]
+            - generic [ref=e307]:
+              - paragraph [ref=e308]: Dirección
+              - paragraph [ref=e309]: C/ Moreno de Pedrajas s/n 14440 Villanueva de Córdoba (Córdoba)
+            - img [ref=e310]
+          - generic [ref=e314]:
+            - img [ref=e315]
+            - paragraph [ref=e318]:
+              - text: Calle Moreno de Pedrajas s/n
+              - text: 14440 Villanueva de Córdoba
+            - link "Ver en Google Maps" [ref=e319] [cursor=pointer]:
+              - /url: https://maps.google.com/?q=Calle+Moreno+de+Pedrajas+Villanueva+de+Cordoba
+        - generic [ref=e320]:
+          - heading "Escríbenos" [level=3] [ref=e321]
+          - paragraph [ref=e322]: Sin compromiso. Respondemos en menos de 24h.
+          - generic [ref=e323]:
+            - generic [ref=e324]:
+              - generic [ref=e325]: Nombre completo
+              - textbox "Tu nombre" [ref=e326]
+            - generic [ref=e327]:
+              - generic [ref=e328]: Teléfono de contacto
+              - textbox "600 000 000" [ref=e329]
+            - generic [ref=e330]:
+              - generic [ref=e331]: Mensaje
+              - textbox "¿En qué podemos ayudarte?" [ref=e332]
+            - button "Enviar mensaje" [ref=e333] [cursor=pointer]:
+              - text: Enviar mensaje
+              - img [ref=e334]
+            - paragraph [ref=e336]:
+              - text: También puedes llamarnos al
+              - link "601 623 400" [ref=e337] [cursor=pointer]:
+                - /url: tel:601623400
+  - contentinfo [ref=e338]:
+    - generic [ref=e339]:
+      - generic [ref=e340]:
+        - generic [ref=e341]:
+          - link "Hospital de Jesús Nazareno" [ref=e342] [cursor=pointer]:
+            - /url: "#inicio"
+            - img "Hospital de Jesús Nazareno" [ref=e343]
+          - paragraph [ref=e344]: Más de 200 años cuidando con dignidad, humanidad y amor cristiano.
+          - paragraph [ref=e345]:
+            - text: C/ Moreno de Pedrajas s/n
+            - text: 14440 Villanueva de Córdoba
+        - generic [ref=e346]:
+          - paragraph [ref=e347]: Páginas
+          - list [ref=e348]:
+            - listitem [ref=e349]:
+              - link "Inicio" [ref=e350] [cursor=pointer]:
+                - /url: "#inicio"
+            - listitem [ref=e351]:
+              - link "Nuestra Historia" [ref=e352] [cursor=pointer]:
+                - /url: "#historia"
+            - listitem [ref=e353]:
+              - link "Nuestros Servicios" [ref=e354] [cursor=pointer]:
+                - /url: "#servicios"
+            - listitem [ref=e355]:
+              - link "Instalaciones" [ref=e356] [cursor=pointer]:
+                - /url: "#instalaciones"
+        - generic [ref=e357]:
+          - paragraph [ref=e358]: Contacto
+          - list [ref=e359]:
+            - listitem [ref=e360]:
+              - link "601 623 400" [ref=e361] [cursor=pointer]:
+                - /url: tel:601623400
+            - listitem [ref=e362]:
+              - link "Enviar email" [ref=e363] [cursor=pointer]:
+                - /url: mailto:jesusnazarenovillanueva@hotmail.com
+            - listitem [ref=e364]:
+              - link "Cómo llegar" [ref=e365] [cursor=pointer]:
+                - /url: https://maps.google.com/?q=Calle+Moreno+de+Pedrajas+Villanueva+de+Cordoba
+      - generic [ref=e366]:
+        - paragraph [ref=e367]: © 2026 Hospital de Jesús Nazareno. Todos los derechos reservados.
+        - paragraph [ref=e368]: Fundado en 1819 · Villanueva de Córdoba

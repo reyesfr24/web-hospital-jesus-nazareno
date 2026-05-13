@@ -1,11 +1,23 @@
-function App() {
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-gray-900">
-        Hospital Jesús Nazareno
-      </h1>
-    </div>
-  )
-}
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Historia from './components/Historia';
+import Servicios from './components/Servicios';
+import Galeria from './components/Galeria';
+import Contacto from './components/Contacto';
+import Footer from './components/Footer';
 
-export default App
+export default function App() {
+  return (
+    <div className="font-sans">
+      <Navbar />
+      <main>
+        <Hero />
+        <Historia />
+        <Servicios />
+        <Galeria />
+        <Contacto />
+      </main>
+      <Footer />
+    </div>
+  );
+}

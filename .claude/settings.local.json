@@ -5,7 +5,18 @@
       "Bash(printf '\\\\n')",
       "Bash(grep -E \"\\\\.\\(css|ts|tsx\\)$\")",
       "Bash(pnpm --version)",
-      "Bash(pnpm install *)"
+      "Bash(pnpm install *)",
+      "mcp__playwright__browser_navigate",
+      "Bash(npx playwright *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('mcpServers',{}\\), indent=2\\)\\)\")",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_snapshot",
+      "WebFetch(domain:alveora.webflow.io)",
+      "Bash(curl -s \"https://alveora.webflow.io/\")",
+      "Bash(curl -s \"https://cdn.prod.website-files.com/69788da23668d30f145dda3f/css/alveora.webflow.shared.9d8fb6478.min.css\")",
+      "Bash(grep -oP '--[a-z][^:;]+:[^;]+')",
+      "mcp__playwright__browser_resize"
     ]
   }
 }

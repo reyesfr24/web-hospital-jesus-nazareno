@@ -1,0 +1,821 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e9]:
+      - link "main logo" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - img "main logo" [ref=e11]
+      - link "about" [ref=e12] [cursor=pointer]:
+        - /url: /about
+        - generic [ref=e13]:
+          - generic:
+            - generic "about":
+              - generic:
+                - generic: a
+                - generic: b
+                - generic: o
+                - generic: u
+                - generic: t
+      - link "services" [ref=e15] [cursor=pointer]:
+        - /url: /services
+        - generic [ref=e16]:
+          - generic:
+            - generic "services":
+              - generic:
+                - generic: s
+                - generic: e
+                - generic: r
+                - generic: v
+                - generic: i
+                - generic: c
+                - generic: e
+                - generic: s
+      - link "case studies" [ref=e18] [cursor=pointer]:
+        - /url: /case-studies
+        - generic [ref=e19]:
+          - generic:
+            - generic "case studies":
+              - generic:
+                - generic: c
+                - generic: a
+                - generic: s
+                - generic: e
+              - generic:
+                - generic: s
+                - generic: t
+                - generic: u
+                - generic: d
+                - generic: i
+                - generic: e
+                - generic: s
+      - link "blog" [ref=e21] [cursor=pointer]:
+        - /url: /blog
+        - generic [ref=e22]:
+          - generic:
+            - generic "blog":
+              - generic:
+                - generic: b
+                - generic: l
+                - generic: o
+                - generic: g
+      - button "Open cart" [ref=e25] [cursor=pointer]:
+        - generic [ref=e28]:
+          - generic [ref=e29]: cart
+          - generic [ref=e30]: (
+          - generic [ref=e31]: "0"
+          - generic [ref=e32]: )
+      - link "Contact us" [ref=e34] [cursor=pointer]:
+        - /url: /contact
+        - generic [ref=e35]:
+          - generic:
+            - generic "Contact us":
+              - generic:
+                - generic: C
+                - generic: o
+                - generic: "n"
+                - generic: t
+                - generic: a
+                - generic: c
+                - generic: t
+              - generic:
+                - generic: u
+                - generic: s
+  - generic [ref=e37]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - heading "A calmer way to care for your smile." [level=1] [ref=e51]
+          - generic "Gentle dentistry designed to remove fear, build trust, and deliver confident, lasting results." [ref=e52]:
+            - generic [ref=e54]:
+              - paragraph [ref=e55]: Gentle dentistry designed to remove fear, build
+              - paragraph [ref=e56]: trust, and deliver confident, lasting results.
+        - link "schedule a visit" [ref=e59] [cursor=pointer]:
+          - /url: /contact
+          - generic [ref=e60]:
+            - generic:
+              - generic "schedule a visit":
+                - generic:
+                  - generic: s
+                  - generic: c
+                  - generic: h
+                  - generic: e
+                  - generic: d
+                  - generic: u
+                  - generic: l
+                  - generic: e
+                - generic:
+                  - generic: a
+                - generic:
+                  - generic: v
+                  - generic: i
+                  - generic: s
+                  - generic: i
+                  - generic: t
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - img "stars group" [ref=e64]
+          - paragraph [ref=e65]: “It felt more like a wellness visit than a dental appointment.”
+          - paragraph [ref=e66]: — Sarah M.
+          - img "icon" [ref=e67]
+        - link "open lightbox" [ref=e68] [cursor=pointer]:
+          - /url: "#"
+          - img "video cover" [ref=e69]
+          - img "play icon" [ref=e71]
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - generic [ref=e78]: OUR PHILOSOPHY
+        - generic "We moved away from the clinical coldness to create a warm, inviting space where your journey to a confident smile is as memorable as the result itself." [ref=e81]:
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: We moved away from the clinical coldness to create a
+            - paragraph [ref=e85]: warm, inviting space where your journey to a confident
+            - paragraph [ref=e86]: smile is as memorable as the result itself.
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - img "design icon" [ref=e89]
+          - paragraph [ref=e91]: Gentle Experience
+        - generic [ref=e92]:
+          - img "design icon" [ref=e93]
+          - paragraph [ref=e95]: Precision Care
+        - generic [ref=e96]:
+          - img "design icon" [ref=e97]
+          - paragraph [ref=e99]: Aesthetic Artistry
+    - generic [ref=e103]:
+      - generic [ref=e105]:
+        - generic [ref=e106]:
+          - generic [ref=e108]: OUR expertise
+          - heading "Curated care for every smile journey." [level=2] [ref=e111]
+        - generic "Personalized care guided by expertise, crafted to deliver comfort, precision, and naturally beautiful results." [ref=e113]:
+          - generic [ref=e115]:
+            - paragraph [ref=e116]: Personalized care guided by expertise,
+            - paragraph [ref=e117]: crafted to deliver comfort, precision, and
+            - paragraph [ref=e118]: naturally beautiful results.
+      - list [ref=e120]:
+        - listitem [ref=e121]:
+          - link "Invisible Restoration. service icon 45–60 min Duration service icon Gentle & Seamless Comfort Level service icon Long-term oral health Result" [ref=e122] [cursor=pointer]:
+            - /url: /service/invisible-restoration
+            - heading "Invisible Restoration." [level=3] [ref=e123]
+            - generic [ref=e124]:
+              - generic [ref=e125]:
+                - img "service icon"
+                - generic [ref=e126]:
+                  - generic [ref=e127]: 45–60 min
+                  - generic [ref=e128]: Duration
+              - generic [ref=e129]:
+                - img "service icon"
+                - generic [ref=e130]:
+                  - generic [ref=e131]: Gentle & Seamless
+                  - generic [ref=e132]: Comfort Level
+              - generic [ref=e133]:
+                - img "service icon"
+                - generic [ref=e134]:
+                  - generic [ref=e135]: Long-term oral health
+                  - generic [ref=e136]: Result
+        - listitem [ref=e137]:
+          - link "Advanced Renewal. service icon 60 Min Duration service icon Gentle & Non-invasive Comfort Level service icon Instant Radiance Boost Result" [ref=e138] [cursor=pointer]:
+            - /url: /service/advanced-renewal
+            - heading "Advanced Renewal." [level=3] [ref=e139]
+            - generic [ref=e140]:
+              - generic [ref=e141]:
+                - img "service icon"
+                - generic [ref=e142]:
+                  - generic [ref=e143]: 60 Min
+                  - generic [ref=e144]: Duration
+              - generic [ref=e145]:
+                - img "service icon"
+                - generic [ref=e146]:
+                  - generic [ref=e147]: Gentle & Non-invasive
+                  - generic [ref=e148]: Comfort Level
+              - generic [ref=e149]:
+                - img "service icon"
+                - generic [ref=e150]:
+                  - generic [ref=e151]: Instant Radiance Boost
+                  - generic [ref=e152]: Result
+        - listitem [ref=e153]:
+          - link "Signature Illumination. service icon 60 – 90 Min Duration service icon Gentle & Non-invasive Comfort Level service icon Instant Radiance Boost Result" [ref=e154] [cursor=pointer]:
+            - /url: /service/signature-illumination
+            - heading "Signature Illumination." [level=3] [ref=e155]
+            - generic [ref=e156]:
+              - generic [ref=e157]:
+                - img "service icon"
+                - generic [ref=e158]:
+                  - generic [ref=e159]: 60 – 90 Min
+                  - generic [ref=e160]: Duration
+              - generic [ref=e161]:
+                - img "service icon"
+                - generic [ref=e162]:
+                  - generic [ref=e163]: Gentle & Non-invasive
+                  - generic [ref=e164]: Comfort Level
+              - generic [ref=e165]:
+                - img "service icon"
+                - generic [ref=e166]:
+                  - generic [ref=e167]: Instant Radiance Boost
+                  - generic [ref=e168]: Result
+        - listitem [ref=e169]:
+          - link "Calming Sedation. service icon 30–45 min Duration service icon Gentle & Seamless Comfort Level service icon Instant Radiance Boost Result" [ref=e170] [cursor=pointer]:
+            - /url: /service/calming-sedation
+            - heading "Calming Sedation." [level=3] [ref=e171]
+            - generic [ref=e172]:
+              - generic [ref=e173]:
+                - img "service icon"
+                - generic [ref=e174]:
+                  - generic [ref=e175]: 30–45 min
+                  - generic [ref=e176]: Duration
+              - generic [ref=e177]:
+                - img "service icon"
+                - generic [ref=e178]:
+                  - generic [ref=e179]: Gentle & Seamless
+                  - generic [ref=e180]: Comfort Level
+              - generic [ref=e181]:
+                - img "service icon"
+                - generic [ref=e182]:
+                  - generic [ref=e183]: Instant Radiance Boost
+                  - generic [ref=e184]: Result
+      - link "view all services" [ref=e187] [cursor=pointer]:
+        - /url: /services
+        - generic [ref=e188]:
+          - generic:
+            - generic "view all services":
+              - generic:
+                - generic: v
+                - generic: i
+                - generic: e
+                - generic: w
+              - generic:
+                - generic: a
+                - generic: l
+                - generic: l
+              - generic:
+                - generic: s
+                - generic: e
+                - generic: r
+                - generic: v
+                - generic: i
+                - generic: c
+                - generic: e
+                - generic: s
+    - generic [ref=e194]:
+      - img "clinic" [ref=e196]
+      - generic [ref=e197]:
+        - generic [ref=e198]:
+          - generic [ref=e201]: our clinic
+          - generic [ref=e202]:
+            - heading "Precision dentistry, quietly redefined." [level=2] [ref=e205]
+            - generic "Personalized care guided by expertise, crafted to deliver comfort, precision, and naturally beautiful results." [ref=e206]:
+              - generic [ref=e208]:
+                - paragraph [ref=e209]: Personalized care guided by expertise, crafted to
+                - paragraph [ref=e210]: deliver comfort, precision, and naturally beautiful
+                - paragraph [ref=e211]: results.
+            - link "Explore the Clinic" [ref=e213] [cursor=pointer]:
+              - /url: /about
+              - generic [ref=e214]:
+                - generic:
+                  - generic "Explore the Clinic":
+                    - generic:
+                      - generic: E
+                      - generic: x
+                      - generic: p
+                      - generic: l
+                      - generic: o
+                      - generic: r
+                      - generic: e
+                    - generic:
+                      - generic: t
+                      - generic: h
+                      - generic: e
+                    - generic:
+                      - generic: C
+                      - generic: l
+                      - generic: i
+                      - generic: "n"
+                      - generic: i
+                      - generic: c
+        - generic [ref=e220]:
+          - generic [ref=e222]:
+            - img "design icon" [ref=e223]
+            - heading "Gentle Patient Care" [level=3] [ref=e225]
+            - paragraph [ref=e226]: Focused on preventive and general care, building long-term trust through
+          - generic [ref=e228]:
+            - img "design icon" [ref=e229]
+            - heading "Precision Dentistry" [level=3] [ref=e231]
+            - paragraph [ref=e232]: Advanced digital tools help us deliver accurate, efficient, and refined results.
+    - generic [ref=e236]:
+      - generic [ref=e238]:
+        - generic [ref=e239]:
+          - generic [ref=e242]: meet the experts
+          - generic [ref=e243]:
+            - generic [ref=e244]:
+              - heading "Meet the mind" [level=2] [ref=e245]
+              - generic [ref=e246]:
+                - img "profile image"
+                - img "profile image"
+                - img "profile image"
+                - generic [ref=e248]: 6+
+            - heading "behind your smile." [level=2] [ref=e250]
+        - generic [ref=e251]:
+          - generic "A team of skilled professionals focused on one goal — delivering your healthiest." [ref=e252]:
+            - generic [ref=e254]:
+              - paragraph [ref=e255]: A team of skilled professionals focused on one
+              - paragraph [ref=e256]: goal — delivering your healthiest.
+          - link "All members" [ref=e258] [cursor=pointer]:
+            - /url: /team
+            - generic [ref=e259]: All members
+      - region "carousel" [ref=e261]:
+        - generic [ref=e262]:
+          - group "1 of 5" [ref=e263]:
+            - list [ref=e265]:
+              - listitem [ref=e266]:
+                - generic [ref=e267]:
+                  - link "Dr. hana Sterling" [ref=e268] [cursor=pointer]:
+                    - /url: /team/dr-hana-sterling
+                    - img "Dr. hana Sterling" [ref=e269]
+                  - generic [ref=e270]:
+                    - paragraph [ref=e271]: Dr. hana Sterling
+                    - generic [ref=e272]:
+                      - paragraph [ref=e273]: Oral Surgery
+                      - generic [ref=e274]:
+                        - link "social icon" [ref=e275] [cursor=pointer]:
+                          - /url: https://facebook.com/
+                          - img "social icon"
+                        - link "social icon" [ref=e276] [cursor=pointer]:
+                          - /url: https://linkedin.com/
+                          - img "social icon"
+                    - paragraph [ref=e278]: Expert in restorative treatments, valued for patience, clear communication, and a reassuring chairside manner.
+          - group [ref=e279]:
+            - list [ref=e281]:
+              - listitem [ref=e282]:
+                - generic [ref=e283]:
+                  - link [ref=e284] [cursor=pointer]:
+                    - /url: /team/dr-julian-thorne
+                    - img [ref=e285]
+                  - generic [ref=e286]:
+                    - paragraph [ref=e287]: Dr. Julian Thorne
+                    - generic [ref=e288]:
+                      - paragraph [ref=e289]: Root Canal Therapy
+                      - generic [ref=e290]:
+                        - link [ref=e291] [cursor=pointer]:
+                          - /url: https://facebook.com/
+                        - link [ref=e292] [cursor=pointer]:
+                          - /url: https://linkedin.com/
+                    - paragraph [ref=e294]: Specialized in cosmetic dentistry, known for a gentle approach and making patients feel.
+          - group [ref=e295]:
+            - list [ref=e297]:
+              - listitem [ref=e298]:
+                - generic [ref=e299]:
+                  - link [ref=e300] [cursor=pointer]:
+                    - /url: /team/dr-sara-stamper
+                    - img [ref=e301]
+                  - generic [ref=e302]:
+                    - paragraph [ref=e303]: Dr. Sarah Stamper
+                    - generic [ref=e304]:
+                      - paragraph [ref=e305]: Invisalign Specialist
+                      - generic [ref=e306]:
+                        - link [ref=e307] [cursor=pointer]:
+                          - /url: https://facebook.com/
+                        - link [ref=e308] [cursor=pointer]:
+                          - /url: https://linkedin.com/
+                    - paragraph [ref=e310]: Experienced in advanced procedures, combining precision with a calm, supportive attitude that patients rely on.
+          - group [ref=e311]:
+            - list [ref=e313]:
+              - listitem [ref=e314]:
+                - generic [ref=e315]:
+                  - link [ref=e316] [cursor=pointer]:
+                    - /url: /team/dr-tom-sterling
+                    - img [ref=e317]
+                  - generic [ref=e318]:
+                    - paragraph [ref=e319]: Dr. Tom Sterling
+                    - generic [ref=e320]:
+                      - paragraph [ref=e321]: Oral Surgery
+                      - generic [ref=e322]:
+                        - link [ref=e323] [cursor=pointer]:
+                          - /url: https://facebook.com/
+                        - link [ref=e324] [cursor=pointer]:
+                          - /url: https://linkedin.com/
+                    - paragraph [ref=e326]: Focused on preventive and general care, building long-term trust through honesty, consistency.
+          - group [ref=e327]:
+            - list [ref=e329]:
+              - listitem [ref=e330]:
+                - generic [ref=e331]:
+                  - link [ref=e332] [cursor=pointer]:
+                    - /url: /team/dr-rosa-stamper
+                    - img [ref=e333]
+                  - generic [ref=e334]:
+                    - paragraph [ref=e335]: Dr. Rosa Stamper
+                    - generic [ref=e336]:
+                      - paragraph [ref=e337]: Invisalign Specialist
+                      - generic [ref=e338]:
+                        - link [ref=e339] [cursor=pointer]:
+                          - /url: https://facebook.com/
+                        - link [ref=e340] [cursor=pointer]:
+                          - /url: https://instagram.com/DrLilyFoster
+                    - paragraph [ref=e342]: Specialized in cosmetic dentistry, known for a gentle approach and making patients feel.
+        - button "previous slide" [ref=e344] [cursor=pointer]:
+          - img "arrow" [ref=e345]
+        - button "next slide" [ref=e346] [cursor=pointer]:
+          - img "arrow" [ref=e347]
+    - generic [ref=e348]:
+      - generic [ref=e349]:
+        - img "design image"
+      - generic [ref=e350]:
+        - generic [ref=e351]:
+          - generic [ref=e353]: case study
+          - generic [ref=e355]:
+            - heading "Smiles that speak volumes." [level=2] [ref=e358]
+            - generic "Real transformations backed by expertise, delivering consistent and confident results." [ref=e359]:
+              - generic [ref=e361]:
+                - paragraph [ref=e362]: Real transformations backed by expertise,
+                - paragraph [ref=e363]: delivering consistent and confident results.
+            - link "see All cases" [ref=e365] [cursor=pointer]:
+              - /url: /case-studies
+              - generic [ref=e366]:
+                - generic:
+                  - generic "see All cases":
+                    - generic:
+                      - generic: s
+                      - generic: e
+                      - generic: e
+                    - generic:
+                      - generic: A
+                      - generic: l
+                      - generic: l
+                    - generic:
+                      - generic: c
+                      - generic: a
+                      - generic: s
+                      - generic: e
+                      - generic: s
+        - generic [ref=e370]:
+          - list [ref=e373]:
+            - listitem [ref=e374]:
+              - generic [ref=e375]:
+                - generic [ref=e376]:
+                  - generic [ref=e379]:
+                    - heading "Smile Transformation with Porcelain Veneers." [level=2] [ref=e382]
+                    - generic [ref=e383]:
+                      - generic [ref=e384]:
+                        - generic [ref=e385]: "Patient:"
+                        - generic [ref=e386]: David Brown
+                      - generic [ref=e387]:
+                        - generic [ref=e388]: "Treatment:"
+                        - generic [ref=e389]: Veneers
+                      - generic [ref=e390]:
+                        - generic [ref=e391]: "Timeline:"
+                        - generic [ref=e392]: 3 weeks
+                    - link "view details" [ref=e395] [cursor=pointer]:
+                      - /url: /case-studies/smile-transformation-with-porcelain-veneers
+                      - generic [ref=e396]:
+                        - generic:
+                          - generic "view details":
+                            - generic:
+                              - generic: v
+                              - generic: i
+                              - generic: e
+                              - generic: w
+                            - generic:
+                              - generic: d
+                              - generic: e
+                              - generic: t
+                              - generic: a
+                              - generic: i
+                              - generic: l
+                              - generic: s
+                  - generic [ref=e400]:
+                    - generic [ref=e401]:
+                      - generic [ref=e402]: 6+
+                      - generic [ref=e403]: Implants placed.
+                    - generic [ref=e404]:
+                      - generic [ref=e405]: 86%
+                      - generic [ref=e406]: Improved clarity.
+                    - generic [ref=e407]:
+                      - generic [ref=e408]: 10/10
+                      - generic [ref=e409]: Treatment success.
+                - link [ref=e410] [cursor=pointer]:
+                  - /url: /case-studies/smile-transformation-with-porcelain-veneers
+          - list [ref=e413]:
+            - listitem [ref=e414]:
+              - generic [ref=e415]:
+                - generic [ref=e416]:
+                  - generic [ref=e419]:
+                    - heading "Restoring Confidence with Dental Implants." [level=2] [ref=e422]
+                    - generic [ref=e423]:
+                      - generic [ref=e424]:
+                        - generic [ref=e425]: "Patient:"
+                        - generic [ref=e426]: Emily Davis
+                      - generic [ref=e427]:
+                        - generic [ref=e428]: "Treatment:"
+                        - generic [ref=e429]: Root Canal
+                      - generic [ref=e430]:
+                        - generic [ref=e431]: "Timeline:"
+                        - generic [ref=e432]: 2 visits over 1 month
+                    - link "view details" [ref=e435] [cursor=pointer]:
+                      - /url: /case-studies/restoring-confidence-with-dental-implants
+                      - generic [ref=e436]:
+                        - generic:
+                          - generic "view details":
+                            - generic:
+                              - generic: v
+                              - generic: i
+                              - generic: e
+                              - generic: w
+                            - generic:
+                              - generic: d
+                              - generic: e
+                              - generic: t
+                              - generic: a
+                              - generic: i
+                              - generic: l
+                              - generic: s
+                  - generic [ref=e440]:
+                    - generic [ref=e441]:
+                      - generic [ref=e442]: 6+
+                      - generic [ref=e443]: Implants placed.
+                    - generic [ref=e444]:
+                      - generic [ref=e445]: 86%
+                      - generic [ref=e446]: Improved clarity.
+                    - generic [ref=e447]:
+                      - generic [ref=e448]: 10/10
+                      - generic [ref=e449]: Treatment success.
+                - link [ref=e450] [cursor=pointer]:
+                  - /url: /case-studies/restoring-confidence-with-dental-implants
+          - list [ref=e453]:
+            - listitem [ref=e454]:
+              - generic [ref=e455]:
+                - generic [ref=e456]:
+                  - generic [ref=e459]:
+                    - heading "Orthodontic Treatment Journey." [level=2] [ref=e462]
+                    - generic [ref=e463]:
+                      - generic [ref=e464]:
+                        - generic [ref=e465]: "Patient:"
+                        - generic [ref=e466]: Michael Johnson
+                      - generic [ref=e467]:
+                        - generic [ref=e468]: "Treatment:"
+                        - generic [ref=e469]: Orthodontics
+                      - generic [ref=e470]:
+                        - generic [ref=e471]: "Timeline:"
+                        - generic [ref=e472]: 18 months
+                    - link "view details" [ref=e475] [cursor=pointer]:
+                      - /url: /case-studies/orthodontic-treatment-journey
+                      - generic [ref=e476]:
+                        - generic:
+                          - generic "view details":
+                            - generic:
+                              - generic: v
+                              - generic: i
+                              - generic: e
+                              - generic: w
+                            - generic:
+                              - generic: d
+                              - generic: e
+                              - generic: t
+                              - generic: a
+                              - generic: i
+                              - generic: l
+                              - generic: s
+                  - generic [ref=e480]:
+                    - generic [ref=e481]:
+                      - generic [ref=e482]: 4+
+                      - generic [ref=e483]: Implants placed.
+                    - generic [ref=e484]:
+                      - generic [ref=e485]: 92%
+                      - generic [ref=e486]: Improved clarity.
+                    - generic [ref=e487]:
+                      - generic [ref=e488]: 10/10
+                      - generic [ref=e489]: Treatment success.
+                - link [ref=e490] [cursor=pointer]:
+                  - /url: /case-studies/orthodontic-treatment-journey
+          - list [ref=e493]:
+            - listitem [ref=e494]:
+              - generic [ref=e495]:
+                - generic [ref=e496]:
+                  - generic [ref=e499]:
+                    - heading "Full Mouth Rehabilitation." [level=2] [ref=e502]
+                    - generic [ref=e503]:
+                      - generic [ref=e504]:
+                        - generic [ref=e505]: "Patient:"
+                        - generic [ref=e506]: Sarah Smith
+                      - generic [ref=e507]:
+                        - generic [ref=e508]: "Treatment:"
+                        - generic [ref=e509]: Teeth Whitening
+                      - generic [ref=e510]:
+                        - generic [ref=e511]: "Timeline:"
+                        - generic [ref=e512]: 1 week
+                    - link "view details" [ref=e515] [cursor=pointer]:
+                      - /url: /case-studies/full-mouth-rehabilitation
+                      - generic [ref=e516]:
+                        - generic:
+                          - generic "view details":
+                            - generic:
+                              - generic: v
+                              - generic: i
+                              - generic: e
+                              - generic: w
+                            - generic:
+                              - generic: d
+                              - generic: e
+                              - generic: t
+                              - generic: a
+                              - generic: i
+                              - generic: l
+                              - generic: s
+                  - generic [ref=e520]:
+                    - generic [ref=e521]:
+                      - generic [ref=e522]: 7+
+                      - generic [ref=e523]: Implants placed.
+                    - generic [ref=e524]:
+                      - generic [ref=e525]: 83%
+                      - generic [ref=e526]: Improved clarity.
+                    - generic [ref=e527]:
+                      - generic [ref=e528]: 9/10
+                      - generic [ref=e529]: Treatment success.
+                - link [ref=e530] [cursor=pointer]:
+                  - /url: /case-studies/full-mouth-rehabilitation
+    - generic [ref=e534]:
+      - generic [ref=e536]:
+        - generic [ref=e537]:
+          - generic [ref=e540]: kind words
+          - heading "Curated care for every smile journey." [level=2] [ref=e543]
+        - generic "A team of skilled professionals focused on one goal — delivering your healthiest, most confident smile." [ref=e545]:
+          - generic [ref=e547]:
+            - paragraph [ref=e548]: A team of skilled professionals focused on one
+            - paragraph [ref=e549]: goal — delivering your healthiest, most
+            - paragraph [ref=e550]: confident smile.
+      - generic [ref=e551]:
+        - generic [ref=e553]:
+          - img "client image" [ref=e554]
+          - generic [ref=e555]:
+            - generic [ref=e556]:
+              - generic [ref=e557]: James S.
+              - generic [ref=e558]: Simple Client
+            - paragraph [ref=e559]: From the first consultation to the final result, everything felt smooth and well-organized.
+        - generic [ref=e561]:
+          - img "client image" [ref=e562]
+          - generic [ref=e563]:
+            - generic [ref=e564]:
+              - generic [ref=e565]: Sarah L.
+              - generic [ref=e566]: Simple Client
+            - paragraph [ref=e567]: Great experience overall. Everything was handled with precision and professionalism.
+        - generic [ref=e569]:
+          - img "client image" [ref=e570]
+          - generic [ref=e571]:
+            - generic [ref=e572]:
+              - generic [ref=e573]: Esther K.
+              - generic [ref=e574]: Simple Client
+            - paragraph [ref=e575]: Great experience overall. Everything was handled with precision and professionalism.
+        - generic [ref=e577]:
+          - img "client image" [ref=e578]
+          - generic [ref=e579]:
+            - generic [ref=e580]:
+              - generic [ref=e581]: Michael H.
+              - generic [ref=e582]: Simple Client
+            - paragraph [ref=e583]: From the first consultation to the final result, everything felt smooth and well-organized.
+        - generic [ref=e585]:
+          - img "doctor" [ref=e586]
+          - generic [ref=e587]:
+            - generic [ref=e588]:
+              - generic [ref=e589]: Hana H.
+              - generic [ref=e590]: Simple Client
+            - paragraph [ref=e591]: Great experience overall. Everything was handled with precision and professionalism.
+    - generic [ref=e594]:
+      - img "design bg image"
+      - generic [ref=e595]:
+        - generic [ref=e596]:
+          - generic [ref=e598]: faq
+          - generic [ref=e600]:
+            - heading "Everything you need to know." [level=2] [ref=e603]
+            - generic "Answers to your most common questions." [ref=e604]:
+              - paragraph [ref=e607]: Answers to your most common questions.
+        - generic [ref=e608]:
+          - generic [ref=e609]:
+            - button "What should I expect during my first visit?" [ref=e610] [cursor=pointer]:
+              - paragraph [ref=e611]: What should I expect during my first visit?
+            - navigation "What should I expect during my first visit?" [ref=e615]:
+              - paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.
+          - generic [ref=e616]:
+            - button "How do you ensure a pain-free and calm treatment?" [ref=e617] [cursor=pointer]:
+              - paragraph [ref=e618]: How do you ensure a pain-free and calm treatment?
+            - navigation "How do you ensure a pain-free and calm treatment?" [ref=e622]:
+              - paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+          - generic [ref=e623]:
+            - button "Do you offer pain-free or sedation options during treatments?" [ref=e624] [cursor=pointer]:
+              - paragraph [ref=e625]: Do you offer pain-free or sedation options during treatments?
+            - navigation "Do you offer pain-free or sedation options during treatments?" [ref=e629]:
+              - paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.
+          - generic [ref=e630]:
+            - button "Are cosmetic dental procedures safe and suitable for all ages?" [ref=e631] [cursor=pointer]:
+              - paragraph [ref=e632]: Are cosmetic dental procedures safe and suitable for all ages?
+            - navigation "Are cosmetic dental procedures safe and suitable for all ages?" [ref=e636]:
+              - paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.
+          - generic [ref=e637]:
+            - button "What can I expect during my first dental visit?" [ref=e638] [cursor=pointer]:
+              - paragraph [ref=e639]: What can I expect during my first dental visit?
+            - navigation "What can I expect during my first dental visit?" [ref=e643]:
+              - paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+          - generic [ref=e644]:
+            - button "What can I expect during my first dental visit?" [ref=e645] [cursor=pointer]:
+              - paragraph [ref=e646]: What can I expect during my first dental visit?
+            - navigation "What can I expect during my first dental visit?" [ref=e650]:
+              - paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.
+    - generic [ref=e655]:
+      - generic [ref=e658]:
+        - heading "Start your smile journey." [level=2] [ref=e661]
+        - generic "Real transformations backed by expertise, delivering consistent." [ref=e662]:
+          - paragraph [ref=e665]: Real transformations backed by expertise, delivering consistent.
+      - form "service" [ref=e667]:
+        - generic [ref=e668]:
+          - textbox "First name" [ref=e669]
+          - textbox "Last name" [ref=e670]
+        - generic [ref=e671]:
+          - textbox "Phone number" [ref=e672]
+          - textbox "Service" [ref=e673]
+        - generic [ref=e674]:
+          - paragraph [ref=e675]: "Best time to connect:"
+          - generic [ref=e676]:
+            - generic [ref=e677]:
+              - radio "morning" [ref=e679]
+              - generic [ref=e680] [cursor=pointer]: morning
+            - generic [ref=e681]:
+              - radio "afternoon" [ref=e683]
+              - generic [ref=e684] [cursor=pointer]: afternoon
+            - generic [ref=e685]:
+              - radio "anytime" [ref=e687]
+              - generic [ref=e688] [cursor=pointer]: anytime
+        - generic [ref=e689]:
+          - button "Request my visit" [ref=e690] [cursor=pointer]
+          - generic [ref=e691]:
+            - img "blue heart"
+            - generic [ref=e692]: No commitment required. We’ll just chat to discuss your options first
+  - contentinfo [ref=e693]:
+    - generic [ref=e697]:
+      - generic [ref=e698]:
+        - link "Alveora" [ref=e699] [cursor=pointer]:
+          - /url: /
+          - heading "Alveora" [level=2] [ref=e700]
+        - generic [ref=e703]:
+          - generic [ref=e704]:
+            - generic [ref=e705]: PAGES
+            - generic [ref=e707]:
+              - link "About" [ref=e708] [cursor=pointer]:
+                - /url: /about
+                - generic [ref=e709]: About
+              - link "Services" [ref=e711] [cursor=pointer]:
+                - /url: /services
+                - generic [ref=e712]: Services
+              - link "Contact" [ref=e714] [cursor=pointer]:
+                - /url: /contact
+                - generic [ref=e715]: Contact
+              - link "Blog" [ref=e717] [cursor=pointer]:
+                - /url: /blog
+                - generic [ref=e718]: Blog
+          - generic [ref=e720]:
+            - generic [ref=e721]: Other Pages
+            - generic [ref=e723]:
+              - link "Pricing" [ref=e724] [cursor=pointer]:
+                - /url: /pricing
+                - generic [ref=e725]: Pricing
+              - link "team" [ref=e727] [cursor=pointer]:
+                - /url: /team
+                - generic [ref=e728]: team
+              - link "case studies" [ref=e730] [cursor=pointer]:
+                - /url: /case-studies
+                - generic [ref=e731]: case studies
+              - link "case single" [ref=e733] [cursor=pointer]:
+                - /url: https://alveora.webflow.io/case-studies/smile-transformation-with-porcelain-veneers
+                - generic [ref=e734]: case single
+          - generic [ref=e736]:
+            - generic [ref=e737]: cms Pages
+            - generic [ref=e739]:
+              - link "Plan Signle" [ref=e740] [cursor=pointer]:
+                - /url: https://alveora.webflow.io/product/enterprise
+                - generic [ref=e741]: Plan Signle
+              - link "Blog Single" [ref=e743] [cursor=pointer]:
+                - /url: https://alveora.webflow.io/blog/a-parents-guide-to-childrens-oral-hygiene
+                - generic [ref=e744]: Blog Single
+              - link "Service Single" [ref=e746] [cursor=pointer]:
+                - /url: https://alveora.webflow.io/service/invisible-restoration
+                - generic [ref=e747]: Service Single
+              - link "Team Single" [ref=e749] [cursor=pointer]:
+                - /url: https://alveora.webflow.io/team/dr-hana-sterling
+                - generic [ref=e750]: Team Single
+          - generic [ref=e752]:
+            - generic [ref=e753]: legal Pages
+            - generic [ref=e755]:
+              - link "Style Guide" [ref=e756] [cursor=pointer]:
+                - /url: /template-pages/style-guide
+                - generic [ref=e757]: Style Guide
+              - link "Licenses" [ref=e759] [cursor=pointer]:
+                - /url: /template-pages/licenses
+                - generic [ref=e760]: Licenses
+              - link "Change log" [ref=e762] [cursor=pointer]:
+                - /url: /template-pages/change-log
+                - generic [ref=e763]: Change log
+      - generic [ref=e766]:
+        - generic [ref=e767]:
+          - text: Designed by
+          - link "Zafre" [ref=e768] [cursor=pointer]:
+            - /url: https://zafremedia.com/
+          - text: Powered by
+          - link "Webflow" [ref=e769] [cursor=pointer]:
+            - /url: https://webflow.com/
+        - generic [ref=e770]:
+          - link "Terms & conditions" [ref=e771] [cursor=pointer]:
+            - /url: https://webflow.com/
+          - link "Privacy policy" [ref=e772] [cursor=pointer]:
+            - /url: https://webflow.com/
