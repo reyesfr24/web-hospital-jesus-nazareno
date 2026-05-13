@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npm create:*)",
       "Bash(printf '\\\\n')",
-      "Bash(grep -E \"\\\\.\\(css|ts|tsx\\)$\")"
+      "Bash(grep -E \"\\\\.\\(css|ts|tsx\\)$\")",
+      "Bash(pnpm --version)",
+      "Bash(pnpm install *)"
     ]
   }
 }
