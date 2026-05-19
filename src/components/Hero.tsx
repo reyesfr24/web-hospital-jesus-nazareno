@@ -1,3 +1,5 @@
+import fondo2 from '/img/fondo2.jpg';
+
 export default function Hero() {
   return (
     <section
@@ -17,9 +19,9 @@ export default function Hero() {
           position: 'absolute',
           inset: 0,
           backgroundImage: `
-            linear-gradient(rgba(100, 6, 121, 0.35), rgba(100, 6, 121, 0.35)),
-            linear-gradient(rgba(100, 6, 121, 0) 45%, rgba(0, 0, 0, 0.68)),
-            url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1920&q=80')
+            linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)),
+            linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.62)),
+            url('${fondo2}')
           `,
           backgroundSize: 'cover',
           backgroundPosition: 'center 30%',
