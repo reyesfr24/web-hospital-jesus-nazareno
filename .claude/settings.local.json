@@ -16,7 +16,11 @@
       "Bash(curl -s \"https://alveora.webflow.io/\")",
       "Bash(curl -s \"https://cdn.prod.website-files.com/69788da23668d30f145dda3f/css/alveora.webflow.shared.9d8fb6478.min.css\")",
       "Bash(grep -oP '--[a-z][^:;]+:[^;]+')",
-      "mcp__playwright__browser_resize"
+      "mcp__playwright__browser_resize",
+      "Bash(pnpm dev *)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(pkill -9 -f \"vite\")",
+      "Bash(pkill -9 -f \"node.*vite\")"
     ]
   }
 }

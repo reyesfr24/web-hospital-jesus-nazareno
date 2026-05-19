@@ -1,0 +1,141 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e5]:
+      - link "Hospital de Jesús Nazareno":
+        - /url: "#inicio"
+        - img "Hospital de Jesús Nazareno"
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Inicio" [ref=e8] [cursor=pointer]:
+            - /url: "#inicio"
+        - listitem [ref=e9]:
+          - link "Historia" [ref=e10] [cursor=pointer]:
+            - /url: "#historia"
+        - listitem [ref=e11]:
+          - link "Servicios" [ref=e12] [cursor=pointer]:
+            - /url: "#servicios"
+        - listitem [ref=e13]:
+          - link "Contacto" [ref=e14] [cursor=pointer]:
+            - /url: "#contacto"
+      - link "Contactar" [ref=e15] [cursor=pointer]:
+        - /url: "#contacto"
+  - main [ref=e16]:
+    - generic [ref=e19]:
+      - generic [ref=e21]:
+        - generic [ref=e23]: Fundado en 1819
+        - heading "Hospital de Jesús Nazareno" [level=1] [ref=e25]
+        - generic [ref=e26]:
+          - link "Conocer más" [ref=e27] [cursor=pointer]:
+            - /url: "#historia"
+          - link "Nuestros servicios" [ref=e28] [cursor=pointer]:
+            - /url: "#servicios"
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]: +200 años
+            - generic [ref=e32]: de historia
+          - generic [ref=e33]:
+            - generic [ref=e34]: Modelo ACP
+            - generic [ref=e35]: centrado en la persona
+          - generic [ref=e36]:
+            - generic [ref=e37]: Amor cristiano
+            - generic [ref=e38]: en cada cuidado
+      - paragraph [ref=e40]:
+        - text: Más de 200 años cuidando con dignidad,
+        - text: humanidad y amor cristiano
+    - generic [ref=e42]:
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Desde 1819
+        - heading "Nuestra Historia" [level=2] [ref=e46]
+        - paragraph [ref=e48]: Más de dos siglos de vocación de servicio, guiados por la fe cristiana y el amor a los más necesitados.
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - heading "El origen cristiano" [level=3] [ref=e53]
+            - paragraph [ref=e54]:
+              - text: El Hospital de Jesús Nazareno tiene su origen en la figura de
+              - strong [ref=e55]: don Bernardo Moreno de Pedrajas (1745–1818)
+              - text: ", sacerdote y vicario de la parroquia de San Miguel Arcángel. En una época especialmente dura, caracterizada por crisis económicas, hambrunas y epidemias, don Bernardo entendió la caridad cristiana como una forma de vida."
+            - paragraph [ref=e56]: Gracias a una gestión austera de su patrimonio, destinó sus bienes a aliviar el sufrimiento de los pobres, enfermos y desamparados. Esta vocación culminó en su testamento (1817–1818), donde dejó dispuesto el nacimiento del Hospital de Jesús Nazareno.
+          - generic [ref=e57]:
+            - heading "Modernización y compromiso actual" [level=3] [ref=e58]
+            - paragraph [ref=e59]: Entre 1999 y 2007 se llevaron a cabo importantes obras de reforma que culminaron con la construcción del edificio actual, concebido para albergar una residencia de personas mayores con instalaciones modernas, accesibles y funcionales.
+            - paragraph [ref=e60]:
+              - text: Hoy, el hospital sigue caminando fiel a su origen cristiano, implementando el modelo de
+              - strong [ref=e61]: Atención Centrada en la Persona (ACP)
+              - text: ", que sitúa a cada residente en el centro del cuidado, respetando sus gustos, preferencias, historia de vida y decisiones."
+        - img "Cuidado con humanidad en el Hospital de Jesús Nazareno" [ref=e66]
+    - generic [ref=e69]:
+      - generic [ref=e71]:
+        - paragraph [ref=e72]: Atención Centrada en la Persona
+        - heading "Nuestros Servicios" [level=2] [ref=e73]
+        - paragraph [ref=e75]: Cuidado integral y personalizado que respeta la historia de vida, los valores y las preferencias de cada residente.
+      - generic [ref=e77]:
+        - generic [ref=e79]:
+          - img [ref=e81]
+          - heading "Psicología y Trabajo Social" [level=3] [ref=e83]
+          - paragraph [ref=e84]: Escuchamos, acompañamos y respetamos los ritmos personales. Trabajamos desde la historia de vida, los valores y las preferencias de cada residente.
+          - blockquote [ref=e85]: "\"ACP significa comprender antes de intervenir.\""
+        - generic [ref=e87]:
+          - img [ref=e89]
+          - heading "Enfermería" [level=3] [ref=e91]
+          - paragraph [ref=e92]: Seguimiento continuo del estado de salud, ajustando cuidados y medicación. Se prioriza el confort, la seguridad y la dignidad.
+          - blockquote [ref=e93]: "\"La atención sanitaria también puede ser cercana y humana.\""
+        - generic [ref=e95]:
+          - img [ref=e97]
+          - heading "Fisioterapia" [level=3] [ref=e99]
+          - paragraph [ref=e100]: Intervención individual teniendo en cuenta capacidades, deseos y objetivos. Fomento del movimiento funcional y prevención de caídas.
+          - blockquote [ref=e101]: "\"En ACP, el objetivo es la calidad de vida.\""
+        - generic [ref=e103]:
+          - img [ref=e105]
+          - heading "Terapia Ocupacional" [level=3] [ref=e107]
+          - paragraph [ref=e108]: Actividades basadas en intereses, hábitos y roles previos, fomentando la participación activa y la toma de decisiones.
+          - blockquote [ref=e109]: "\"La persona elige, participa y decide.\""
+        - generic [ref=e111]:
+          - img [ref=e113]
+          - heading "Gerocultores y Cuidadores" [level=3] [ref=e115]
+          - paragraph [ref=e116]: Atención diaria respetando preferencias, rutinas y tiempos personales. El vínculo humano y el trato cercano son la base del cuidado.
+          - blockquote [ref=e117]: "\"Cuidar no es hacer por la persona, es hacer con ella.\""
+        - generic [ref=e119]:
+          - img [ref=e121]
+          - heading "Cocina" [level=3] [ref=e123]
+          - paragraph [ref=e124]: Alimentación adaptada a las necesidades de salud, pero también a los gustos, costumbres y preferencias personales.
+          - blockquote [ref=e125]: "\"En ACP, la comida no es solo nutrición.\""
+      - link "Contactar con nosotros" [ref=e128] [cursor=pointer]:
+        - /url: "#contacto"
+  - contentinfo [ref=e130]:
+    - generic [ref=e131]:
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - img "Hospital de Jesús Nazareno"
+          - paragraph [ref=e134]: Más de 200 años cuidando con dignidad, humanidad y amor cristiano.
+          - generic [ref=e136]: Modelo ACP
+        - generic [ref=e137]:
+          - heading "Navegación" [level=4] [ref=e138]
+          - list [ref=e139]:
+            - listitem [ref=e140]:
+              - link "Inicio" [ref=e141] [cursor=pointer]:
+                - /url: "#inicio"
+            - listitem [ref=e142]:
+              - link "Historia" [ref=e143] [cursor=pointer]:
+                - /url: "#historia"
+            - listitem [ref=e144]:
+              - link "Servicios" [ref=e145] [cursor=pointer]:
+                - /url: "#servicios"
+            - listitem [ref=e146]:
+              - link "Contacto" [ref=e147] [cursor=pointer]:
+                - /url: "#contacto"
+        - generic [ref=e148]:
+          - heading "Contacto" [level=4] [ref=e149]
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - generic [ref=e152]: Dirección
+              - generic [ref=e153]: Plaza Jesús Nazareno, s/n
+            - generic [ref=e154]:
+              - generic [ref=e155]: Teléfono
+              - generic [ref=e156]: +34 000 000 000
+            - generic [ref=e157]:
+              - generic [ref=e158]: Correo
+              - generic [ref=e159]: info@hospitaljesusnazareno.es
+      - generic [ref=e160]:
+        - paragraph [ref=e161]: © 2026 Hospital de Jesús Nazareno. Todos los derechos reservados.
+        - paragraph [ref=e162]: Fundado en 1819 · Vocación cristiana de servicio

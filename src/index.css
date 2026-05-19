@@ -1,1 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --color-brand: #640679;
+  --color-brand-dark: #4a0559;
+  --color-brand-light: #8a0aa3;
+  --color-secondary: #998FC7;
+  --color-accent: #ACF7C1;
+  --color-bg-light: #F8F5FB;
+  --color-text-dark: #1e1e2e;
+  --color-text-secondary: #6b6b7b;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+*, *::before, *::after {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #303030;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Scroll animations ─── */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+
+/* ─── Nav transition ─── */
+.nav-scrolled {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+  box-shadow: 0 1px 24px rgba(100, 6, 121, 0.08);
+}
+
+/* ─── Mobile nav open ─── */
+.mobile-menu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease-out;
+}
+.mobile-menu.open {
+  max-height: 400px;
+}
+
+/* ─── Services grid: always 2 columns on md+, 1 on mobile ─── */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(20px, 3vw, 40px);
+}
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ─── Historia grid: 1 col on mobile, 2 on md+ ─── */
+.historia-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .historia-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
