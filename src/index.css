@@ -64,6 +64,16 @@ body {
   max-height: 400px;
 }
 
+/* ─── Hero grid: 2 cols desktop, 1 col mobile ─── */
+.hero-grid {
+  grid-template-columns: 1fr !important;
+}
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
 /* ─── Services grid: always 2 columns on md+, 1 on mobile ─── */
 .services-grid {
   display: grid;

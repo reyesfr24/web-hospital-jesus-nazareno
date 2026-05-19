@@ -25,7 +25,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'nav-scrolled' : ''}`}
     >
       <div style={{ padding: '0 clamp(24px, 4vw, 48px)' }}>
-        <div className="flex items-center justify-between" style={{ height: '80px' }}>
+        <div className="flex items-center justify-between" style={{ height: '96px' }}>
 
           {/* Logo */}
           <a href="#inicio" className="flex-shrink-0 flex items-center">
@@ -33,7 +33,7 @@ export default function Navbar() {
               src="/logos/logo-transparente-alargado.png"
               alt="Hospital de Jesús Nazareno"
               style={{
-                height: '48px',
+                height: '72px',
                 objectFit: 'contain',
                 filter: scrolled ? 'none' : 'brightness(0) invert(1)',
                 transition: 'filter 0.3s',

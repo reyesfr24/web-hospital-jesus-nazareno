@@ -13,7 +13,7 @@ export default function Hero() {
         flexDirection: 'column',
       }}
     >
-      {/* Background image + dual gradient overlay — mirrors reference site structure */}
+      {/* Background image + gradient overlay */}
       <div
         style={{
           position: 'absolute',
@@ -40,11 +40,21 @@ export default function Hero() {
           minHeight: '100vh',
         }}
       >
-        {/* Main content — top/center */}
-        <div style={{ flex: 1, display: 'flex', alignItems: 'center', paddingTop: '100px' }}>
-          <div style={{ width: '100%', maxWidth: '680px' }}>
-
-            {/* Year badge */}
+        {/* ── Centro: grid 2 columnas ── */}
+        <div
+          style={{
+            flex: 1,
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            alignItems: 'center',
+            paddingTop: '116px',
+            gap: '40px',
+          }}
+          className="hero-grid"
+        >
+          {/* Columna izquierda: badge + H1 + CTAs */}
+          <div>
+            {/* Badge */}
             <div style={{ marginBottom: '28px' }}>
               <span
                 style={{
@@ -80,7 +90,7 @@ export default function Hero() {
                 margin: '0 0 32px',
                 color: '#ffffff',
                 fontWeight: 600,
-                fontSize: 'clamp(2.25rem, 5.5vw, 4.5rem)',
+                fontSize: 'clamp(2.25rem, 4vw, 4rem)',
                 lineHeight: 1.08,
                 letterSpacing: '-0.02em',
               }}
@@ -131,50 +141,63 @@ export default function Hero() {
                 Nuestros servicios
               </a>
             </div>
+          </div>
 
-            {/* Stat badges */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '40px' }}>
-              {[
-                { value: '+200 años', label: 'de historia' },
-                { value: 'Modelo ACP', label: 'centrado en la persona' },
-                { value: 'Amor cristiano', label: 'en cada cuidado' },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    padding: '12px 18px',
-                    borderRadius: '14px',
-                    backgroundColor: 'rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(8px)',
-                    border: '1px solid rgba(255,255,255,0.15)',
-                  }}
-                >
-                  <span style={{ color: '#ACF7C1', fontWeight: 700, fontSize: '0.875rem' }}>{stat.value}</span>
-                  <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.75rem', marginTop: '2px' }}>{stat.label}</span>
-                </div>
-              ))}
-            </div>
+          {/* Columna derecha: eslogan con protagonismo */}
+          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <p
+              style={{
+                margin: 0,
+                color: '#ffffff',
+                fontWeight: 600,
+                fontSize: 'clamp(1.75rem, 3.5vw, 3rem)',
+                lineHeight: 1.2,
+                letterSpacing: '-0.01em',
+                textAlign: 'right',
+                maxWidth: '520px',
+                textShadow: '0 2px 20px rgba(0,0,0,0.3)',
+              }}
+            >
+              Más de 200 años
+              <br />
+              <span style={{ color: '#ACF7C1' }}>cuidando</span> con dignidad,
+              <br />
+              humanidad y amor cristiano
+            </p>
           </div>
         </div>
 
-        {/* Bottom tagline — mirrors reference site's body-text bottom-left */}
-        <div style={{ paddingBottom: '64px', paddingTop: '48px' }}>
-          <p
-            style={{
-              margin: 0,
-              color: 'rgba(255,255,255,0.88)',
-              fontWeight: 500,
-              fontSize: 'clamp(1.125rem, 2.5vw, 1.75rem)',
-              maxWidth: '560px',
-              lineHeight: 1.45,
-            }}
-          >
-            Más de 200 años cuidando con dignidad,
-            <br />
-            humanidad y amor cristiano
-          </p>
+        {/* ── Pie: badges de stats ── */}
+        <div
+          style={{
+            paddingBottom: '56px',
+            paddingTop: '40px',
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '12px',
+          }}
+        >
+          {[
+            { value: '+200 años', label: 'de historia' },
+            { value: 'Modelo ACP', label: 'centrado en la persona' },
+            { value: 'Amor cristiano', label: 'en cada cuidado' },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                padding: '12px 18px',
+                borderRadius: '14px',
+                backgroundColor: 'rgba(255,255,255,0.1)',
+                backdropFilter: 'blur(8px)',
+                border: '1px solid rgba(255,255,255,0.15)',
+              }}
+            >
+              <span style={{ color: '#ACF7C1', fontWeight: 700, fontSize: '0.875rem' }}>{stat.value}</span>
+              <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.75rem', marginTop: '2px' }}>{stat.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
