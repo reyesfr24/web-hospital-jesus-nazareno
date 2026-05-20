@@ -1,4 +1,4 @@
-import fondo2 from '/img/fondo2.jpg';
+import fondo2 from '/img/portada2.jpeg';
 
 export default function Hero() {
   return (

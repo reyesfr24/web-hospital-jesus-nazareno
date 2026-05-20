@@ -9,10 +9,21 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      setScrolled(currentY > 60);
+      if (currentY > lastY && currentY > 100) {
+        setHidden(true);
+      } else if (currentY < lastY) {
+        setHidden(false);
+      }
+      lastY = currentY;
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -22,7 +33,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'nav-scrolled' : ''}`}
+      className={`fixed top-0 left-0 right-0 z-50 nav-transition ${scrolled ? 'nav-scrolled' : ''} ${hidden ? 'nav-hidden' : ''}`}
     >
       <div style={{ padding: '0 clamp(24px, 4vw, 48px)' }}>
         <div className="flex items-center justify-between" style={{ height: '96px' }}>
