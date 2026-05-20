@@ -29,6 +29,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ─── Text selection ─── */
+::selection {
+  background-color: rgba(180, 180, 180, 0.35);
+  color: inherit;
+}
+
 /* ─── Scroll animations ─── */
 .animate-on-scroll {
   opacity: 0;
@@ -77,6 +83,14 @@ body {
 }
 .marquee-track:hover {
   animation-play-state: paused;
+}
+
+/* ─── Gradient heading ─── */
+.gradient-heading {
+  background: linear-gradient(120deg, #640679 0%, #998FC7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* ─── Nav link underline slide ─── */

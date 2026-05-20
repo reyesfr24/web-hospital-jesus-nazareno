@@ -74,7 +74,7 @@ export default function Servicios() {
       <div style={{ padding: '0 clamp(24px, 4vw, 48px)' }}>
 
         {/* spacer-huge */}
-        <div style={{ height: 'clamp(80px, 12vw, 160px)' }} />
+        <div style={{ height: 'clamp(80px, 12vw, 80px)' }} />
 
         {/* Centered heading */}
         <div className="animate-on-scroll" style={{ textAlign: 'center' }}>
