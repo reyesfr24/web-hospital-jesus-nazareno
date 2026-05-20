@@ -67,7 +67,6 @@ const SERVICES = [
   },
 ];
 
-const DELAY_CLASSES = ['', 'delay-1', 'delay-2', 'delay-3', 'delay-4', 'delay-5'];
 
 export default function Servicios() {
   return (
@@ -120,22 +119,17 @@ export default function Servicios() {
         {/* spacer-xlarge */}
         <div style={{ height: 'clamp(48px, 6vw, 80px)' }} />
 
-        {/* Services grid */}
-        <div className="services-grid">
-          {SERVICES.map((service, i) => (
-            <div
-              key={service.title}
-              className={`animate-on-scroll ${DELAY_CLASSES[i % 2]}`}
-            >
+        {/* Carousel */}
+        <div style={{ position: 'relative', overflow: 'hidden' }}>
+          {/* Fade edges */}
+          <div style={{ position: 'absolute', inset: 0, zIndex: 2, pointerEvents: 'none', background: 'linear-gradient(to right, #F9F5FF 0%, transparent 8%, transparent 92%, #F9F5FF 100%)' }} />
+
+          {/* Scrolling track — duplicated for seamless loop */}
+          <div className="marquee-track" style={{ display: 'flex', gap: '24px', width: 'max-content' }}>
+            {[...SERVICES, ...SERVICES].map((service, i) => (
               <div
-                style={{
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  backgroundColor: '#ffffff',
-                  borderRadius: '20px',
-                  padding: 'clamp(28px, 3vw, 40px)',
-                }}
+                key={i}
+                style={{ width: '380px', flexShrink: 0, display: 'flex', flexDirection: 'column', backgroundColor: '#ffffff', borderRadius: '20px', padding: '36px' }}
               >
                 {/* Icon + Title row */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '18px', marginBottom: '20px' }}>
@@ -154,28 +148,13 @@ export default function Servicios() {
                   >
                     {service.icon}
                   </div>
-                  <h3
-                    style={{
-                      margin: 0,
-                      color: '#1e1e2e',
-                      fontWeight: 600,
-                      fontSize: '1.375rem',
-                      lineHeight: 1.25,
-                    }}
-                  >
+                  <h3 style={{ margin: 0, color: '#1e1e2e', fontWeight: 600, fontSize: '1.375rem', lineHeight: 1.25 }}>
                     {service.title}
                   </h3>
                 </div>
 
                 {/* Description */}
-                <p
-                  style={{
-                    margin: '0 0 20px',
-                    color: '#757575',
-                    fontSize: '0.9375rem',
-                    lineHeight: 1.7,
-                  }}
-                >
+                <p style={{ margin: '0 0 20px', color: '#757575', fontSize: '0.9375rem', lineHeight: 1.7 }}>
                   {service.description}
                 </p>
 
@@ -194,18 +173,7 @@ export default function Servicios() {
                 {/* Footer link */}
                 <a
                   href="#contacto"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    color: '#640679',
-                    fontWeight: 600,
-                    fontSize: '0.9375rem',
-                    textDecoration: 'none',
-                    borderTop: '1px solid #f0edf5',
-                    paddingTop: '20px',
-                    transition: 'gap 0.2s',
-                  }}
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#640679', fontWeight: 600, fontSize: '0.9375rem', textDecoration: 'none', borderTop: '1px solid #f0edf5', paddingTop: '20px', transition: 'gap 0.2s' }}
                   onMouseEnter={e => (e.currentTarget.style.gap = '10px')}
                   onMouseLeave={e => (e.currentTarget.style.gap = '6px')}
                 >
@@ -215,8 +183,8 @@ export default function Servicios() {
                   </svg>
                 </a>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* spacer-large */}
