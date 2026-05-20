@@ -34,7 +34,7 @@ export default function Footer() {
                   padding: '4px 12px',
                   borderRadius: '9999px',
                   backgroundColor: 'rgba(172,247,193,0.15)',
-                  color: '#ACF7C1',
+                  color: '#D4C2FC',
                   fontSize: '0.8125rem',
                   fontWeight: 500,
                 }}
@@ -55,7 +55,7 @@ export default function Footer() {
                   <a
                     href={`#${item.toLowerCase()}`}
                     style={{ color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: '0.9375rem', transition: 'color 0.2s' }}
-                    onMouseEnter={e => (e.currentTarget.style.color = '#ACF7C1')}
+                    onMouseEnter={e => (e.currentTarget.style.color = '#D4C2FC')}
                     onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
                   >
                     {item}
@@ -73,7 +73,6 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {[
                 { label: 'Dirección', value: 'Plaza Jesús Nazareno, s/n' },
-                { label: 'Teléfono', value: '+34 000 000 000' },
                 { label: 'Correo', value: 'info@hospitaljesusnazareno.es' },
               ].map((item) => (
                 <div key={item.label}>
@@ -83,6 +82,46 @@ export default function Footer() {
                   <div style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.75)' }}>{item.value}</div>
                 </div>
               ))}
+
+              {/* Phone pill button */}
+              <div>
+                <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '8px' }}>
+                  Teléfono
+                </div>
+                <a
+                  href="tel:+34000000000"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: '12px',
+                    padding: '6px 6px 6px 18px',
+                    borderRadius: '9999px',
+                    backgroundColor: 'rgba(255,255,255,0.95)',
+                    textDecoration: 'none',
+                  }}
+                >
+                  <span style={{ color: '#1e1e2e', fontWeight: 500, fontSize: '0.9375rem', letterSpacing: '0.01em' }}>
+                    +34 000 000 000
+                  </span>
+                  <span
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: '36px',
+                      height: '36px',
+                      borderRadius: '50%',
+                      backgroundColor: '#640679',
+                      flexShrink: 0,
+                    }}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

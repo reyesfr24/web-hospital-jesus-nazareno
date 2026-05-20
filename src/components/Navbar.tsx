@@ -11,6 +11,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navAnimDone, setNavAnimDone] = useState(false);
 
   useEffect(() => {
     let lastY = window.scrollY;
@@ -28,12 +29,18 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    const t = setTimeout(() => setNavAnimDone(true), 1600);
+    return () => clearTimeout(t);
+  }, []);
+
   const linkColor = scrolled ? '#303030' : 'rgba(255,255,255,0.88)';
   const linkHoverColor = scrolled ? '#640679' : '#ffffff';
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 nav-transition ${scrolled ? 'nav-scrolled' : ''} ${hidden ? 'nav-hidden' : ''}`}
+      style={navAnimDone ? undefined : { animation: 'nav-slide-down 1.6s cubic-bezier(0.16, 1, 0.3, 1) both' }}
     >
       <div style={{ padding: '0 clamp(24px, 4vw, 48px)' }}>
         <div className="flex items-center justify-between" style={{ height: '96px' }}>
@@ -58,6 +65,7 @@ export default function Navbar() {
               <li key={link.label}>
                 <a
                   href={link.href}
+                  className="nav-link"
                   style={{
                     color: linkColor,
                     fontSize: '1rem',

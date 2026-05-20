@@ -4,13 +4,13 @@ export default function Historia() {
       <div style={{ padding: '0 clamp(24px, 4vw, 48px)' }}>
 
         {/* spacer-huge equivalent */}
-        <div style={{ height: 'clamp(80px, 12vw, 160px)' }} />
+        <div style={{ height: 'clamp(80px, 12vw, 100px)' }} />
 
         {/* Centered heading block — mirrors reference about section */}
         <div className="animate-on-scroll" style={{ textAlign: 'center' }}>
           <p
             style={{
-              margin: '0 0 16px',
+              margin: '0 0 1px',
               color: '#640679',
               fontSize: '0.8125rem',
               fontWeight: 600,
@@ -111,7 +111,7 @@ export default function Historia() {
           </div>
 
           {/* Right: image — mirrors home_about-image */}
-          <div className="animate-on-scroll delay-2" style={{ position: 'relative' }}>
+          <div className="animate-on-scroll delay-2" style={{ position: 'relative', maxWidth: '640px', marginLeft: 'auto' }}>
             {/* Accent block behind image */}
             <div
               style={{
@@ -133,7 +133,7 @@ export default function Historia() {
                 width: '56px',
                 height: '56px',
                 borderRadius: '12px',
-                backgroundColor: '#ACF7C1',
+                backgroundColor: '#D4C2FC',
                 zIndex: 0,
               }}
             />
@@ -143,11 +143,11 @@ export default function Historia() {
                 zIndex: 1,
                 borderRadius: '24px',
                 overflow: 'hidden',
-                aspectRatio: '4 / 5',
+                aspectRatio: '3 / 4',
               }}
             >
               <img
-                src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80"
+                src="img/buena1.jpeg"
                 alt="Cuidado con humanidad en el Hospital de Jesús Nazareno"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />
