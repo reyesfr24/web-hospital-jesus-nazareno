@@ -153,7 +153,7 @@ export default function Historia() {
               }}
             >
               <img
-                src="img/buena1.jpeg"
+                src="img/iglesia-interior.jpeg"
                 alt="Cuidado con humanidad en el Hospital de Jesús Nazareno"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />

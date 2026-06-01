@@ -1,6 +1,5 @@
-// import fondo2 from '/img/portada2.jpeg';
-import fondo2 from '/img/fondo2.jpg';
-// import fondo2 from '/img/IMG_8558.jpeg';
+// import fondo2 from '/img/portada-iglesia.jpeg';
+import fondo2 from '/img/portada-persona.jpg';
 
 export default function Hero() {
   return (
