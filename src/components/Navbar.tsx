@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logo from '../assets/logos/logo-transparente-alargado.png';
 
 const NAV_LINKS = [
   { label: 'Inicio', href: '#inicio' },
@@ -48,7 +49,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#inicio" className="flex-shrink-0 flex items-center">
             <img
-              src="/logos/logo-transparente-alargado.png"
+              src={logo}
               alt="Hospital de Jesús Nazareno"
               style={{
                 height: '72px',

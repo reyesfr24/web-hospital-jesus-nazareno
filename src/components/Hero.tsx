@@ -1,5 +1,5 @@
-// import fondo2 from '/img/portada-iglesia.webp';
-import fondo2 from '/img/portada-persona.webp';
+// import fondo2 from '../assets/images/portada-iglesia.webp';
+import fondo2 from '../assets/images/portada-persona.webp';
 
 export default function Hero() {
   return (

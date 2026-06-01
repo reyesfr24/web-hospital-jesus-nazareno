@@ -1,3 +1,5 @@
+import logo from '../assets/logos/logo-transparente-alargado.png';
+
 export default function Footer() {
   return (
     <footer
@@ -20,7 +22,7 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <img
-              src="/logos/logo-transparente-alargado.png"
+              src={logo}
               alt="Hospital de Jesús Nazareno"
               style={{ height: '44px', objectFit: 'contain', marginBottom: '20px', filter: 'brightness(0) invert(1)' }}
             />

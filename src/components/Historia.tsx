@@ -1,4 +1,4 @@
-import iglesiaInterior from '/img/iglesia-interior.webp';
+import iglesiaInterior from '../assets/images/iglesia-interior.webp';
 
 const HL = ({ text }: { text: string }) => (
   <span style={{ color: '#640679', backgroundColor: 'rgba(212,194,252,0.25)', borderRadius: '6px', padding: '0 8px' }}>

@@ -21,7 +21,10 @@
       "Bash(curl -s http://localhost:5173)",
       "Bash(pkill -9 -f \"vite\")",
       "Bash(pkill -9 -f \"node.*vite\")",
-      "Bash(grep -E '\\\\.\\(html|css|js|ts|tsx|jsx|vue|astro|svelte\\)$')"
+      "Bash(grep -E '\\\\.\\(html|css|js|ts|tsx|jsx|vue|astro|svelte\\)$')",
+      "Bash(mkdir -p src/assets/images src/assets/logos)",
+      "Bash(cp img/*.webp src/assets/images/)",
+      "Bash(cp logos/*.png src/assets/logos/)"
     ]
   }
 }
