@@ -4,43 +4,23 @@ export default function Footer() {
   return (
     <footer
       id="contacto"
-      style={{
-        backgroundColor: '#1e1e2e',
-        color: 'rgba(255,255,255,0.7)',
-        padding: 'clamp(60px, 8vw, 100px) clamp(24px, 4vw, 48px) clamp(32px, 4vw, 48px)',
-      }}
+      className="bg-text-dark text-white/70 pt-[clamp(60px,8vw,100px)] px-[clamp(24px,4vw,48px)] pb-[clamp(32px,4vw,48px)]"
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-            gap: 'clamp(40px, 6vw, 64px)',
-            marginBottom: 'clamp(48px, 6vw, 72px)',
-          }}
-        >
+      <div className="max-w-[1200px] mx-auto">
+        <div className="grid [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))] gap-[clamp(40px,6vw,64px)] mb-[clamp(48px,6vw,72px)]">
+
           {/* Brand column */}
           <div>
             <img
               src={logo}
               alt="Hospital de Jesús Nazareno"
-              style={{ height: '44px', objectFit: 'contain', marginBottom: '20px', filter: 'brightness(0) invert(1)' }}
+              className="h-11 object-contain mb-5 brightness-0 invert"
             />
-            <p style={{ fontSize: '0.9375rem', lineHeight: 1.7, margin: '0 0 24px', maxWidth: '280px' }}>
+            <p className="text-[0.9375rem] leading-[1.7] m-0 mb-6 max-w-[280px]">
               Más de 200 años cuidando con dignidad, humanidad y amor cristiano.
             </p>
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <span
-                style={{
-                  display: 'inline-block',
-                  padding: '4px 12px',
-                  borderRadius: '9999px',
-                  backgroundColor: 'rgba(172,247,193,0.15)',
-                  color: '#D4C2FC',
-                  fontSize: '0.8125rem',
-                  fontWeight: 500,
-                }}
-              >
+            <div className="flex gap-2">
+              <span className="inline-block px-3 py-1 rounded-full bg-[rgba(172,247,193,0.15)] text-accent text-[0.8125rem] font-medium">
                 Modelo ACP
               </span>
             </div>
@@ -48,17 +28,15 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 style={{ color: '#ffffff', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 20px' }}>
+            <h4 className="text-white font-semibold text-sm tracking-[0.08em] uppercase m-0 mb-5">
               Navegación
             </h4>
-            <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <ul className="list-none m-0 p-0 flex flex-col gap-3">
               {['Inicio', 'Historia', 'Servicios', 'Contacto'].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
-                    style={{ color: 'rgba(255,255,255,0.65)', textDecoration: 'none', fontSize: '0.9375rem', transition: 'color 0.2s' }}
-                    onMouseEnter={e => (e.currentTarget.style.color = '#D4C2FC')}
-                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
+                    className="text-white/65 no-underline text-[0.9375rem] transition-colors duration-200 hover:text-accent"
                   >
                     {item}
                   </a>
@@ -69,55 +47,35 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 style={{ color: '#ffffff', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 20px' }}>
+            <h4 className="text-white font-semibold text-sm tracking-[0.08em] uppercase m-0 mb-5">
               Contacto
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            <div className="flex flex-col gap-[14px]">
               {[
                 { label: 'Dirección', value: 'Plaza Jesús Nazareno, s/n' },
                 { label: 'Correo', value: 'info@hospitaljesusnazareno.es' },
               ].map((item) => (
                 <div key={item.label}>
-                  <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '2px' }}>
+                  <div className="text-white/40 text-xs font-semibold uppercase tracking-[0.06em] mb-[2px]">
                     {item.label}
                   </div>
-                  <div style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.75)' }}>{item.value}</div>
+                  <div className="text-[0.9375rem] text-white/75">{item.value}</div>
                 </div>
               ))}
 
               {/* Phone pill button */}
               <div>
-                <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '8px' }}>
+                <div className="text-white/40 text-xs font-semibold uppercase tracking-[0.06em] mb-2">
                   Teléfono
                 </div>
                 <a
                   href="tel:+34000000000"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    gap: '12px',
-                    padding: '6px 6px 6px 18px',
-                    borderRadius: '9999px',
-                    backgroundColor: 'rgba(255,255,255,0.95)',
-                    textDecoration: 'none',
-                  }}
+                  className="inline-flex items-center justify-between gap-3 py-[6px] pl-[18px] pr-[6px] rounded-full bg-white/95 no-underline"
                 >
-                  <span style={{ color: '#1e1e2e', fontWeight: 500, fontSize: '0.9375rem', letterSpacing: '0.01em' }}>
+                  <span className="text-text-dark font-medium text-[0.9375rem] tracking-[0.01em]">
                     +34 000 000 000
                   </span>
-                  <span
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      width: '36px',
-                      height: '36px',
-                      borderRadius: '50%',
-                      backgroundColor: '#640679',
-                      flexShrink: 0,
-                    }}
-                  >
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand shrink-0">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
                     </svg>
@@ -129,21 +87,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div
-          style={{
-            borderTop: '1px solid rgba(255,255,255,0.1)',
-            paddingTop: '24px',
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: '12px',
-          }}
-        >
-          <p style={{ margin: 0, fontSize: '0.875rem' }}>
+        <div className="border-t border-white/10 pt-6 flex flex-wrap justify-between items-center gap-3">
+          <p className="m-0 text-sm">
             © {new Date().getFullYear()} Hospital de Jesús Nazareno. Todos los derechos reservados.
           </p>
-          <p style={{ margin: 0, fontSize: '0.875rem' }}>
+          <p className="m-0 text-sm">
             Fundado en 1819 · Vocación cristiana de servicio
           </p>
         </div>

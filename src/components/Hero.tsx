@@ -1,24 +1,13 @@
-// import fondo2 from '../assets/images/portada-iglesia.webp';
 import fondo2 from '../assets/images/portada-persona.webp';
 
 export default function Hero() {
   return (
-    <section
-      id="inicio"
-      style={{
-        position: 'relative',
-        minHeight: '100vh',
-        backgroundColor: '#640679',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
+    <section id="inicio" className="relative min-h-screen bg-brand overflow-hidden flex flex-col">
+
       {/* Background image + gradient overlay */}
       <div
+        className="absolute inset-0"
         style={{
-          position: 'absolute',
-          inset: 0,
           backgroundImage: `
             linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 28%),
             linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 42%),
@@ -31,74 +20,21 @@ export default function Hero() {
       />
 
       {/* Content wrapper */}
-      <div
-        style={{
-          position: 'relative',
-          zIndex: 10,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-end',
-          flex: 1,
-          padding: '0 clamp(24px, 4vw, 48px)',
-          minHeight: '100vh',
-        }}
-      >
-        {/* ── Grid 2 columnas ── */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            alignItems: 'stretch',
-            paddingTop: '116px',
-            gap: '40px',
-          }}
-          className="hero-grid"
-        >
+      <div className="relative z-10 flex flex-col justify-end flex-1 px-[clamp(24px,4vw,48px)] min-h-screen">
+
+        {/* Grid 2 columnas */}
+        <div className="grid grid-cols-1 md:grid-cols-2 items-stretch pt-[116px] gap-10">
+
           {/* Columna izquierda: badge + H1 + CTAs + stats */}
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div className="flex flex-col">
+
             {/* Badges */}
-            <div style={{ marginBottom: '28px', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-              <span
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  padding: '8px 18px',
-                  borderRadius: '9999px',
-                  backgroundColor: 'rgba(255,255,255,0.12)',
-                  backdropFilter: 'blur(8px)',
-                  color: 'rgba(255,255,255,0.9)',
-                  fontSize: '0.875rem',
-                  fontWeight: 500,
-                  border: '1px solid rgba(255,255,255,0.2)',
-                }}
-              >
-                <span
-                  style={{
-                    width: '7px',
-                    height: '7px',
-                    borderRadius: '50%',
-                    backgroundColor: '#D4C2FC',
-                    flexShrink: 0,
-                  }}
-                />
+            <div className="mb-7 flex flex-wrap gap-[10px]">
+              <span className="inline-flex items-center gap-2 px-[18px] py-2 rounded-full bg-white/12 backdrop-blur-[8px] text-white/90 text-sm font-medium border border-white/20">
+                <span className="w-[7px] h-[7px] rounded-full bg-accent shrink-0" />
                 Fundado en 1819
               </span>
-              <span
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  padding: '8px 18px',
-                  borderRadius: '9999px',
-                  backgroundColor: 'rgba(255,255,255,0.12)',
-                  backdropFilter: 'blur(8px)',
-                  color: 'rgba(255,255,255,0.9)',
-                  fontSize: '0.875rem',
-                  fontWeight: 500,
-                  border: '1px solid rgba(255,255,255,0.2)',
-                }}
-              >
+              <span className="inline-flex items-center gap-2 px-[18px] py-2 rounded-full bg-white/12 backdrop-blur-[8px] text-white/90 text-sm font-medium border border-white/20">
                 <svg
                   width="14"
                   height="14"
@@ -108,7 +44,7 @@ export default function Hero() {
                   strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  style={{ flexShrink: 0 }}
+                  className="shrink-0"
                 >
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
                   <circle cx="12" cy="9" r="2.5" fill="#D4C2FC" stroke="none" />
@@ -119,73 +55,31 @@ export default function Hero() {
 
             {/* H1 */}
             <h1
-              style={{
-                margin: '0 0 32px',
-                color: '#ffffff',
-                fontWeight: 600,
-                fontSize: 'clamp(2.25rem, 4vw, 4rem)',
-                lineHeight: 1.08,
-                letterSpacing: '-0.02em',
-                animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both',
-              }}
+              className="mb-8 text-white font-semibold text-[clamp(2.25rem,4vw,4rem)] leading-[1.08] tracking-[-0.02em]"
+              style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both' }}
             >
               Hospital de{' '}
-              <span style={{ color: '#D4C2FC' }}>Jesús Nazareno</span>
+              <span className="text-accent">Jesús Nazareno</span>
             </h1>
 
             {/* CTAs */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px' }}>
+            <div className="flex flex-wrap gap-[14px]">
               <a
                 href="#historia"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  padding: '13px 32px',
-                  borderRadius: '9999px',
-                  backgroundColor: '#640679',
-                  border: '1.5px solid rgba(255,255,255,0.35)',
-                  color: '#ffffff',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  textDecoration: 'none',
-                  transition: 'opacity 0.2s ease-out',
-                }}
-                onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
-                onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                className="inline-flex items-center px-8 py-[13px] rounded-full bg-brand border-[1.5px] border-white/35 text-white font-semibold text-base no-underline transition-opacity duration-200 hover:opacity-85"
               >
                 Conocer más
               </a>
               <a
                 href="#servicios"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  padding: '13px 32px',
-                  borderRadius: '9999px',
-                  backgroundColor: 'rgba(255,255,255,0.95)',
-                  color: '#640679',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  textDecoration: 'none',
-                  transition: 'opacity 0.2s ease-out',
-                }}
-                onMouseEnter={e => (e.currentTarget.style.opacity = '0.88')}
-                onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                className="inline-flex items-center px-8 py-[13px] rounded-full bg-white/95 text-brand font-semibold text-base no-underline transition-opacity duration-200 hover:opacity-[0.88]"
               >
                 Nuestros servicios
               </a>
             </div>
 
             {/* Stats */}
-            <div
-              style={{
-                paddingBottom: '36px',
-                paddingTop: '24px',
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '12px',
-              }}
-            >
+            <div className="pt-6 pb-9 flex flex-wrap gap-3">
               {[
                 { value: '+200 años', label: 'de historia' },
                 { value: 'Modelo ACP', label: 'centrado en la persona' },
@@ -193,42 +87,24 @@ export default function Hero() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    padding: '12px 18px',
-                    borderRadius: '14px',
-                    backgroundColor: 'rgba(255,255,255,0.1)',
-                    backdropFilter: 'blur(8px)',
-                    border: '1px solid rgba(255,255,255,0.15)',
-                  }}
+                  className="flex flex-col px-[18px] py-3 rounded-[14px] bg-white/10 backdrop-blur-[8px] border border-white/15"
                 >
-                  <span style={{ color: '#D4C2FC', fontWeight: 700, fontSize: '0.875rem' }}>{stat.value}</span>
-                  <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.75rem', marginTop: '2px' }}>{stat.label}</span>
+                  <span className="text-accent font-bold text-sm">{stat.value}</span>
+                  <span className="text-white/65 text-xs mt-[2px]">{stat.label}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Columna derecha: eslogan alineado al fondo */}
-          <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', paddingBottom: '36px' }}>
+          <div className="flex justify-end items-end pb-9">
             <p
-              style={{
-                margin: 0,
-                color: '#ffffff',
-                fontWeight: 600,
-                fontSize: 'clamp(1.75rem, 3.5vw, 3rem)',
-                lineHeight: 1.2,
-                letterSpacing: '-0.01em',
-                textAlign: 'right',
-                maxWidth: '520px',
-                textShadow: '0 2px 20px rgba(0,0,0,0.3)',
-                animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both',
-              }}
+              className="m-0 text-white font-semibold text-[clamp(1.75rem,3.5vw,3rem)] leading-[1.2] tracking-[-0.01em] text-right max-w-[520px] [text-shadow:0_2px_20px_rgba(0,0,0,0.3)]"
+              style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both' }}
             >
               Más de 200 años
               <br />
-              <span style={{ color: '#D4C2FC' }}>cuidando</span> con dignidad,
+              <span className="text-accent">cuidando</span> con dignidad,
               <br />
               humanidad y amor cristiano
             </p>

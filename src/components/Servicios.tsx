@@ -70,99 +70,59 @@ const SERVICES = [
 
 export default function Servicios() {
   return (
-    <section id="servicios" style={{ backgroundColor: '#F9F5FF' }}>
-      <div style={{ padding: '0 clamp(24px, 4vw, 48px)' }}>
+    <section id="servicios" className="bg-[#F9F5FF]">
+      <div className="px-[clamp(24px,4vw,48px)]">
 
-        {/* spacer-huge */}
-        <div style={{ height: 'clamp(80px, 12vw, 80px)' }} />
+        <div className="h-[clamp(80px,12vw,80px)]" />
 
-        {/* Centered heading */}
-        <div className="animate-on-scroll" style={{ textAlign: 'center' }}>
-          <p
-            style={{
-              margin: '0 0 16px',
-              color: '#640679',
-              fontSize: '0.8125rem',
-              fontWeight: 600,
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-            }}
-          >
+        {/* Cabecera centrada */}
+        <div className="animate-on-scroll text-center">
+          <p className="m-0 mb-4 text-brand text-[0.8125rem] font-semibold tracking-[0.12em] uppercase">
             Atención Centrada en la Persona
           </p>
-          <h2
-            style={{
-              margin: 0,
-              color: '#1e1e2e',
-              fontWeight: 600,
-              fontSize: 'clamp(2.25rem, 7vw, 5.5rem)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.02em',
-            }}
-          >
+          <h2 className="m-0 text-text-dark font-semibold text-[clamp(2.25rem,7vw,5.5rem)] leading-[1.05] tracking-[-0.02em]">
             Nuestros Servicios
           </h2>
-          <div style={{ height: '24px' }} />
-          <p
-            style={{
-              margin: '0 auto',
-              color: '#757575',
-              fontSize: '1.125rem',
-              lineHeight: 1.75,
-              maxWidth: '600px',
-            }}
-          >
+          <div className="h-6" />
+          <p className="m-0 mx-auto text-[#757575] text-lg leading-[1.75] max-w-[600px]">
             Cuidado integral y personalizado que respeta la historia de vida, los valores y las preferencias de cada residente.
           </p>
         </div>
 
-        {/* spacer-xlarge */}
-        <div style={{ height: 'clamp(48px, 6vw, 80px)' }} />
+        <div className="h-[clamp(48px,6vw,80px)]" />
 
         {/* Carousel */}
-        <div style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="relative overflow-hidden">
           {/* Fade edges */}
-          <div style={{ position: 'absolute', inset: 0, zIndex: 2, pointerEvents: 'none', background: 'linear-gradient(to right, #F9F5FF 0%, transparent 8%, transparent 92%, #F9F5FF 100%)' }} />
+          <div className="absolute inset-0 z-[2] pointer-events-none bg-[linear-gradient(to_right,#F9F5FF_0%,transparent_8%,transparent_92%,#F9F5FF_100%)]" />
 
           {/* Scrolling track — duplicated for seamless loop */}
-          <div className="marquee-track" style={{ display: 'flex', gap: '24px', width: 'max-content' }}>
+          <div className="marquee-track flex gap-6 w-max">
             {[...SERVICES, ...SERVICES].map((service, i) => (
               <div
                 key={i}
-                style={{ width: '380px', flexShrink: 0, display: 'flex', flexDirection: 'column', backgroundColor: '#ffffff', borderRadius: '20px', padding: '36px' }}
+                className="w-[380px] shrink-0 flex flex-col bg-white rounded-[20px] p-9"
               >
-                {/* Icon + Title row */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '18px', marginBottom: '20px' }}>
-                  <div
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      width: '68px',
-                      height: '68px',
-                      borderRadius: '16px',
-                      backgroundColor: '#640679',
-                      color: '#ffffff',
-                      flexShrink: 0,
-                    }}
-                  >
+                {/* Icon + Title */}
+                <div className="flex items-center gap-[18px] mb-5">
+                  <div className="inline-flex items-center justify-center w-[68px] h-[68px] rounded-2xl bg-brand text-white shrink-0">
                     {service.icon}
                   </div>
-                  <h3 style={{ margin: 0, color: '#1e1e2e', fontWeight: 600, fontSize: '1.375rem', lineHeight: 1.25 }}>
+                  <h3 className="m-0 text-text-dark font-semibold text-[1.375rem] leading-[1.25]">
                     {service.title}
                   </h3>
                 </div>
 
                 {/* Description */}
-                <p style={{ margin: '0 0 20px', color: '#757575', fontSize: '0.9375rem', lineHeight: 1.7 }}>
+                <p className="m-0 mb-5 text-[#757575] text-[0.9375rem] leading-[1.7]">
                   {service.description}
                 </p>
 
                 {/* Feature checklist */}
-                <ul style={{ margin: '0 0 24px', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', flex: 1 }}>
+                <ul className="m-0 mb-6 p-0 list-none flex flex-col gap-2.5 flex-1">
                   {service.features.map((feat) => (
-                    <li key={feat} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#303030', fontSize: '0.9375rem' }}>
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
+                    <li key={feat} className="flex items-center gap-2.5 text-[#303030] text-[0.9375rem]">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0">
                         <path d="M3 8.5l3.5 3.5 6.5-7" stroke="#640679" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       {feat}
@@ -173,9 +133,7 @@ export default function Servicios() {
                 {/* Footer link */}
                 <a
                   href="#contacto"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#640679', fontWeight: 600, fontSize: '0.9375rem', textDecoration: 'none', borderTop: '1px solid #f0edf5', paddingTop: '20px', transition: 'gap 0.2s' }}
-                  onMouseEnter={e => (e.currentTarget.style.gap = '10px')}
-                  onMouseLeave={e => (e.currentTarget.style.gap = '6px')}
+                  className="inline-flex items-center gap-[6px] text-brand font-semibold text-[0.9375rem] no-underline border-t border-[#f0edf5] pt-5 transition-[gap] duration-200 hover:gap-[10px]"
                 >
                   Más información
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -187,34 +145,19 @@ export default function Servicios() {
           </div>
         </div>
 
-        {/* spacer-large */}
-        <div style={{ height: 'clamp(48px, 6vw, 80px)' }} />
+        <div className="h-[clamp(48px,6vw,80px)]" />
 
         {/* CTA */}
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className="flex justify-center">
           <a
             href="#contacto"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              padding: '14px 40px',
-              borderRadius: '9999px',
-              backgroundColor: '#640679',
-              color: '#ffffff',
-              fontWeight: 600,
-              fontSize: '1rem',
-              textDecoration: 'none',
-              transition: 'background-color 0.2s ease-out',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#4a0559')}
-            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#640679')}
+            className="inline-flex items-center px-10 py-[14px] rounded-full bg-brand text-white font-semibold text-base no-underline transition-colors duration-200 hover:bg-brand-dark"
           >
             Contactar con nosotros
           </a>
         </div>
 
-        {/* spacer-large */}
-        <div style={{ height: 'clamp(80px, 12vw, 140px)' }} />
+        <div className="h-[clamp(80px,12vw,140px)]" />
       </div>
     </section>
   );

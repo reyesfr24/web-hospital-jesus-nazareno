@@ -35,47 +35,30 @@ export default function Navbar() {
     return () => clearTimeout(t);
   }, []);
 
-  const linkColor = scrolled ? '#303030' : 'rgba(255,255,255,0.88)';
-  const linkHoverColor = scrolled ? '#640679' : '#ffffff';
-
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 nav-transition ${scrolled ? 'nav-scrolled' : ''} ${hidden ? 'nav-hidden' : ''}`}
+      className={`fixed top-0 left-0 right-0 z-50 nav-transition${scrolled ? ' nav-scrolled' : ''}${hidden ? ' nav-hidden' : ''}`}
       style={navAnimDone ? undefined : { animation: 'nav-slide-down 1.6s cubic-bezier(0.16, 1, 0.3, 1) both' }}
     >
-      <div style={{ padding: '0 clamp(24px, 4vw, 48px)' }}>
-        <div className="flex items-center justify-between" style={{ height: '96px' }}>
+      <div className="px-[clamp(24px,4vw,48px)]">
+        <div className="flex items-center justify-between h-24">
 
           {/* Logo */}
-          <a href="#inicio" className="flex-shrink-0 flex items-center">
+          <a href="#inicio" className="shrink-0 flex items-center">
             <img
               src={logo}
               alt="Hospital de Jesús Nazareno"
-              style={{
-                height: '72px',
-                objectFit: 'contain',
-                filter: scrolled ? 'none' : 'brightness(0) invert(1)',
-                transition: 'filter 0.3s',
-              }}
+              className={`h-[72px] object-contain transition-[filter] duration-300${scrolled ? '' : ' brightness-0 invert'}`}
             />
           </a>
 
           {/* Desktop links */}
-          <ul className="hidden md:flex items-center" style={{ gap: '40px', listStyle: 'none', margin: 0, padding: 0 }}>
+          <ul className="hidden md:flex items-center gap-10 list-none m-0 p-0">
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="nav-link"
-                  style={{
-                    color: linkColor,
-                    fontSize: '1rem',
-                    fontWeight: 500,
-                    textDecoration: 'none',
-                    transition: 'color 0.2s',
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.color = linkHoverColor)}
-                  onMouseLeave={e => (e.currentTarget.style.color = linkColor)}
+                  className={`nav-link text-base font-medium no-underline transition-colors duration-200${scrolled ? ' text-[#303030] hover:text-brand' : ' text-white/88 hover:text-white'}`}
                 >
                   {link.label}
                 </a>
@@ -86,42 +69,22 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <a
             href="#contacto"
-            className="hidden md:inline-flex items-center"
-            style={{
-              padding: '10px 28px',
-              borderRadius: '9999px',
-              backgroundColor: scrolled ? '#640679' : 'rgba(255,255,255,0.12)',
-              border: '1.5px solid rgba(255,255,255,0.35)',
-              color: '#ffffff',
-              fontWeight: 600,
-              fontSize: '0.9375rem',
-              textDecoration: 'none',
-              transition: 'background-color 0.2s ease-out, opacity 0.2s',
-              backdropFilter: scrolled ? 'none' : 'blur(8px)',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
-            onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+            className={`hidden md:inline-flex items-center px-7 py-[10px] rounded-full border-[1.5px] border-white/35 text-white font-semibold text-[0.9375rem] no-underline transition-[background-color,opacity] duration-200 hover:opacity-85${scrolled ? ' bg-brand' : ' bg-white/12 backdrop-blur-[8px]'}`}
           >
             Contactar
           </a>
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden flex flex-col justify-center items-center"
-            style={{ width: '40px', height: '40px', background: 'none', border: 'none', cursor: 'pointer', gap: '5px' }}
+            className="md:hidden flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer gap-[5px]"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Abrir menú"
           >
             {[0, 1, 2].map((i) => (
               <span
                 key={i}
+                className={`block w-[22px] h-[2px] rounded-[2px] transition-[background-color,transform] duration-300${scrolled ? ' bg-[#303030]' : ' bg-white'}`}
                 style={{
-                  display: 'block',
-                  width: '22px',
-                  height: '2px',
-                  backgroundColor: scrolled ? '#303030' : '#ffffff',
-                  borderRadius: '2px',
-                  transition: 'background-color 0.3s, transform 0.3s',
                   transformOrigin: 'center',
                   transform:
                     menuOpen && i === 0 ? 'rotate(45deg) translate(4px, 5px)'
@@ -135,21 +98,13 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu */}
-        <div className={`mobile-menu md:hidden ${menuOpen ? 'open' : ''}`} style={{ backgroundColor: 'white' }}>
-          <div style={{ padding: '16px 0 24px' }}>
+        <div className={`mobile-menu md:hidden bg-white${menuOpen ? ' open' : ''}`}>
+          <div className="pt-4 pb-6">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                style={{
-                  display: 'block',
-                  padding: '12px 0',
-                  color: '#303030',
-                  fontWeight: 500,
-                  fontSize: '1rem',
-                  textDecoration: 'none',
-                  borderBottom: '1px solid #f0edf5',
-                }}
+                className="block py-3 text-[#303030] font-medium text-base no-underline border-b border-[#f0edf5]"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
@@ -157,17 +112,7 @@ export default function Navbar() {
             ))}
             <a
               href="#contacto"
-              style={{
-                display: 'inline-flex',
-                marginTop: '16px',
-                padding: '10px 28px',
-                borderRadius: '9999px',
-                backgroundColor: '#640679',
-                color: '#ffffff',
-                fontWeight: 600,
-                fontSize: '0.9375rem',
-                textDecoration: 'none',
-              }}
+              className="inline-flex mt-4 px-7 py-[10px] rounded-full bg-brand text-white font-semibold text-[0.9375rem] no-underline"
               onClick={() => setMenuOpen(false)}
             >
               Contactar
