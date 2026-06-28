@@ -7,7 +7,7 @@ export default function Footer() {
       className="bg-text-dark text-white/70 pt-[clamp(60px,8vw,100px)] px-[clamp(24px,4vw,48px)] pb-[clamp(32px,4vw,48px)]"
     >
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))] gap-[clamp(40px,6vw,64px)] mb-[clamp(48px,6vw,72px)]">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-[clamp(40px,6vw,64px)] mb-[clamp(48px,6vw,72px)]">
 
           {/* Brand column */}
           <div>
@@ -50,13 +50,13 @@ export default function Footer() {
             <h4 className="text-white font-semibold text-sm tracking-[0.08em] uppercase m-0 mb-5">
               Contacto
             </h4>
-            <div className="flex flex-col gap-[14px]">
+            <div className="flex flex-col gap-3.5">
               {[
                 { label: 'Dirección', value: 'Plaza Jesús Nazareno, s/n' },
                 { label: 'Correo', value: 'info@hospitaljesusnazareno.es' },
               ].map((item) => (
                 <div key={item.label}>
-                  <div className="text-white/40 text-xs font-semibold uppercase tracking-[0.06em] mb-[2px]">
+                  <div className="text-white/40 text-xs font-semibold uppercase tracking-[0.06em] mb-0.5">
                     {item.label}
                   </div>
                   <div className="text-[0.9375rem] text-white/75">{item.value}</div>
@@ -70,7 +70,7 @@ export default function Footer() {
                 </div>
                 <a
                   href="tel:+34000000000"
-                  className="inline-flex items-center justify-between gap-3 py-[6px] pl-[18px] pr-[6px] rounded-full bg-white/95 no-underline"
+                  className="inline-flex items-center justify-between gap-3 py-1.5 pl-[18px] pr-1.5 rounded-full bg-white/95 no-underline"
                 >
                   <span className="text-text-dark font-medium text-[0.9375rem] tracking-[0.01em]">
                     +34 000 000 000

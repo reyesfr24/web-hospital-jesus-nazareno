@@ -47,6 +47,38 @@ body {
   transform: translateY(0);
 }
 
+/* Variante: revelar imagen de arriba hacia abajo */
+@keyframes historia-reveal-top {
+  from { clip-path: inset(0% 0% 100% 0%); }
+  to   { clip-path: inset(0% 0% 0%   0%); }
+}
+
+.animate-on-scroll.reveal-top {
+  transform: none;
+  /* sin clip-path inicial — opacity:0 de la clase base oculta el elemento
+     y garantiza que el IntersectionObserver detecte su bounding box */
+  transition: opacity 0.25s ease-out;
+}
+
+.animate-on-scroll.reveal-top.visible {
+  transform: none;
+  animation: historia-reveal-top 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-on-scroll.reveal-top.delay-2.visible {
+  animation-delay: 0.2s;
+}
+
+/* Variante: tarjeta de texto sube desde abajo */
+.animate-on-scroll.slide-up {
+  transform: translateY(40px);
+  transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+}
+
+.animate-on-scroll.slide-up.visible {
+  transform: translateY(0);
+}
+
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
