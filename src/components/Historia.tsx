@@ -64,8 +64,17 @@ export default function Historia() {
             </p>
           </div>
 
-          {/* Fila 2: card izquierda */}
-          <div className="bg-[#f4f1fb] rounded-[20px] px-12 py-10 flex flex-col justify-center overflow-hidden animate-on-scroll slide-up">
+          {/* Fila 2: imagen derecha (en móvil aparece tercera, en desktop va a col 2 fila 2) */}
+          <div className="rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll reveal-top delay-2 lg:order-4">
+            <img
+              src={closeupHands}
+              alt="Atención y cuidado a residentes del Hospital de Jesús Nazareno"
+              className="w-full h-full object-cover block"
+            />
+          </div>
+
+          {/* Fila 2: card izquierda (en móvil aparece cuarta, en desktop va a col 1 fila 2) */}
+          <div className="bg-[#f4f1fb] rounded-[20px] px-12 py-10 flex flex-col justify-center overflow-hidden animate-on-scroll slide-up lg:order-3">
             <h3 className="mb-4 text-brand font-semibold text-[clamp(1.375rem,2.5vw,1.875rem)] leading-[1.2]">
               Modernización y compromiso actual
             </h3>
@@ -83,15 +92,6 @@ export default function Historia() {
               , que sitúa a cada residente en el centro del cuidado, respetando sus gustos, preferencias,
               historia de vida y decisiones.
             </p>
-          </div>
-
-          {/* Fila 2: imagen derecha */}
-          <div className="rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll reveal-top delay-2">
-            <img
-              src={closeupHands}
-              alt="Atención y cuidado a residentes del Hospital de Jesús Nazareno"
-              className="w-full h-full object-cover block"
-            />
           </div>
 
         </div>
