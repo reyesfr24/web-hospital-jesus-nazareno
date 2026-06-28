@@ -56,8 +56,10 @@ export default function Historia() {
 
         <div style={{ height: 'clamp(60px, 8vw, 100px)' }} />
 
-        {/* Bloque 1: imagen izquierda, card derecha */}
-        <div className="historia-bloque">
+        {/* Grid unificado 2×2: las 4 celdas comparten el mismo grid → filas iguales */}
+        <div className="historia-unified-grid">
+
+          {/* Fila 1: imagen izquierda, card derecha */}
           <div className="historia-bloque-image animate-on-scroll">
             <img
               src={iglesiaInterior}
@@ -82,12 +84,8 @@ export default function Historia() {
               donde dejó dispuesto el nacimiento del Hospital de Jesús Nazareno.
             </p>
           </div>
-        </div>
 
-        <div style={{ height: 'clamp(40px, 5vw, 64px)' }} />
-
-        {/* Bloque 2: card izquierda, imagen derecha */}
-        <div className="historia-bloque">
+          {/* Fila 2: card izquierda, imagen derecha */}
           <div className="historia-bloque-card animate-on-scroll">
             <h3 style={{ color: '#640679' }}>Modernización y compromiso actual</h3>
             <hr className="historia-divider" />
@@ -111,6 +109,7 @@ export default function Historia() {
               alt="Atención y cuidado a residentes del Hospital de Jesús Nazareno"
             />
           </div>
+
         </div>
 
         <div style={{ height: 'clamp(80px, 12vw, 160px)' }} />
