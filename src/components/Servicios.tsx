@@ -67,7 +67,7 @@ export default function Servicios() {
             <div key={service.title} className="rounded-[32px] bg-white shadow-[0_16px_40px_-16px_rgba(100,6,121,0.25)]">
               <div className="flex items-center gap-6 lg:gap-12 px-7 py-8 md:px-10 md:py-9">
                 {/* Title */}
-                <h3 className="m-0 flex-1 min-w-0 truncate text-text-dark font-bold text-[1.375rem] md:text-[1.75rem] lg:text-[2rem] leading-[1.2] tracking-[-0.01em]">
+                <h3 className="m-0 flex-1 min-w-0 truncate text-brand font-bold text-[1.375rem] md:text-[1.75rem] lg:text-[2rem] leading-[1.2] tracking-[-0.01em]">
                   {service.title}
                 </h3>
 
