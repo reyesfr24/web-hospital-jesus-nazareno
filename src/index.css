@@ -105,18 +105,6 @@ body {
   }
 }
 
-/* ─── Services marquee ─── */
-@keyframes marquee-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-.marquee-track {
-  animation: marquee-scroll 30s linear infinite;
-}
-.marquee-track:hover {
-  animation-play-state: paused;
-}
-
 /* ─── Gradient heading ─── */
 .gradient-heading {
   background: linear-gradient(120deg, #640679 0%, #998FC7 100%);
