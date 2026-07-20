@@ -62,7 +62,7 @@ body {
 
 .animate-on-scroll.reveal-top.visible {
   transform: none;
-  animation: historia-reveal-top 2s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation: historia-reveal-top 3.2s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
 .animate-on-scroll.reveal-top.delay-2.visible {
@@ -77,6 +77,38 @@ body {
 
 .animate-on-scroll.slide-up.visible {
   transform: translateY(0);
+}
+
+/* Variante: tarjeta de servicio, aparece desde abajo desenfocada */
+.service-card-reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  filter: blur(12px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Variante: bloque de cabecera, misma aparición desde abajo desenfocada */
+.header-reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  filter: blur(12px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
 }
 
 .delay-1 { transition-delay: 0.1s; }

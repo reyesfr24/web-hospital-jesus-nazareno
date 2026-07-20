@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import iglesiaInterior from '../assets/images/iglesia-interior.webp';
 import closeupHands from '../assets/images/closeup-support-hands.webp';
 
@@ -7,7 +8,84 @@ const HL = ({ text }: { text: string }) => (
   </span>
 );
 
+// Igual que el observer global de App.tsx (añade "visible" al entrar en
+// pantalla) pero con más margen, para que haga falta más espacio en blanco
+// antes de que se aprecie el efecto. El marcador "local-reveal" excluye el
+// elemento del observer global para que no se dispare antes de tiempo.
+function useRevealObserver<T extends HTMLElement>(rootMargin: string) {
+  const ref = useRef<T>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return ref;
+}
+
+function HeaderBlock() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    // Requiere algo más de espacio libre que el resto de bloques
+    // "animate-on-scroll" antes de disparar el efecto.
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -150px 0px' }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className={`header-reveal text-center${visible ? ' visible' : ''}`}>
+      <p className="m-0 mb-4 text-brand text-[0.8125rem] font-semibold tracking-[0.12em] uppercase">
+        Desde 1819
+      </p>
+      <h2 className="m-0 text-text-dark font-semibold text-[clamp(2.25rem,6vw,5rem)] leading-[1.05] tracking-[-0.02em]">
+        <HL text="Nuestra Historia" />
+      </h2>
+      <div className="h-6" />
+      <p className="m-0 mx-auto text-[#757575] text-lg leading-[1.75] max-w-[620px]">
+        Más de dos siglos de vocación de servicio, guiados por la fe cristiana y el amor a los más necesitados.
+      </p>
+    </div>
+  );
+}
+
 export default function Historia() {
+  const reveal1 = useRevealObserver<HTMLDivElement>('0px 0px -140px 0px');
+  const reveal2 = useRevealObserver<HTMLDivElement>('0px 0px -140px 0px');
+  const reveal3 = useRevealObserver<HTMLDivElement>('0px 0px -140px 0px');
+  const reveal4 = useRevealObserver<HTMLDivElement>('0px 0px -140px 0px');
+
   return (
     <section id="historia" className="bg-white">
       <div className="px-[clamp(24px,4vw,48px)]">
@@ -15,18 +93,7 @@ export default function Historia() {
         <div className="h-[clamp(80px,12vw,50px)]" />
 
         {/* Cabecera centrada */}
-        <div className="animate-on-scroll text-center">
-          <p className="m-0 mb-4 text-brand text-[0.8125rem] font-semibold tracking-[0.12em] uppercase">
-            Desde 1819
-          </p>
-          <h2 className="m-0 text-text-dark font-semibold text-[clamp(2.25rem,6vw,5rem)] leading-[1.05] tracking-[-0.02em]">
-            <HL text="Nuestra Historia" />
-          </h2>
-          <div className="h-6" />
-          <p className="m-0 mx-auto text-[#757575] text-lg leading-[1.75] max-w-[620px]">
-            Más de dos siglos de vocación de servicio, guiados por la fe cristiana y el amor a los más necesitados.
-          </p>
-        </div>
+        <HeaderBlock />
 
         <div className="h-[clamp(60px,8vw,100px)]" />
 
@@ -34,7 +101,7 @@ export default function Historia() {
         <div className="grid grid-cols-1 gap-6 max-w-[1350px] mx-auto lg:grid-cols-2 lg:[grid-template-rows:650px_650px] lg:gap-x-8 lg:gap-y-10">
 
           {/* Fila 1: imagen izquierda */}
-          <div className="rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll reveal-top">
+          <div ref={reveal1} className="rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll local-reveal reveal-top">
             <img
               src={iglesiaInterior}
               alt="Interior de la iglesia del Hospital de Jesús Nazareno"
@@ -43,7 +110,7 @@ export default function Historia() {
           </div>
 
           {/* Fila 1: card derecha */}
-          <div className="bg-[#f4f1fb] rounded-[20px] px-12 py-10 flex flex-col justify-center overflow-hidden animate-on-scroll slide-up delay-2">
+          <div ref={reveal2} className="bg-[#f4f1fb] rounded-[20px] px-12 py-10 flex flex-col justify-center overflow-hidden animate-on-scroll local-reveal slide-up delay-2">
             <h3 className="mb-4 text-brand font-semibold text-[clamp(1.375rem,2.5vw,1.875rem)] leading-[1.2]">
               El origen cristiano
             </h3>
@@ -65,7 +132,7 @@ export default function Historia() {
           </div>
 
           {/* Fila 2: imagen derecha (en móvil aparece tercera, en desktop va a col 2 fila 2) */}
-          <div className="rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll reveal-top delay-2 lg:order-4">
+          <div ref={reveal3} className="rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll local-reveal reveal-top delay-2 lg:order-4">
             <img
               src={closeupHands}
               alt="Atención y cuidado a residentes del Hospital de Jesús Nazareno"
@@ -74,7 +141,7 @@ export default function Historia() {
           </div>
 
           {/* Fila 2: card izquierda (en móvil aparece cuarta, en desktop va a col 1 fila 2) */}
-          <div className="bg-[#f4f1fb] rounded-[20px] px-12 py-10 flex flex-col justify-center overflow-hidden animate-on-scroll slide-up lg:order-3">
+          <div ref={reveal4} className="bg-[#f4f1fb] rounded-[20px] px-12 py-10 flex flex-col justify-center overflow-hidden animate-on-scroll local-reveal slide-up lg:order-3">
             <h3 className="mb-4 text-brand font-semibold text-[clamp(1.375rem,2.5vw,1.875rem)] leading-[1.2]">
               Modernización y compromiso actual
             </h3>
