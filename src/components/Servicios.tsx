@@ -47,14 +47,9 @@ export default function Servicios() {
 
         {/* Cabecera centrada */}
         <div className="animate-on-scroll text-center">
-          <div className="inline-flex items-center gap-2 mb-5 px-4 py-[7px] rounded-full border border-brand/30">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-brand shrink-0">
-              <path d="M12 0l1.8 8.2L22 10l-8.2 1.8L12 20l-1.8-8.2L2 10l8.2-1.8L12 0z" />
-            </svg>
-            <span className="text-brand text-[0.8125rem] font-semibold tracking-[0.1em] uppercase">
-              Atención Centrada en la Persona
-            </span>
-          </div>
+          <p className="m-0 mb-4 text-brand text-[0.8125rem] font-semibold tracking-[0.12em] uppercase">
+            Atención Centrada en la Persona
+          </p>
           <h2 className="m-0 text-text-dark font-semibold text-[clamp(2.25rem,7vw,5.5rem)] leading-[1.05] tracking-[-0.02em]">
             Nuestros Servicios
           </h2>
