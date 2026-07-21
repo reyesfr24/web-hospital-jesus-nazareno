@@ -160,9 +160,13 @@ export default function NuestroCentro() {
               {column.map((image, index) => (
                 <div
                   key={image.src}
-                  className={`rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll delay-${(index % 3) + 1}`}
+                  className={`group rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll delay-${(index % 3) + 1}`}
                 >
-                  <img src={image.src} alt={image.alt} className="w-full h-auto object-cover block" />
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-auto object-cover block transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
                 </div>
               ))}
             </div>
