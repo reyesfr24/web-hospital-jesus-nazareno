@@ -66,7 +66,7 @@ function HeaderBlock() {
   }, []);
 
   return (
-    <div ref={ref} className={`header-reveal text-center${visible ? ' visible' : ''}`}>
+    <div ref={ref} className={`header-reveal text-center ${visible ? 'visible' : ''}`}>
       <p className="m-0 mb-4 text-brand text-[0.8125rem] font-semibold tracking-[0.12em] uppercase">
         Atención Centrada en la Persona
       </p>

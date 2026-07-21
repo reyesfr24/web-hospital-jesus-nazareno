@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Historia from './components/Historia';
 import Servicios from './components/Servicios';
+import NuestroCentro from './components/NuestroCentro';
 import Footer from './components/Footer';
 
 function useScrollAnimation() {
@@ -35,6 +36,7 @@ export default function App() {
         <Hero />
         <Historia />
         <Servicios />
+        <NuestroCentro />
       </main>
       <Footer />
     </>
