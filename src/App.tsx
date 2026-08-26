@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, type JSX } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Historia from './components/Historia';
