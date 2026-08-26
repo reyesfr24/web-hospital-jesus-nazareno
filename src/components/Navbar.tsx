@@ -48,6 +48,18 @@ export default function Navbar() {
 
   const navLight = scrolled && !menuOpen;
 
+  const handleMobileLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    document.body.style.overflow = '';
+    const target = document.querySelector<HTMLElement>(href);
+    if (!target) return;
+    setTimeout(() => {
+      const top = target.getBoundingClientRect().top + window.scrollY - 96;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 320);
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 nav-transition${navLight ? ' nav-scrolled' : ''}${hidden ? ' nav-hidden' : ''}`}
@@ -121,13 +133,14 @@ export default function Navbar() {
           onClick={() => setMenuOpen(false)}
         />
         <div className="relative px-[clamp(24px,4vw,48px)] pt-28">
-          <div className="mobile-menu-card flex flex-col bg-white rounded-2xl shadow-xl px-6 py-4">
-            {NAV_LINKS.map((link) => (
+          <div className="mobile-menu-card flex flex-col gap-1.5 bg-white rounded-2xl shadow-xl p-3">
+            {NAV_LINKS.map((link, i) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="py-4 text-[#303030] font-medium text-lg no-underline border-b border-[#f0edf5] last:border-b-0"
-                onClick={() => setMenuOpen(false)}
+                className="mobile-menu-link relative flex items-center rounded-xl pl-8 pr-4 py-4 text-[#303030] font-medium text-lg no-underline"
+                style={{ transitionDelay: `${i * 40}ms` }}
+                onClick={(e) => handleMobileLinkClick(e, link.href)}
               >
                 {link.label}
               </a>
