@@ -62,7 +62,7 @@ body {
 
 .animate-on-scroll.reveal-top.visible {
   transform: none;
-  animation: historia-reveal-top 3.2s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation: historia-reveal-top 2.2s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
 .animate-on-scroll.reveal-top.delay-2.visible {
@@ -188,12 +188,31 @@ body {
   background-image: radial-gradient(at 88.81015571215028% 87.69722117305746%, hsla(289.04347826086956, 90.5511811023622%, 24.901960784313726%, 1) 0%, hsla(289.04347826086956, 90.5511811023622%, 24.901960784313726%, 0) 100%), radial-gradient(at 54.54574318858194% 73.3417800266399%, hsla(250.71428571428575, 33.33333333333333%, 67.05882352941177%, 1) 0%, hsla(250.71428571428575, 33.33333333333333%, 67.05882352941177%, 0) 100%), radial-gradient(at 1.271041303230458% 49.154801643891844%, hsla(289.04347826086956, 90.5511811023622%, 24.901960784313726%, 1) 0%, hsla(289.04347826086956, 90.5511811023622%, 24.901960784313726%, 0) 100%), radial-gradient(at 28.74201106044851% 83.3329387470108%, hsla(250.71428571428575, 33.33333333333333%, 67.05882352941177%, 1) 0%, hsla(250.71428571428575, 33.33333333333333%, 67.05882352941177%, 0) 100%), radial-gradient(at 60.55803028667428% 38.0673562483874%, hsla(289.04347826086956, 90.5511811023622%, 24.901960784313726%, 1) 0%, hsla(289.04347826086956, 90.5511811023622%, 24.901960784313726%, 0) 100%), radial-gradient(at 35.00960939406832% 1.3916757651651457%, hsla(250.71428571428575, 33.33333333333333%, 67.05882352941177%, 1) 0%, hsla(250.71428571428575, 33.33333333333333%, 67.05882352941177%, 0) 100%), radial-gradient(at 16.399962816958592% 27.530664551615203%, hsla(289.04347826086956, 90.5511811023622%, 24.901960784313726%, 1) 0%, hsla(289.04347826086956, 90.5511811023622%, 24.901960784313726%, 0) 100%);
 }
 
-/* ─── Mobile nav open ─── */
-.mobile-menu {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.35s ease-out;
+/* ─── Mobile nav overlay ─── */
+.mobile-menu-overlay {
+  visibility: hidden;
+  transition: visibility 0.3s ease;
 }
-.mobile-menu.open {
-  max-height: 400px;
+.mobile-menu-overlay.open {
+  visibility: visible;
+}
+.mobile-menu-backdrop {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+}
+.mobile-menu-overlay.open .mobile-menu-backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.mobile-menu-card {
+  transform: translateY(-16px);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+.mobile-menu-overlay.open .mobile-menu-card {
+  transform: translateY(0);
+  opacity: 1;
 }

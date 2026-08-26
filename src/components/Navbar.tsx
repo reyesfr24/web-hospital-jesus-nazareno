@@ -35,25 +35,38 @@ export default function Navbar() {
     return () => clearTimeout(t);
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
+  const navLight = scrolled && !menuOpen;
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 nav-transition${scrolled ? ' nav-scrolled' : ''}${hidden ? ' nav-hidden' : ''}`}
+      className={`fixed top-0 left-0 right-0 z-50 nav-transition${navLight ? ' nav-scrolled' : ''}${hidden ? ' nav-hidden' : ''}`}
       style={navAnimDone ? undefined : { animation: 'nav-slide-down 1.6s cubic-bezier(0.16, 1, 0.3, 1) both' }}
     >
-      <div className="px-[clamp(24px,4vw,48px)]">
-        <div className="flex items-center justify-between h-24">
+      <div className="relative z-[60] px-[clamp(24px,4vw,48px)]">
+        <div className="relative flex items-center justify-between h-24">
 
           {/* Logo */}
           <a href="#inicio" className="shrink-0 flex items-center">
             <img
               src={logo}
               alt="Hospital de Jesús Nazareno"
-              className={`h-[72px] object-contain transition-[filter] duration-300${scrolled ? '' : ' brightness-0 invert'}`}
+              className={`h-[72px] object-contain transition-[filter] duration-300${navLight ? '' : ' brightness-0 invert'}`}
             />
           </a>
 
           {/* Desktop links */}
-          <ul className="hidden md:flex items-center gap-10 list-none m-0 p-0">
+          <ul className="hidden md:flex items-center gap-10 list-none m-0 p-0 md:absolute md:left-1/2 md:-translate-x-1/2">
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
                 <a
@@ -76,14 +89,14 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer gap-[5px]"
+            className="md:hidden relative z-[60] flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none cursor-pointer gap-[5px]"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Abrir menú"
+            aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
           >
             {[0, 1, 2].map((i) => (
               <span
                 key={i}
-                className={`block w-[22px] h-[2px] rounded-[2px] transition-[background-color,transform] duration-300${scrolled ? ' bg-[#303030]' : ' bg-white'}`}
+                className={`block w-[22px] h-[2px] rounded-[2px] transition-[background-color,transform] duration-300${navLight ? ' bg-[#303030]' : ' bg-white'}`}
                 style={{
                   transformOrigin: 'center',
                   transform:
@@ -96,27 +109,29 @@ export default function Navbar() {
             ))}
           </button>
         </div>
+      </div>
 
-        {/* Mobile menu */}
-        <div className={`mobile-menu md:hidden bg-white${menuOpen ? ' open' : ''}`}>
-          <div className="pt-4 pb-6">
+      {/* Mobile menu overlay */}
+      <div
+        className={`mobile-menu-overlay md:hidden fixed inset-0 z-50${menuOpen ? ' open' : ''}`}
+        aria-hidden={!menuOpen}
+      >
+        <div
+          className="mobile-menu-backdrop absolute inset-0"
+          onClick={() => setMenuOpen(false)}
+        />
+        <div className="relative px-[clamp(24px,4vw,48px)] pt-28">
+          <div className="mobile-menu-card flex flex-col bg-white rounded-2xl shadow-xl px-6 py-4">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="block py-3 text-[#303030] font-medium text-base no-underline border-b border-[#f0edf5]"
+                className="py-4 text-[#303030] font-medium text-lg no-underline border-b border-[#f0edf5] last:border-b-0"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <a
-              href="#contacto"
-              className="inline-flex mt-4 px-7 py-[10px] rounded-full bg-brand text-white font-semibold text-[0.9375rem] no-underline"
-              onClick={() => setMenuOpen(false)}
-            >
-              Contactar
-            </a>
           </div>
         </div>
       </div>

@@ -121,14 +121,14 @@ function HeaderBlock() {
 
   return (
     <div ref={ref} className={`header-reveal text-center ${visible ? 'visible' : ''}`}>
-      <p className="m-0 mb-4 text-brand text-[0.8125rem] font-semibold tracking-[0.12em] uppercase">
+      <p className="m-0 mb-3.5 text-brand text-[0.7375rem] font-semibold tracking-[0.12em] uppercase">
         Conócenos
       </p>
-      <h2 className="m-0 text-text-dark font-semibold text-[clamp(2.25rem,6vw,5rem)] leading-[1.05] tracking-[-0.02em]">
+      <h2 className="m-0 text-text-dark font-semibold text-[clamp(2.025rem,6vw,4.5rem)] leading-[1.05] tracking-[-0.02em]">
         <HL text="Nuestro Centro" />
       </h2>
-      <div className="h-6" />
-      <p className="m-0 mx-auto text-[#757575] text-lg leading-[1.75] max-w-[620px]">
+      <div className="h-5" />
+      <p className="m-0 mx-auto text-[#757575] text-[1.0125rem] leading-[1.75] max-w-[560px]">
         Un espacio pensado para el bienestar, la vida en comunidad y la fe, donde cada rincón acompaña el
         día a día de nuestros residentes.
       </p>
@@ -144,19 +144,19 @@ export default function NuestroCentro() {
 
   return (
     <section id="centro" className="bg-white">
-      <div className="px-[clamp(24px,4vw,48px)]">
+      <div className="px-[clamp(22px,4vw,43px)]">
 
-        <div className="h-[clamp(80px,12vw,50px)]" />
+        <div className="h-[clamp(72px,12vw,45px)]" />
 
         {/* Cabecera centrada */}
         <HeaderBlock />
 
-        <div className="h-[clamp(60px,8vw,100px)]" />
+        <div className="h-[clamp(54px,8vw,90px)]" />
 
         {/* Galería: 3 columnas con altura equilibrada por JS */}
-        <div ref={containerRef} className="flex gap-6 max-w-[1350px] mx-auto">
+        <div ref={containerRef} className="flex gap-5 max-w-[1215px] mx-auto">
           {columns.map((column, colIndex) => (
-            <div key={colIndex} className="flex flex-1 flex-col gap-6">
+            <div key={colIndex} className="flex flex-1 flex-col gap-5">
               {column.map((image, index) => (
                 <div
                   key={image.src}
@@ -173,7 +173,7 @@ export default function NuestroCentro() {
           ))}
         </div>
 
-        <div className="h-[clamp(80px,12vw,160px)]" />
+        <div className="h-[clamp(72px,12vw,144px)]" />
       </div>
     </section>
   );
