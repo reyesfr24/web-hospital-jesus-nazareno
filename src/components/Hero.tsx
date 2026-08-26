@@ -18,6 +18,7 @@ export default function Hero() {
           backgroundPosition: 'center 30%',
         }}
       />
+      <div className="absolute inset-0 bg-black/25 md:hidden" />
 
       {/* Content wrapper */}
       <div className="relative z-10 flex flex-col justify-end flex-1 px-[clamp(24px,4vw,48px)] min-h-screen">
@@ -63,7 +64,7 @@ export default function Hero() {
             </h1>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-[14px]">
+            <div className="hidden md:flex flex-wrap gap-[14px]">
               <a
                 href="#historia"
                 className="inline-flex items-center px-8 py-[13px] rounded-full bg-brand border-[1.5px] border-white/35 text-white font-semibold text-base no-underline transition-opacity duration-200 hover:opacity-85"
