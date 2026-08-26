@@ -2,7 +2,7 @@ import fondo2 from '../assets/images/portada-persona.webp';
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-[80vh] md:min-h-screen bg-brand overflow-hidden flex flex-col">
+    <section id="inicio" className="relative min-h-[72vh] md:min-h-screen bg-brand overflow-hidden flex flex-col">
 
       {/* Background image + gradient overlay */}
       <div
@@ -15,7 +15,7 @@ export default function Hero() {
             url('${fondo2}')
           `,
           backgroundSize: 'cover',
-          backgroundPosition: 'center 55%',
+          backgroundPosition: 'center 65%',
         }}
       />
       <div
@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/25 md:hidden" />
 
       {/* Content wrapper */}
-      <div className="relative z-10 flex flex-col justify-end flex-1 px-[clamp(24px,4vw,48px)] min-h-[80vh] md:min-h-screen">
+      <div className="relative z-10 flex flex-col justify-end flex-1 px-[clamp(24px,4vw,48px)] min-h-[72vh] md:min-h-screen">
 
         {/* Grid 2 columnas */}
         <div className="grid grid-cols-1 md:grid-cols-2 items-stretch pt-[116px] gap-10">
