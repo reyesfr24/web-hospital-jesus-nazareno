@@ -125,7 +125,7 @@ function ServiceCard({ service }: { service: (typeof SERVICES)[number] }) {
       <div className="rounded-[29px] bg-white shadow-[0_16px_40px_-16px_rgba(100,6,121,0.25)]">
         <div className="flex items-center gap-5 lg:gap-11 px-6 py-7 md:px-9 md:py-8">
           {/* Title */}
-          <h3 className="m-0 flex-1 min-w-0 truncate text-brand font-bold text-[1.2375rem] md:text-[1.575rem] lg:text-[1.8rem] leading-[1.2] tracking-[-0.01em]">
+          <h3 className="m-0 flex-1 min-w-0 text-brand font-bold text-[1.2375rem] md:text-[1.575rem] lg:text-[1.8rem] leading-[1.2] tracking-[-0.01em]">
             {service.title}
           </h3>
 
