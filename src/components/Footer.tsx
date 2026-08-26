@@ -1,4 +1,5 @@
 import logo from '../assets/logos/redondo-negativo.png';
+import { navigate } from '../lib/navigation';
 
 export default function Footer() {
   return (
@@ -59,14 +60,22 @@ export default function Footer() {
               </h4>
               <ul className="list-none m-0 p-0 flex flex-col gap-3">
                 {[
-                  { label: 'Aviso Legal', href: '#' },
-                  { label: 'Política de Cookies', href: '#' },
-                  { label: 'Accesibilidad', href: '#' },
-                  { label: 'Ayudas recibidas', href: '#' },
+                  { label: 'Aviso Legal', href: '/aviso-legal', onClick: () => navigate('/aviso-legal') },
+                  { label: 'Política de Cookies', href: '/politica-cookies', onClick: () => navigate('/politica-cookies') },
+                  { label: 'Accesibilidad', href: '/accesibilidad', onClick: () => navigate('/accesibilidad') },
+                  { label: 'Ayudas recibidas', href: '/ayudas-recibidas', onClick: () => navigate('/ayudas-recibidas') },
                 ].map((item) => (
                   <li key={item.label}>
                     <a
                       href={item.href}
+                      onClick={
+                        item.onClick
+                          ? (e) => {
+                              e.preventDefault();
+                              item.onClick!();
+                            }
+                          : undefined
+                      }
                       className="text-white/65 no-underline text-[0.9375rem] transition-colors duration-200 hover:text-accent"
                     >
                       {item.label}

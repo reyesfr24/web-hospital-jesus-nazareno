@@ -5,6 +5,10 @@ import Historia from './components/Historia';
 import Servicios from './components/Servicios';
 import NuestroCentro from './components/NuestroCentro';
 import Footer from './components/Footer';
+import AvisoLegal from './pages/AvisoLegal';
+import PoliticaCookies from './pages/PoliticaCookies';
+import Accesibilidad from './pages/Accesibilidad';
+import AyudasRecibidas from './pages/AyudasRecibidas';
 
 function useScrollAnimation() {
   useEffect(() => {
@@ -26,18 +30,33 @@ function useScrollAnimation() {
   }, []);
 }
 
+function HomePage() {
+  return (
+    <>
+      <Hero />
+      <Historia />
+      <Servicios />
+      <NuestroCentro />
+    </>
+  );
+}
+
+const STANDALONE_PAGES: Record<string, () => JSX.Element> = {
+  '/aviso-legal': AvisoLegal,
+  '/politica-cookies': PoliticaCookies,
+  '/accesibilidad': Accesibilidad,
+  '/ayudas-recibidas': AyudasRecibidas,
+};
+
 export default function App() {
   useScrollAnimation();
+  const path = window.location.pathname;
+  const StandalonePage = STANDALONE_PAGES[path];
 
   return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Historia />
-        <Servicios />
-        <NuestroCentro />
-      </main>
+      {!StandalonePage && <Navbar />}
+      <main>{StandalonePage ? <StandalonePage /> : <HomePage />}</main>
       <Footer />
     </>
   );
