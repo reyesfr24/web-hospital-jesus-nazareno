@@ -11,13 +11,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row gap-[clamp(40px,6vw,64px)] mb-[clamp(48px,6vw,72px)]">
 
           {/* Logo + description */}
-          <div className="flex items-center gap-6 md:flex-1">
+          <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center md:flex-1">
             <img
               src={logo}
               alt="Hospital de Jesús Nazareno"
-              className="w-1/2 aspect-square object-cover shrink-0"
+              className="w-28 sm:w-1/2 aspect-square object-cover shrink-0"
             />
-            <p className="flex-1 text-white/80 text-[1.5rem] leading-[1.7] italic font-light tracking-[0.01em] m-0">
+            <p className="flex-1 text-white/80 text-[1.25rem] sm:text-[1.5rem] leading-[1.7] italic font-light tracking-[0.01em] m-0">
               Más de 200 años cuidando con dignidad, humanidad y amor cristiano.
             </p>
           </div>
