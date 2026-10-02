@@ -5,7 +5,7 @@ const NAV_LINKS = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Historia', href: '#historia' },
   { label: 'Servicios', href: '#servicios' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Galería', href: '#centro' },
 ];
 
 export default function Navbar() {

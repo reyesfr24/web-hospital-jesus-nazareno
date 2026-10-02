@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Historia from './components/Historia';
 import Servicios from './components/Servicios';
 import NuestroCentro from './components/NuestroCentro';
+import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import AvisoLegal from './pages/AvisoLegal';
 import PoliticaCookies from './pages/PoliticaCookies';
@@ -37,6 +38,7 @@ function HomePage() {
       <Historia />
       <Servicios />
       <NuestroCentro />
+      <Contacto />
     </>
   );
 }

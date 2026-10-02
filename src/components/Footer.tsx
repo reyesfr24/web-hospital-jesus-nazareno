@@ -4,7 +4,6 @@ import { navigate } from '../lib/navigation';
 export default function Footer() {
   return (
     <footer
-      id="contacto"
       className="footer-mesh-gradient-2 text-white/70 pt-[clamp(60px,8vw,80px)] px-[clamp(24px,4vw,48px)] pb-[clamp(32px,4vw,48px)]"
     >
       <div className="max-w-[1200px] mx-auto">
