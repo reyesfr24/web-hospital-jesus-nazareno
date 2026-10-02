@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import bustoFrancisco from '../assets/images/centro/busto-francisco.webp';
 import capilla from '../assets/images/centro/capilla.webp';
 import centro1 from '../assets/images/centro/centro-1.webp';
@@ -27,6 +28,91 @@ const GALLERY = [
   { src: centro6, alt: 'Instalaciones del Hospital de Jesús Nazareno', ratio: 1134 / 2016 },
   { src: centro7, alt: 'Instalaciones del Hospital de Jesús Nazareno', ratio: 932 / 2024 },
 ];
+
+type GalleryImage = (typeof GALLERY)[number];
+
+const SPRING = { type: 'spring', stiffness: 350, damping: 35, mass: 1 } as const;
+
+// Vista ampliada: la imagen comparte `layoutId` con su miniatura, así que
+// framer-motion anima posición y tamaño entre ambas al abrir y al cerrar.
+function GalleryModal({ image, onClose }: { image: GalleryImage | null; onClose: () => void }) {
+  useEffect(() => {
+    if (!image) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKeyDown);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [image, onClose]);
+
+  return (
+    <AnimatePresence>
+      {image && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="absolute inset-0 bg-white/55 backdrop-blur-2xl"
+            onClick={onClose}
+          />
+
+          <motion.div
+            className="relative z-10 w-full h-full flex items-center justify-center cursor-zoom-out"
+            drag="y"
+            dragConstraints={{ top: 0, bottom: 0 }}
+            dragElastic={0.8}
+            onDragEnd={(_, info) => {
+              if (Math.abs(info.offset.y) > 100 || Math.abs(info.velocity.y) > 300) onClose();
+            }}
+            onClick={onClose}
+          >
+            <motion.img
+              layoutId={`galeria-${image.src}`}
+              src={image.src}
+              alt={image.alt}
+              transition={SPRING}
+              draggable={false}
+              className="w-auto h-auto max-w-[95vw] max-h-[90vh] rounded-2xl shadow-2xl object-contain will-change-transform"
+            />
+          </motion.div>
+
+          <motion.button
+            type="button"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ delay: 0.1, duration: 0.2 }}
+            className="absolute top-6 right-6 z-20 p-2.5 bg-black/5 text-text-dark rounded-full backdrop-blur-md hover:bg-black/10 transition-colors cursor-pointer"
+            onClick={onClose}
+            aria-label="Cerrar imagen"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </motion.button>
+        </div>
+      )}
+    </AnimatePresence>
+  );
+}
 
 function useColumnCount() {
   const [count, setCount] = useState(3);
@@ -140,6 +226,7 @@ export default function NuestroCentro() {
   const containerRef = useRef<HTMLDivElement>(null);
   const columnCount = useColumnCount();
   const columns = distributeIntoColumns(GALLERY, columnCount);
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   useGalleryReveal(containerRef, columnCount);
 
   return (
@@ -162,11 +249,18 @@ export default function NuestroCentro() {
                   key={image.src}
                   className={`group rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll delay-${(index % 3) + 1}`}
                 >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-auto object-cover block transition-transform duration-500 ease-out group-hover:scale-110"
-                  />
+                  <div
+                    className="cursor-zoom-in transition-transform duration-500 ease-out group-hover:scale-110"
+                    onClick={() => setSelectedImage(image)}
+                  >
+                    <motion.img
+                      layoutId={`galeria-${image.src}`}
+                      src={image.src}
+                      alt={image.alt}
+                      transition={SPRING}
+                      className="w-full h-auto object-cover block"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -175,6 +269,8 @@ export default function NuestroCentro() {
 
         <div className="h-[clamp(72px,12vw,144px)]" />
       </div>
+
+      <GalleryModal image={selectedImage} onClose={() => setSelectedImage(null)} />
     </section>
   );
 }
