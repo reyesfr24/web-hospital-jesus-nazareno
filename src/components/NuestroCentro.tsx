@@ -247,19 +247,25 @@ export default function NuestroCentro() {
               {column.map((image, index) => (
                 <div
                   key={image.src}
-                  className={`group rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll delay-${(index % 3) + 1}`}
+                  className={`group relative rounded-2xl shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll delay-${(index % 3) + 1}`}
                 >
-                  <div
-                    className="cursor-zoom-in transition-transform duration-500 ease-out group-hover:scale-110"
-                    onClick={() => setSelectedImage(image)}
-                  >
-                    <motion.img
-                      layoutId={`galeria-${image.src}`}
-                      src={image.src}
-                      alt={image.alt}
-                      transition={SPRING}
-                      className="w-full h-auto object-cover block"
-                    />
+                  {/* Sombra de hover: va fuera del recorte para que no se corte */}
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 shadow-[0_14px_40px_rgba(153,143,199,0.5)] transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="relative rounded-2xl overflow-hidden">
+                    <div
+                      className="cursor-zoom-in transition-transform duration-500 ease-out group-hover:scale-110"
+                      onClick={() => setSelectedImage(image)}
+                    >
+                      <motion.img
+                        layoutId={`galeria-${image.src}`}
+                        src={image.src}
+                        alt={image.alt}
+                        transition={SPRING}
+                        className="w-full h-auto object-cover block"
+                      />
+                    </div>
+                    {/* Marco sutil con el color secundario */}
+                    <div className="pointer-events-none absolute inset-0 rounded-2xl ring-4 ring-inset ring-secondary/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   </div>
                 </div>
               ))}
