@@ -182,7 +182,7 @@ export default function Accesibilidad() {
               <span className="font-semibold text-text-dark">Teléfono:</span> 601 623 400
             </p>
             <p className="m-0 text-[0.9375rem] text-text-secondary">
-              <span className="font-semibold text-text-dark">Email:</span> jesusnazarenovillanueva@hotmail.com
+              <span className="font-semibold text-text-dark">Email:</span> administracion@hospitaljesusnazareno.es
             </p>
             <p className="m-0 text-[0.9375rem] text-text-secondary">
               <span className="font-semibold text-text-dark">Sitio web:</span> www.hospitaljesusnazarenovillanueva.es
@@ -256,7 +256,7 @@ export default function Accesibilidad() {
           </p>
           <InfoBox>
             <p className="m-0 text-[0.9375rem] text-text-secondary">
-              <span className="font-semibold text-text-dark">Email:</span> jesusnazarenovillanueva@hotmail.com
+              <span className="font-semibold text-text-dark">Email:</span> administracion@hospitaljesusnazareno.es
             </p>
             <p className="m-0 text-[0.9375rem] text-text-secondary">
               <span className="font-semibold text-text-dark">Teléfono:</span> 601 623 400

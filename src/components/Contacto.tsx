@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 
-const EMAIL = 'jesusnazarenovillanueva@hotmail.com';
+const EMAIL = 'administracion@hospitaljesusnazareno.es';
 
 const MAP_QUERY = 'Hospital de Jesús Nazareno, Calle Moreno de Pedrajas, 14440 Villanueva de Córdoba';
 const MAP_SRC = `https://www.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&output=embed`;

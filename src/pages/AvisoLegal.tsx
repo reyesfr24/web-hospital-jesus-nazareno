@@ -52,7 +52,7 @@ export default function AvisoLegal() {
             <span className="font-semibold text-text-dark">Teléfono:</span> 957120047
           </p>
           <p className="m-0 text-[0.9375rem] text-text-secondary">
-            <span className="font-semibold text-text-dark">Email:</span> jesusnazarenovillanueva@hotmail.com
+            <span className="font-semibold text-text-dark">Email:</span> administracion@hospitaljesusnazareno.es
           </p>
         </div>
 

@@ -34,7 +34,7 @@ export default function Footer() {
               <div className="flex flex-col gap-3.5">
                 {[
                   { label: 'Teléfono', value: ['601 623 400'] },
-                  { label: 'Email', value: ['jesusnazarenovillanueva@hotmail.com'] },
+                  { label: 'Email', value: ['administracion@hospitaljesusnazareno.es'] },
                   { label: 'Dirección', value: ['Calle Moreno de Pedrajas s/n', '14440 Villanueva de Córdoba (Córdoba)'] },
                   { label: 'Horario de visitas', value: ['Mañana: 10:00 - 12:30', 'Tarde: 16:00 - 19:00'] },
                 ].map((item) => (
@@ -43,7 +43,7 @@ export default function Footer() {
                       {item.label}
                     </div>
                     {item.value.map((line) => (
-                      <div key={line} className="text-[0.9375rem] text-white/75 break-words">
+                      <div key={line} className={`${item.label === 'Email' ? 'text-[0.875rem]' : 'text-[0.9375rem]'} text-white/75 break-words`}>
                         {line}
                       </div>
                     ))}
