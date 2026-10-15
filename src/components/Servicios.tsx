@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 
-const SERVICES = [
+const SERVICES: { title: string; description: string; features?: string[] }[] = [
+  {
+    title: 'Servicio religioso',
+    description:
+      'Eucaristía todos los domingos y fiestas de guardar en la capilla del Hospital de Jesús Nazareno. Atención y acompañamiento cristiano por parte de los curas de Villanueva y de las Hermanas Obreras.',
+    features: ['Eucaristía semanal', 'Acompañamiento cristiano', 'Apoyo y cercanía'],
+  },
   {
     title: 'Psicología y Trabajo Social',
     description:
@@ -148,19 +154,21 @@ function ServiceCard({ service }: { service: (typeof SERVICES)[number] }) {
             {service.description}
           </p>
 
-          <div className="pt-4 border-t border-[#f0edf5]">
-            {/* Feature checklist */}
-            <ul className="m-0 p-0 list-none flex flex-wrap gap-x-5 gap-y-2">
-              {service.features.map((feat) => (
-                <li key={feat} className="flex items-center gap-2 text-[#303030] text-[0.84375rem]">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="shrink-0">
-                    <path d="M3 8.5l3.5 3.5 6.5-7" stroke="#640679" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {feat}
-                </li>
-              ))}
-            </ul>
-          </div>
+          {service.features && (
+            <div className="pt-4 border-t border-[#f0edf5]">
+              {/* Feature checklist */}
+              <ul className="m-0 p-0 list-none flex flex-wrap gap-x-5 gap-y-2">
+                {service.features.map((feat) => (
+                  <li key={feat} className="flex items-center gap-2 text-[#303030] text-[0.84375rem]">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="shrink-0">
+                      <path d="M3 8.5l3.5 3.5 6.5-7" stroke="#640679" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    {feat}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -180,7 +188,7 @@ export default function Servicios() {
         <div className="h-[clamp(43px,6vw,72px)]" />
 
         {/* Lista de servicios */}
-        <div className="flex flex-col gap-2.5 max-w-[1080px] mx-auto">
+        <div className="flex flex-col gap-8 max-w-[1080px] mx-auto">
           {SERVICES.map((service) => (
             <ServiceCard key={service.title} service={service} />
           ))}
