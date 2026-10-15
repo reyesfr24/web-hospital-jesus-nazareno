@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import iglesiaInterior from '../assets/images/iglesia-interior.webp';
 import closeupHands from '../assets/images/closeup-support-hands.webp';
+import fundacion from '../assets/images/fundacion.webp';
 
 const HL = ({ text }: { text: string }) => (
   <span className="text-brand bg-accent/25 rounded-[6px] px-2">
@@ -85,6 +86,8 @@ export default function Historia() {
   const reveal2 = useRevealObserver<HTMLDivElement>('0px 0px -140px 0px');
   const reveal3 = useRevealObserver<HTMLDivElement>('0px 0px -140px 0px');
   const reveal4 = useRevealObserver<HTMLDivElement>('0px 0px -140px 0px');
+  const reveal5 = useRevealObserver<HTMLDivElement>('0px 0px -140px 0px');
+  const reveal6 = useRevealObserver<HTMLDivElement>('0px 0px -140px 0px');
 
   return (
     <section id="historia" className="bg-white">
@@ -97,11 +100,39 @@ export default function Historia() {
 
         <div className="h-[clamp(54px,8vw,90px)]" />
 
-        {/* Grid 2×2 */}
-        <div className="grid grid-cols-1 gap-5 max-w-[1215px] mx-auto lg:grid-cols-2 lg:[grid-template-rows:585px_585px] lg:gap-x-7 lg:gap-y-9">
+        {/* Grid 2×3 */}
+        <div className="grid grid-cols-1 gap-5 max-w-[1215px] mx-auto lg:grid-cols-2 lg:[grid-template-rows:585px_585px_585px] lg:gap-x-7 lg:gap-y-9">
 
-          {/* Fila 1: imagen izquierda */}
-          <div ref={reveal1} className="rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll local-reveal reveal-top">
+          {/* Fila 1: imagen derecha en desktop (en móvil aparece primera) */}
+          <div ref={reveal5} className="rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll local-reveal reveal-top lg:order-2">
+            <img
+              src={fundacion}
+              alt="Fundación Hospital de Jesús Nazareno"
+              className="w-full h-full object-cover block"
+            />
+          </div>
+
+          {/* Fila 1: card izquierda en desktop */}
+          <div ref={reveal6} className="bg-[#f4f1fb] rounded-[18px] px-11 py-9 flex flex-col justify-center overflow-hidden animate-on-scroll local-reveal slide-up delay-2 lg:order-1">
+            <h3 className="mb-3.5 text-brand font-semibold text-[clamp(1.2375rem,2.5vw,1.6875rem)] leading-[1.2]">
+              Fundación Hospital de Jesús Nazareno
+            </h3>
+            <hr className="border-0 border-t-2 border-brand/20 mb-5" />
+            <p className="mb-3 text-[#5a5a6e] leading-[1.8] text-[1.0575rem] lg:text-[1.1925rem]">
+              Desde sus orígenes, nuestra Fundación fue concevida y creada con un propósito claro e inquebrantable:
+              poner nuestra vocación de servicio al cuidado de los más desfavorecidos y vulnerables.
+              Guiados siempre por el espíritu y los valores cristianos, mantenemos vivo el compromiso diario de ofrecer un hogar digno,
+              un trato humano y un apoyo integral a cada una de las personas que acogemos.
+            </p>
+            <p className="mb-0 text-[#5a5a6e] leading-[1.8] text-[1.0575rem] lg:text-[1.1925rem]">
+              En nuestra residencia, cada gesto de atención y acompañamiento refleja el amor de Dios
+              puesto en acción para devolver dignidad, paz y esperanza a nuestros mayores y colectivos
+              más desfavorecidos.
+            </p>
+          </div>
+
+          {/* Fila 2: imagen izquierda */}
+          <div ref={reveal1} className="rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll local-reveal reveal-top lg:order-3">
             <img
               src={iglesiaInterior}
               alt="Interior de la iglesia del Hospital de Jesús Nazareno"
@@ -109,8 +140,8 @@ export default function Historia() {
             />
           </div>
 
-          {/* Fila 1: card derecha */}
-          <div ref={reveal2} className="bg-[#f4f1fb] rounded-[18px] px-11 py-9 flex flex-col justify-center overflow-hidden animate-on-scroll local-reveal slide-up delay-2">
+          {/* Fila 2: card derecha */}
+          <div ref={reveal2} className="bg-[#f4f1fb] rounded-[18px] px-11 py-9 flex flex-col justify-center overflow-hidden animate-on-scroll local-reveal slide-up delay-2 lg:order-4">
             <h3 className="mb-3.5 text-brand font-semibold text-[clamp(1.2375rem,2.5vw,1.6875rem)] leading-[1.2]">
               El origen cristiano
             </h3>
@@ -131,8 +162,8 @@ export default function Historia() {
             </p>
           </div>
 
-          {/* Fila 2: imagen derecha (en móvil aparece tercera, en desktop va a col 2 fila 2) */}
-          <div ref={reveal3} className="rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll local-reveal reveal-top delay-2 lg:order-4">
+          {/* Fila 3: imagen derecha */}
+          <div ref={reveal3} className="rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(100,6,121,0.12)] animate-on-scroll local-reveal reveal-top delay-2 lg:order-6">
             <img
               src={closeupHands}
               alt="Atención y cuidado a residentes del Hospital de Jesús Nazareno"
@@ -140,8 +171,8 @@ export default function Historia() {
             />
           </div>
 
-          {/* Fila 2: card izquierda (en móvil aparece cuarta, en desktop va a col 1 fila 2) */}
-          <div ref={reveal4} className="bg-[#f4f1fb] rounded-[18px] px-11 py-9 flex flex-col justify-center overflow-hidden animate-on-scroll local-reveal slide-up lg:order-3">
+          {/* Fila 3: card izquierda */}
+          <div ref={reveal4} className="bg-[#f4f1fb] rounded-[18px] px-11 py-9 flex flex-col justify-center overflow-hidden animate-on-scroll local-reveal slide-up lg:order-5">
             <h3 className="mb-3.5 text-brand font-semibold text-[clamp(1.2375rem,2.5vw,1.6875rem)] leading-[1.2]">
               Modernización y compromiso actual
             </h3>
