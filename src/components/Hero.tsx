@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col justify-end flex-1 px-[clamp(24px,4vw,48px)] min-h-[72vh] md:min-h-screen">
 
         {/* Grid 2 columnas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 md:flex-1 items-stretch pt-[116px] gap-6 md:gap-10">
+        <div className="grid grid-cols-1 grid-rows-[auto_1fr] md:grid-cols-2 md:grid-rows-1 flex-1 items-stretch pt-[96px] md:pt-[116px] gap-6 md:gap-10">
 
           {/* Columna izquierda: badges + H1 arriba (en escritorio), CTAs abajo */}
           <div className="flex flex-col">
