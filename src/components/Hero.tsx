@@ -11,7 +11,7 @@ const overlay = `
 `;
 
 // Entrada de los badges (va en el propio badge y no en un contenedor: un filter en el padre anularía su backdrop-blur)
-const badgeAnimation = { animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both' };
+const badgeAnimation = { animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both' };
 
 // Badge de ubicación: en escritorio va junto a "Fundado en 1819"; en móvil, encima del eslogan
 function LocationBadge({ className }: { className: string }) {
@@ -101,7 +101,7 @@ export default function Hero() {
             {/* H1 */}
             <h1
               className="order-first md:order-none mb-5 md:mb-8 text-white font-semibold text-[clamp(1.75rem,7vw,2.25rem)] md:text-[clamp(2.25rem,4vw,4rem)] leading-[1.08] tracking-[-0.02em] [text-shadow:0_2px_24px_rgba(0,0,0,0.5)]"
-              style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both' }}
+              style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both' }}
             >
               Hospital de{' '}
               <br className="md:hidden" />
@@ -111,7 +111,7 @@ export default function Hero() {
             {/* CTAs */}
             <div
               className="hidden md:flex md:mt-auto md:pb-9 flex-wrap gap-[14px]"
-              style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both' }}
+              style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both' }}
             >
               <a
                 href="#historia"
@@ -133,7 +133,7 @@ export default function Hero() {
             <LocationBadge className="inline-flex md:hidden" />
             <p
               className="m-0 text-white font-semibold text-[clamp(1.75rem,3.5vw,3rem)] leading-[1.2] tracking-[-0.01em] text-right max-w-[520px] [text-shadow:0_2px_24px_rgba(0,0,0,0.5)]"
-              style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both' }}
+              style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.85s both' }}
             >
               Más de 200 años
               <br />
