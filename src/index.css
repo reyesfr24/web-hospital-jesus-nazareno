@@ -137,6 +137,20 @@ body {
   }
 }
 
+/* En móvil, sin desenfoque: animar filter (sobre todo con backdrop-blur) va a tirones en muchos Android */
+@media (max-width: 767px) {
+  @keyframes hero-rise-in {
+    from {
+      transform: translateY(32px) scale(0.97);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+}
+
 /* ─── Gradient heading ─── */
 .gradient-heading {
   background: linear-gradient(120deg, #640679 0%, #998FC7 100%);

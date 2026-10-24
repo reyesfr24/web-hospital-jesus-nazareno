@@ -1,4 +1,4 @@
-import fondo2 from '../assets/images/portada-iglesia.webp';
+import fondo2 from '../assets/images/portada-iglesia-2400.webp';
 
 // Degradados para asegurar legibilidad del texto sobre las zonas claras de la foto
 const overlay = `
