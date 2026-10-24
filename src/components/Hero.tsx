@@ -70,6 +70,7 @@ export default function Hero() {
               style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both' }}
             >
               Hospital de{' '}
+              <br className="md:hidden" />
               <span className="text-accent">Jesús Nazareno</span>
             </h1>
 
