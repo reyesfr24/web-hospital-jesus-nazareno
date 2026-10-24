@@ -7,6 +7,34 @@ const overlay = `
   linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%)
 `;
 
+// Entrada de los badges (va en el propio badge y no en un contenedor: un filter en el padre anularía su backdrop-blur)
+const badgeAnimation = { animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both' };
+
+// Badge de ubicación: en escritorio va junto a "Fundado en 1819"; en móvil, encima del eslogan
+function LocationBadge({ className }: { className: string }) {
+  return (
+    <span className={`items-center gap-2 px-[18px] py-2 rounded-full bg-white/12 backdrop-blur-[8px] text-white/90 text-[0.8125rem] md:text-sm font-medium border border-white/20 ${className}`}
+      style={badgeAnimation}
+    >
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#D4C2FC"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="shrink-0"
+      >
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+        <circle cx="12" cy="9" r="2.5" fill="#D4C2FC" stroke="none" />
+      </svg>
+      Villanueva de Córdoba
+    </span>
+  );
+}
+
 export default function Hero() {
   return (
     <section id="inicio" className="relative min-h-[72vh] md:min-h-screen bg-brand overflow-hidden flex flex-col">
@@ -41,27 +69,13 @@ export default function Hero() {
 
             {/* Badges */}
             <div className="mb-7 flex flex-wrap gap-[10px]">
-              <span className="inline-flex items-center gap-2 px-[18px] py-2 rounded-full bg-white/12 backdrop-blur-[8px] text-white/90 text-sm font-medium border border-white/20">
+              <span className="inline-flex items-center gap-2 px-[18px] py-2 rounded-full bg-white/12 backdrop-blur-[8px] text-white/90 text-[0.8125rem] md:text-sm font-medium border border-white/20"
+                style={badgeAnimation}
+              >
                 <span className="w-[7px] h-[7px] rounded-full bg-accent shrink-0" />
                 Fundado en 1819
               </span>
-              <span className="inline-flex items-center gap-2 px-[18px] py-2 rounded-full bg-white/12 backdrop-blur-[8px] text-white/90 text-sm font-medium border border-white/20">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#D4C2FC"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="shrink-0"
-                >
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                  <circle cx="12" cy="9" r="2.5" fill="#D4C2FC" stroke="none" />
-                </svg>
-                Villanueva de Córdoba
-              </span>
+              <LocationBadge className="hidden md:inline-flex" />
             </div>
 
             {/* H1 */}
@@ -92,7 +106,8 @@ export default function Hero() {
           </div>
 
           {/* Columna derecha: eslogan alineado al fondo */}
-          <div className="flex justify-end items-end pb-9">
+          <div className="flex flex-col md:flex-row justify-end items-end gap-4 pb-9">
+            <LocationBadge className="inline-flex md:hidden" />
             <p
               className="m-0 text-white font-semibold text-[clamp(1.75rem,3.5vw,3rem)] leading-[1.2] tracking-[-0.01em] text-right max-w-[520px] [text-shadow:0_2px_24px_rgba(0,0,0,0.5)]"
               style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both' }}

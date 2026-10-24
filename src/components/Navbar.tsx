@@ -73,7 +73,7 @@ export default function Navbar() {
             <img
               src={logo}
               alt="Hospital de Jesús Nazareno"
-              className={`h-[72px] object-contain transition-[filter] duration-300${navLight ? '' : ' brightness-0 invert'}`}
+              className={`h-[56px] md:h-[72px] object-contain transition-[filter] duration-300${navLight ? '' : ' brightness-0 invert'}`}
             />
           </a>
 
