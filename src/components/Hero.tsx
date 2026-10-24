@@ -66,7 +66,7 @@ export default function Hero() {
 
             {/* H1 */}
             <h1
-              className="mb-8 text-white font-semibold text-[clamp(2.25rem,4vw,4rem)] leading-[1.08] tracking-[-0.02em] [text-shadow:0_2px_24px_rgba(0,0,0,0.5)]"
+              className="order-first md:order-none mb-5 md:mb-8 text-white font-semibold text-[clamp(1.75rem,7vw,2.25rem)] md:text-[clamp(2.25rem,4vw,4rem)] leading-[1.08] tracking-[-0.02em] [text-shadow:0_2px_24px_rgba(0,0,0,0.5)]"
               style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both' }}
             >
               Hospital de{' '}
