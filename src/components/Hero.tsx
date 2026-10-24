@@ -1,4 +1,7 @@
-import fondo2 from '../assets/images/portada-iglesia-2400.webp';
+import { useEffect, useState } from 'react';
+
+// Servida desde /public para poder precargarla en index.html antes de que arranque React
+const fondo2 = '/images/portada-iglesia-2400.webp';
 
 // Degradados para asegurar legibilidad del texto sobre las zonas claras de la foto
 const overlay = `
@@ -36,12 +39,29 @@ function LocationBadge({ className }: { className: string }) {
 }
 
 export default function Hero() {
+  // Las animaciones de entrada esperan a que la portada esté cargada (máx. 2,5 s si la conexión es lenta)
+  const [bgReady, setBgReady] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    const done = () => setBgReady(true);
+    img.onload = done;
+    img.onerror = done;
+    img.src = fondo2;
+    if (img.complete) done();
+    const timeout = setTimeout(done, 2500);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <section id="inicio" className="relative min-h-[72vh] md:min-h-screen bg-brand overflow-hidden flex flex-col">
+    <section
+      id="inicio"
+      className={`relative min-h-[72vh] md:min-h-screen bg-brand overflow-hidden flex flex-col${bgReady ? '' : ' hero-waiting'}`}
+    >
 
       {/* Background image + gradient overlay */}
       <div
-        className="absolute inset-0 md:hidden"
+        className={`absolute inset-0 md:hidden transition-opacity duration-700 ${bgReady ? 'opacity-100' : 'opacity-0'}`}
         style={{
           backgroundImage: `${overlay}, url('${fondo2}')`,
           backgroundSize: 'cover',
@@ -49,7 +69,7 @@ export default function Hero() {
         }}
       />
       <div
-        className="absolute inset-0 hidden md:block"
+        className={`absolute inset-0 hidden md:block transition-opacity duration-700 ${bgReady ? 'opacity-100' : 'opacity-0'}`}
         style={{
           backgroundImage: `${overlay}, url('${fondo2}')`,
           backgroundSize: 'cover',
