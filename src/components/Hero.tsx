@@ -1,4 +1,11 @@
-import fondo2 from '../assets/images/portada-persona.webp';
+import fondo2 from '../assets/images/portada-iglesia.webp';
+
+// Degradados para asegurar legibilidad del texto sobre las zonas claras de la foto
+const overlay = `
+  linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 20%),
+  linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0) 55%),
+  linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%)
+`;
 
 export default function Hero() {
   return (
@@ -8,38 +15,28 @@ export default function Hero() {
       <div
         className="absolute inset-0 md:hidden"
         style={{
-          backgroundImage: `
-            linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 28%),
-            linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 42%),
-            linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)),
-            url('${fondo2}')
-          `,
+          backgroundImage: `${overlay}, url('${fondo2}')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center 65%',
+          backgroundPosition: '65% center',
         }}
       />
       <div
         className="absolute inset-0 hidden md:block"
         style={{
-          backgroundImage: `
-            linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 28%),
-            linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 42%),
-            linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)),
-            url('${fondo2}')
-          `,
+          backgroundImage: `${overlay}, url('${fondo2}')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center 30%',
+          backgroundPosition: 'center top',
         }}
       />
-      <div className="absolute inset-0 bg-black/25 md:hidden" />
+      <div className="absolute inset-0 bg-black/10 md:hidden" />
 
       {/* Content wrapper */}
       <div className="relative z-10 flex flex-col justify-end flex-1 px-[clamp(24px,4vw,48px)] min-h-[72vh] md:min-h-screen">
 
         {/* Grid 2 columnas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-stretch pt-[116px] gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:flex-1 items-stretch pt-[116px] gap-10">
 
-          {/* Columna izquierda: badge + H1 + CTAs + stats */}
+          {/* Columna izquierda: badges + H1 arriba (en escritorio), CTAs + stats abajo */}
           <div className="flex flex-col">
 
             {/* Badges */}
@@ -69,7 +66,7 @@ export default function Hero() {
 
             {/* H1 */}
             <h1
-              className="mb-8 text-white font-semibold text-[clamp(2.25rem,4vw,4rem)] leading-[1.08] tracking-[-0.02em]"
+              className="mb-8 text-white font-semibold text-[clamp(2.25rem,4vw,4rem)] leading-[1.08] tracking-[-0.02em] [text-shadow:0_2px_24px_rgba(0,0,0,0.5)]"
               style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both' }}
             >
               Hospital de{' '}
@@ -77,7 +74,7 @@ export default function Hero() {
             </h1>
 
             {/* CTAs */}
-            <div className="hidden md:flex flex-wrap gap-[14px]">
+            <div className="hidden md:flex md:mt-auto flex-wrap gap-[14px]">
               <a
                 href="#historia"
                 className="inline-flex items-center px-8 py-[13px] rounded-full bg-brand border-[1.5px] border-white/35 text-white font-semibold text-base no-underline transition-opacity duration-200 hover:opacity-85"
@@ -113,7 +110,7 @@ export default function Hero() {
           {/* Columna derecha: eslogan alineado al fondo */}
           <div className="flex justify-end items-end pb-9">
             <p
-              className="m-0 text-white font-semibold text-[clamp(1.75rem,3.5vw,3rem)] leading-[1.2] tracking-[-0.01em] text-right max-w-[520px] [text-shadow:0_2px_20px_rgba(0,0,0,0.3)]"
+              className="m-0 text-white font-semibold text-[clamp(1.75rem,3.5vw,3rem)] leading-[1.2] tracking-[-0.01em] text-right max-w-[520px] [text-shadow:0_2px_24px_rgba(0,0,0,0.5)]"
               style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both' }}
             >
               Más de 200 años
