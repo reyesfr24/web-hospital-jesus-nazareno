@@ -89,7 +89,10 @@ export default function Hero() {
             </h1>
 
             {/* CTAs */}
-            <div className="hidden md:flex md:mt-auto md:pb-9 flex-wrap gap-[14px]">
+            <div
+              className="hidden md:flex md:mt-auto md:pb-9 flex-wrap gap-[14px]"
+              style={{ animation: 'hero-rise-in 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both' }}
+            >
               <a
                 href="#historia"
                 className="inline-flex items-center px-8 py-[13px] rounded-full bg-brand border-[1.5px] border-white/35 text-white font-semibold text-base no-underline transition-opacity duration-200 hover:opacity-85"
