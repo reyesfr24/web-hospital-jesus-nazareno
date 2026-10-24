@@ -34,9 +34,9 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col justify-end flex-1 px-[clamp(24px,4vw,48px)] min-h-[72vh] md:min-h-screen">
 
         {/* Grid 2 columnas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 md:flex-1 items-stretch pt-[116px] gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:flex-1 items-stretch pt-[116px] gap-6 md:gap-10">
 
-          {/* Columna izquierda: badges + H1 arriba (en escritorio), CTAs + stats abajo */}
+          {/* Columna izquierda: badges + H1 arriba (en escritorio), CTAs abajo */}
           <div className="flex flex-col">
 
             {/* Badges */}
@@ -75,7 +75,7 @@ export default function Hero() {
             </h1>
 
             {/* CTAs */}
-            <div className="hidden md:flex md:mt-auto flex-wrap gap-[14px]">
+            <div className="hidden md:flex md:mt-auto md:pb-9 flex-wrap gap-[14px]">
               <a
                 href="#historia"
                 className="inline-flex items-center px-8 py-[13px] rounded-full bg-brand border-[1.5px] border-white/35 text-white font-semibold text-base no-underline transition-opacity duration-200 hover:opacity-85"
@@ -88,23 +88,6 @@ export default function Hero() {
               >
                 Nuestros servicios
               </a>
-            </div>
-
-            {/* Stats */}
-            <div className="pt-6 pb-9 flex flex-wrap gap-3">
-              {[
-                { value: '+200 años', label: 'de historia' },
-                { value: 'Modelo ACP', label: 'centrado en la persona' },
-                { value: 'Amor cristiano', label: 'en cada cuidado' },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col px-[18px] py-3 rounded-[14px] bg-white/10 backdrop-blur-[8px] border border-white/15"
-                >
-                  <span className="text-accent font-bold text-sm">{stat.value}</span>
-                  <span className="text-white/65 text-xs mt-[2px]">{stat.label}</span>
-                </div>
-              ))}
             </div>
           </div>
 
